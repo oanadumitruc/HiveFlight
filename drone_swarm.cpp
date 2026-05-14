@@ -56,7 +56,7 @@ private:
     Vector2D calculateSeparation(const std::vector<Drone>& drones) {
         Vector2D steer(0, 0);
         int count = 0;
-        double desiredSeparation = 30.0;
+        double desiredSeparation = 50.0;
 
         for (const auto& other : drones) {
             double distance = (position - other.position).magnitude();
@@ -78,7 +78,7 @@ private:
     Vector2D calculateAlignment(const std::vector<Drone>& drones) {
         Vector2D sum(0, 0);
         int count = 0;
-        double neighborDist = 50.0;
+        double neighborDist = 100.0;
 
         for (const auto& other : drones) {
             double distance = (position - other.position).magnitude();
@@ -100,14 +100,14 @@ private:
     Vector2D calculateCohesion(const std::vector<Drone>& drones) {
         Vector2D sum(0, 0);
         int count = 0;
-        double neighborDist = 50.0;
+        double neighborDist = 100.0;
 
         for (const auto& other : drones) {
             double distance = (position - other.position).magnitude();
             if (distance > 0 && distance < neighborDist) {
                 sum = sum + other.position;
                 count++;
-                
+
             }
         }
 
@@ -137,7 +137,7 @@ void printSwarm(const std::vector<Drone>& drones, int step) {
 int main() {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_real_distribution<> posDist(100, 700);
+    std::uniform_real_distribution<> posDist(200, 500);
     std::uniform_real_distribution<> velDist(-20, 20);
 
     std::vector<Drone> drones;
@@ -148,7 +148,9 @@ int main() {
     }
 
     double dt = 0.1;
-    int steps = 100;
+    int steps = 10;
+
+    std::cout << "Starting drone swarm simulation..." << std::endl;
 
     for (int step = 0; step < steps; ++step) {
         printSwarm(drones, step);
@@ -157,8 +159,10 @@ int main() {
             drone.update(drones, dt);
         }
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
+
+    std::cout << "Simulation complete." << std::endl;
 
     return 0;
 }
