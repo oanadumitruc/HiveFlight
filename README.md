@@ -1,4 +1,3 @@
-﻿# HiveFlight
 # HiveFlight
 
 ## Drone Swarm Simulation
