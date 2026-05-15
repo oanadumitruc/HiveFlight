@@ -7,6 +7,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(Threads REQUIRED)
 
-add_executable(drone_swarm drone_swarm.cpp)
+add_executable(drone_swarm
+    main.cpp
+    Config.cpp
+    SwarmSimulation.cpp
+    PpmRenderer.cpp
+    SpatialGrid.cpp
+)
+
 
 target_link_libraries(drone_swarm Threads::Threads)
+
+
