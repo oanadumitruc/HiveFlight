@@ -1,6 +1,8 @@
 # HiveFlight
  [ Demo video](output.mp4)
 
+https://github.com/oanadumitruc/HiveFlight/blob/main/output.mp4
+
 ## Drone Swarm Simulation
 
 This is a simple simulation of a swarm drones using basic flocking algorithms (separation, alignment, cohesion) in C++.
