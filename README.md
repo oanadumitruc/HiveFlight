@@ -2,11 +2,11 @@
 
 ## Drone Swarm Simulation
 
-This is a simple simulation of a swarm of 5 drones using basic flocking algorithms (separation, alignment, cohesion) in C++.
+This is a simple simulation of a swarm drones using basic flocking algorithms (separation, alignment, cohesion) in C++.
 
 ## Features
 
-- 5 drones moving in a 2D space (800x600 units)
+- drones moving in a 2D space (800x600 units)
 - Flocking behavior: drones try to stay close but not too close, align velocities, and move towards the center of mass
 - Console output showing positions and velocities at each step
 - Wrap-around boundaries
