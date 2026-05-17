@@ -52,14 +52,6 @@ cmake ..
 mingw32-make
 ```
 
-#### Option 3: Using CMake GUI
-1. Open CMake GUI
-2. Set source path to `{your project folder}`
-3. Set build path to `{your project folder}`
-4. Click "Configure" and select your compiler (MinGW or Visual Studio)
-5. Click "Generate"
-6. Build using `mingw32-make` or open the generated `.sln` file in Visual Studio
-
 ## Running
 
 ### Linux
@@ -77,8 +69,25 @@ drone_swarm.exe
 Or simply double-click `drone_swarm.exe` in the build folder.
 
 ---
+### Example of command parameters for rendering
+```
+rm -rf frames_many && mkdir -p frames_many
 
-The simulation will run for 100 steps, printing the state of each drone every 0.5 seconds.
+./drone_swarm \
+  --steps 300 \
+  --dt 0.1 \
+  --droneCount 20 \
+  --renderPpm true \
+  --renderEvery 1 \
+  --renderFramesDir frames_many \
+  --renderImageW 800 \
+  --renderImageH 600
+```
+
+Create the video
+```
+ffmpeg -framerate 30 -i frames_many/frame_%05d.ppm -c:v libx264 -pix_fmt yuv420p swarm.mp4
+```
 
 ## Algorithm Details
 
