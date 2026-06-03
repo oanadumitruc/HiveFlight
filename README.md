@@ -19,6 +19,7 @@ This is a simple simulation of a swarm drones using basic flocking algorithms (s
 - CMake 3.10 or higher
 - C++ compiler (g++/clang++ on Linux, MinGW or MSVC on Windows)
 - Git Bash or WSL (for Linux builds on Windows)
+- Optional for the interactive 3D viewer: OpenGL, GLU, and GLUT/freeglut development packages
 
 ## Building
 ### Linux (Native or WSL)
@@ -70,6 +71,34 @@ drone_swarm.exe
 ```
 
 Or simply double-click `drone_swarm.exe` in the build folder.
+
+### Interactive OpenGL 3D Viewer
+
+If OpenGL and GLUT/freeglut are available when CMake configures the project, an
+extra executable is built:
+
+```bash
+cd {your project folder}/HiveFlight/build
+./hiveflight_gl_viewer --drones 60 --seed 7
+```
+
+Common Linux dependencies:
+
+```bash
+sudo apt install freeglut3-dev libglu1-mesa-dev
+```
+
+Viewer controls:
+
+- Mouse drag: orbit camera
+- Mouse wheel: zoom
+- Arrow keys: orbit camera
+- Space: pause/resume
+- R: reset simulation
+- V: toggle velocity vectors
+- +/-: change simulation speed
+- 0: reset camera
+- Q or Esc: quit
 
 ---
 ### Example of command parameters for rendering

@@ -1,6 +1,6 @@
 #include "SpatialGrid.hpp"
 
-#include "SwarmSimulation.hpp" // Vec2, DroneState
+#include "SwarmSimulation.hpp" // DroneState
 
 // Template implementation lives in the header by default.
 // This grid is only used for Vec2/DroneState in this project, so we provide

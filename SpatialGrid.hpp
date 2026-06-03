@@ -3,8 +3,9 @@
 #include <cstddef>
 #include <vector>
 
+#include "Vec2.hpp"
+
 // Forward declarations to avoid include cycles.
-struct Vec2;
 struct DroneState;
 
 

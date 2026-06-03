@@ -28,14 +28,24 @@ struct SimConfig {
     double separationRadius = 50.0;
     double alignmentRadius = 100.0;
     double cohesionRadius = 100.0;
+    double perceptionRadius = 100.0;
 
     double desiredSeparationSpeed = 50.0; // used as a target speed in steering
 
-    double weightSeparation = 1.5;
+    double weightSeparation = 1.8;
     double weightAlignment = 1.0;
     double weightCohesion = 1.0;
+    double weightTarget = 0.6;      // New: target seeking weight
+    double weightObstacle = 2.5;    // New: obstacle avoidance weight
 
     double maxSpeed = 50.0;
+    double maxForce = 12.5;         // New: max force (acceleration limiter)
+
+    // Battery/Health system
+    double batteryDrainRate = 0.002; // Battery loss per unit velocity per second
+
+    // Obstacle avoidance
+    double obstacleBuffer = 2.5;    // Buffer distance around obstacles
 
     // Visualization
     bool renderPpm = false;
