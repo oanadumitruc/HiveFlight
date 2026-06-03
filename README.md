@@ -1,8 +1,6 @@
 # HiveFlight
  [ Demo video](output.mp4)
 
-https://github.com/oanadumitruc/HiveFlight/blob/main/output.mp4
-
 ## Drone Swarm Simulation
 
 This is a simple simulation of a swarm drones using basic flocking algorithms (separation, alignment, cohesion) in C++.
@@ -24,51 +22,21 @@ This is a simple simulation of a swarm drones using basic flocking algorithms (s
 ## Building
 ### Linux (Native or WSL)
 
-#### Option 1: Using the build script
+#### Using the build script
 ```bash
 cd {your project folder}
 ./build_linux.sh
 ```
-
-#### Option 2: Manual commands
-```bash
-cd {your project folder}
-mkdir -p build
-cd build
-cmake ..
-make
-```
-
 ### Windows (using MinGW)
 
-#### Option 1: Using the build script
+#### Using the build script
 ```cmd
 cd {your project folder}
 build_windows.bat
 ```
-
-#### Option 2: Manual commands
-```cmd
-cd {your project folder}
-if not exist build mkdir build
-cd build
-cmake ..
-mingw32-make
-```
-
 ## Running
-
-### Linux
-```bash
 cd {your project folder}/HiveFlight/build
 ./drone_swarm
-```
-
-### Windows
-```cmd
-cd {your project folder}/HiveFlight\build
-drone_swarm.exe
-```
 
 Or simply double-click `drone_swarm.exe` in the build folder.
 
