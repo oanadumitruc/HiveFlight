@@ -1,18 +1,20 @@
 @echo off
-REM Build script for Windows
-
-
 setlocal
+
+call "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\Build\vcvars64.bat"
+
 set SCRIPT_DIR=%~dp0
-set BUILD_DIR=%SCRIPT_DIR%build
+set SCRIPT_DIR=%SCRIPT_DIR:~0,-1%
+set BUILD_DIR=%SCRIPT_DIR%\build
 
-cmake -S "%SCRIPT_DIR%" -B "%BUILD_DIR%" -DHIVEFLIGHT_BUILD_OPENGL_VIEWER=ON
-if errorlevel 1 exit /b %errorlevel%
+if not exist "%BUILD_DIR%" mkdir "%BUILD_DIR%"
 
-cmake --build "%BUILD_DIR%" --parallel
-if errorlevel 1 exit /b %errorlevel%
-echo.
-echo Build complete.
-echo Executables are in: %BUILD_DIR%
-echo If OpenGL/GLU/GLUT were found, run: %BUILD_DIR%hiveflight_gl_viewer.exe
+cd /d "%BUILD_DIR%"
+cmake -G "Ninja" ^
+  -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake ^
+  -D HIVEFLIGHT_BUILD_OPENGL_VIEWER=ON ^
+  "%SCRIPT_DIR%"
+
+cmake --build .
+
 endlocal

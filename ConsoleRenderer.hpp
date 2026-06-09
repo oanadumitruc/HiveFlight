@@ -22,7 +22,7 @@ public:
 
     void print(const std::vector<DroneState>& drones, 
                const std::vector<Obstacle>& obstacles,
-               const Vec2& target,
+               const std::vector<Vec2>& targets,
                int step,
                double time,
                const SimConfig& cfg) const {
@@ -48,10 +48,12 @@ public:
             }
         }
 
-        // Draw target
-        int tx = clamp(static_cast<int>(target.x / cfg.worldWidth * m_gridWidth), 0, m_gridWidth - 1);
-        int ty = clamp(static_cast<int>(target.y / cfg.worldHeight * m_gridHeight), 0, m_gridHeight - 1);
-        grid[ty][tx] = 'X';
+        // Draw targets
+        for (const auto& target : targets) {
+            int tx = clamp(static_cast<int>(target.x / cfg.worldWidth * m_gridWidth), 0, m_gridWidth - 1);
+            int ty = clamp(static_cast<int>(target.y / cfg.worldHeight * m_gridHeight), 0, m_gridHeight - 1);
+            grid[ty][tx] = 'X';
+        }
 
         // Draw drones
         for (const auto& d : drones) {
@@ -105,7 +107,7 @@ public:
         std::cout << " Step: " << step << "  |  Active Drones: " << alive << "/" << drones.size()
                   << "  |  Avg Health: " << std::fixed << std::setprecision(1) << avgHealth << "%"
                   << "  |  Avg Speed: " << std::setprecision(2) << avgSpeed << "\n";
-        std::cout << " Legend: >^<v=drone | *=stationary | #=obstacle | X=target\n";
+        std::cout << " Legend: >^<v=drone | *=stationary | #=obstacle | X=target(s)\n";
         std::cout << "\033[0m";
     }
 

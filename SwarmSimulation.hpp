@@ -31,15 +31,19 @@ public:
 
     const std::vector<DroneState>& drones() const { return m_drones; }
     const std::vector<Obstacle>& obstacles() const { return m_obstacles; }
-    const Vec2& target() const { return m_target; }
+    const std::vector<Vec2>& targets() const { return m_targets; }
     const SimConfig& config() const { return m_cfg; }
-    
+
     double time() const { return m_time; }
     int tick() const { return m_tick; }
 
 private:
     void applyWrap(Vec2& p) const;
     void updateTarget();
+
+    void initializeAssignments();
+    void updateAssignmentsIfNeeded();
+    std::size_t assignedTarget(std::size_t droneIndex) const;
 
     Vec2 separationForce(std::size_t i) const;
     Vec2 alignmentForce(std::size_t i) const;
@@ -52,8 +56,13 @@ private:
     SimConfig m_cfg;
     std::vector<DroneState> m_drones;
     std::vector<Obstacle> m_obstacles;
-    Vec2 m_target;
+    std::vector<Vec2> m_targets;
+
+    // For swarm splitting: each drone belongs to exactly one target group.
+    std::vector<std::size_t> m_targetAssignment;
+
     double m_time = 0.0;
     int m_tick = 0;
 };
+
 

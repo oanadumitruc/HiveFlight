@@ -1,13 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 
-if(POLICY CMP0072)
-    cmake_policy(SET CMP0072 NEW)
-endif()
+
 
 project(DroneSwarm)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Threads REQUIRED)
 option(HIVEFLIGHT_BUILD_OPENGL_VIEWER "Build the interactive OpenGL swarm viewer" ON)
@@ -21,6 +20,7 @@ add_executable(drone_swarm
     SpatialGrid.cpp
 )
 
+target_include_directories(drone_swarm PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(drone_swarm Threads::Threads)
 
 # 3D Simulation
@@ -30,6 +30,7 @@ add_executable(drone_swarm_3d
     Renderer3D.cpp
 )
 
+target_include_directories(drone_swarm_3d PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(drone_swarm_3d Threads::Threads)
 
 if(HIVEFLIGHT_BUILD_OPENGL_VIEWER)
@@ -42,6 +43,8 @@ if(HIVEFLIGHT_BUILD_OPENGL_VIEWER)
             OpenGLSwarmViewer.cpp
             SwarmSimulation3D.cpp
         )
+
+        target_include_directories(hiveflight_gl_viewer PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
         if(TARGET OpenGL::GL)
             target_link_libraries(hiveflight_gl_viewer PRIVATE OpenGL::GL)

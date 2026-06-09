@@ -1,13 +1,16 @@
-#include "SwarmSimulation.hpp"
+ #include "SwarmSimulation.hpp"
 
 #include <algorithm>
 #include <chrono>
 #include <cmath>
 #include <random>
+#include <limits>
 
 static double distance(const Vec2& a, const Vec2& b) {
     return (a - b).magnitude();
 }
+
+
 
 double Vec2::magnitude() const {
     return std::sqrt(x * x + y * y);
@@ -62,20 +65,104 @@ void SwarmSimulation::reset() {
     m_obstacles.push_back({Vec2(m_cfg.worldWidth * 0.7, m_cfg.worldHeight * 0.3), 25.0});
     m_obstacles.push_back({Vec2(m_cfg.worldWidth * 0.5, m_cfg.worldHeight * 0.7), 35.0});
 
-    // Initialize target
-    m_target = Vec2(m_cfg.worldWidth / 2.0, m_cfg.worldHeight / 2.0);
+    // Initialize multiple targets
+    m_targets.clear();
+    std::size_t numTargets = std::max<std::size_t>(1, m_cfg.targetCount);
+    m_targets.reserve(numTargets);
+    double centerX = m_cfg.worldWidth / 2.0;
+    double centerY = m_cfg.worldHeight / 2.0;
+    double radiusX = m_cfg.worldWidth * 0.25;
+    double radiusY = m_cfg.worldHeight * 0.25;
+    const double PI = 3.14159265358979323846;
+
+    for (std::size_t t = 0; t < numTargets; ++t) {
+        double phase = 2.0 * PI * static_cast<double>(t) / static_cast<double>(numTargets);
+        m_targets.push_back({
+            centerX + radiusX * std::cos(phase),
+            centerY + radiusY * std::sin(phase)
+        });
+    }
+
+    initializeAssignments();
+
     m_time = 0.0;
     m_tick = 0;
 }
 
+void SwarmSimulation::initializeAssignments() {
+    const std::size_t numTargets = std::max<std::size_t>(1, m_targets.size());
+    m_targetAssignment.assign(m_drones.size(), 0);
+
+    // Assign each drone to the closest target at reset.
+    for (std::size_t i = 0; i < m_drones.size(); ++i) {
+        double bestDist = (m_targets[0] - m_drones[i].position).magnitude();
+        std::size_t bestT = 0;
+
+        for (std::size_t t = 1; t < numTargets; ++t) {
+            double d = (m_targets[t] - m_drones[i].position).magnitude();
+            if (d < bestDist) {
+                bestDist = d;
+                bestT = t;
+            }
+        }
+
+        m_targetAssignment[i] = bestT;
+    }
+}
+
+void SwarmSimulation::updateAssignmentsIfNeeded() {
+    if (m_cfg.reassignmentInterval <= 0.0) return;
+    if (m_targets.empty() || m_drones.empty()) return;
+
+    // Reassign in discrete time buckets to keep stable groups between reassignments.
+    const double interval = m_cfg.reassignmentInterval;
+    const int curBucket = static_cast<int>(m_time / interval);
+    static int lastBucket = std::numeric_limits<int>::min();
+
+    if (curBucket == lastBucket) return;
+    lastBucket = curBucket;
+
+    const std::size_t numTargets = m_targets.size();
+
+    for (std::size_t i = 0; i < m_drones.size(); ++i) {
+
+        if (m_drones[i].health <= 0.0) continue;
+
+        double bestDist = (m_targets[0] - m_drones[i].position).magnitude();
+        std::size_t bestT = 0;
+        for (std::size_t t = 1; t < numTargets; ++t) {
+            double d = (m_targets[t] - m_drones[i].position).magnitude();
+            if (d < bestDist) {
+                bestDist = d;
+                bestT = t;
+            }
+        }
+        m_targetAssignment[i] = bestT;
+    }
+}
+
+std::size_t SwarmSimulation::assignedTarget(std::size_t droneIndex) const {
+    if (m_targetAssignment.size() != m_drones.size()) return 0;
+    if (m_targets.empty()) return 0;
+    const std::size_t t = m_targetAssignment[droneIndex];
+    return std::min(t, m_targets.size() - 1);
+}
+
+
 void SwarmSimulation::updateTarget() {
-    // Move target in circular pattern
+    // Move multiple targets in interleaved orbiting patterns
     const double PI = 3.14159265358979323846;
+    double centerX = m_cfg.worldWidth / 2.0;
+    double centerY = m_cfg.worldHeight / 2.0;
     double radiusX = m_cfg.worldWidth * 0.25;
     double radiusY = m_cfg.worldHeight * 0.25;
-    
-    m_target.x = m_cfg.worldWidth / 2.0 + radiusX * std::cos(m_time * 0.3);
-    m_target.y = m_cfg.worldHeight / 2.0 + radiusY * std::sin(m_time * 0.2);
+
+    for (std::size_t t = 0; t < m_targets.size(); ++t) {
+        double speed = 0.25 + 0.05 * static_cast<double>(t);
+        double phase = m_time * speed + static_cast<double>(t) * (PI * 0.75);
+        m_targets[t].x = centerX + radiusX * std::cos(phase);
+        m_targets[t].y = centerY + radiusY * std::sin(phase + static_cast<double>(t) * 0.6);
+    }
 }
 
 void SwarmSimulation::applyWrap(Vec2& p) const {
@@ -91,6 +178,9 @@ void SwarmSimulation::step() {
     // Update target position
     updateTarget();
     m_time += m_cfg.dt;
+
+    // Reassign drone->target groups periodically so swarm split can follow moving targets.
+    updateAssignmentsIfNeeded();
 
     // Build grid for candidate neighbor search (spatial partitioning)
     m_grid.init(m_cfg.worldWidth, m_cfg.worldHeight, m_cfg.cohesionRadius);
@@ -124,11 +214,13 @@ void SwarmSimulation::step() {
         Vec2 seekForce = seekTarget(i);
         Vec2 avoid = avoidObstacles(i);
 
+
         // Apply weighted forces as acceleration
-        acc += separation * m_cfg.weightSeparation;
+acc += separation * m_cfg.weightSeparation;
         acc += alignment * m_cfg.weightAlignment;
         acc += cohesion * m_cfg.weightCohesion;
-        acc += seekForce * m_cfg.weightTarget;
+        // Increase target authority so each assigned swarm converges to its target.
+        acc += seekForce * (m_cfg.weightTarget * 2.0);
         acc += avoid * m_cfg.weightObstacle;
 
         acc = acc.limit(m_cfg.maxForce);
@@ -169,9 +261,14 @@ Vec2 SwarmSimulation::separationForce(std::size_t i) const {
 
     const double r = m_cfg.separationRadius;
 
+    const std::size_t myT = assignedTarget(i);
     m_grid.forEachCandidate(pos, m_cfg.wrapAround, [&](std::size_t j) {
         if (j == i) return;
+        // Only flock with drones assigned to the same target.
+        if (assignedTarget(j) != myT) return;
+
         Vec2 diff = pos - m_drones[j].position;
+
         double d = diff.magnitude();
         if (d > 0.0 && d < r) {
             // steer away: direction away weighted by distance
@@ -179,6 +276,7 @@ Vec2 SwarmSimulation::separationForce(std::size_t i) const {
             count++;
         }
     });
+
 
     if (count == 0) return Vec2(0.0, 0.0);
 
@@ -196,14 +294,20 @@ Vec2 SwarmSimulation::alignmentForce(std::size_t i) const {
 
     const double r = m_cfg.alignmentRadius;
 
+    const std::size_t myT = assignedTarget(i);
+
     m_grid.forEachCandidate(pos, m_cfg.wrapAround, [&](std::size_t j) {
         if (j == i) return;
+        // Only flock with drones assigned to the same target.
+        if (assignedTarget(j) != myT) return;
+
         double d = (pos - m_drones[j].position).magnitude();
         if (d > 0.0 && d < r) {
             sum += m_drones[j].velocity;
             count++;
         }
     });
+
 
     if (count == 0) return Vec2(0.0, 0.0);
 
@@ -221,14 +325,20 @@ Vec2 SwarmSimulation::cohesionForce(std::size_t i) const {
 
     const double r = m_cfg.cohesionRadius;
 
+    const std::size_t myT = assignedTarget(i);
+
     m_grid.forEachCandidate(pos, m_cfg.wrapAround, [&](std::size_t j) {
         if (j == i) return;
+        // Only flock with drones assigned to the same target.
+        if (assignedTarget(j) != myT) return;
+
         double d = (pos - m_drones[j].position).magnitude();
         if (d > 0.0 && d < r) {
             sum += m_drones[j].position;
             count++;
         }
     });
+
 
     if (count == 0) return Vec2(0.0, 0.0);
 
@@ -237,12 +347,20 @@ Vec2 SwarmSimulation::cohesionForce(std::size_t i) const {
 }
 
 Vec2 SwarmSimulation::seekTarget(std::size_t i) const {
+    if (m_targets.empty()) return Vec2(0.0, 0.0);
+
+    const std::size_t tIdx = assignedTarget(i);
     const Vec2 pos = m_drones[i].position;
     const Vec2 vel = m_drones[i].velocity;
-    
-    Vec2 desired = (m_target - pos).normalized() * m_cfg.maxSpeed;
+
+    Vec2 toTarget = m_targets[tIdx] - pos;
+    double dist = toTarget.magnitude();
+    if (dist < 1e-9) return Vec2(0.0, 0.0);
+
+    Vec2 desired = toTarget.normalized() * m_cfg.maxSpeed;
     return (desired - vel).limit(m_cfg.maxForce);
 }
+
 
 Vec2 SwarmSimulation::avoidObstacles(std::size_t i) const {
     const Vec2 pos = m_drones[i].position;

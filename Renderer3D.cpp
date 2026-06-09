@@ -15,7 +15,7 @@ Renderer3D::Point2D Renderer3D::project3D(const Vec3& p, const SwarmConfig3D& cf
 
 void Renderer3D::printConsole(const std::vector<Drone3D>& drones,
                               const std::vector<Obstacle3D>& obstacles,
-                              const Vec3& target,
+                              const std::vector<Vec3>& targets,
                               const SwarmConfig3D& cfg,
                               int step) const {
     // Create 2D projection for console display
@@ -44,12 +44,14 @@ void Renderer3D::printConsole(const std::vector<Drone3D>& drones,
         }
     }
 
-    // Project and render target
-    Point2D targetProj = project3D(target, cfg);
-    int tx = static_cast<int>(width / 2.0 + targetProj.x / 20.0);
-    int ty = static_cast<int>(height / 2.0 + targetProj.y / 20.0);
-    if (tx >= 0 && tx < width && ty >= 0 && ty < height) {
-        grid[ty][tx] = 'X';
+    // Project and render targets
+    for (const auto& target : targets) {
+        Point2D targetProj = project3D(target, cfg);
+        int tx = static_cast<int>(width / 2.0 + targetProj.x / 20.0);
+        int ty = static_cast<int>(height / 2.0 + targetProj.y / 20.0);
+        if (tx >= 0 && tx < width && ty >= 0 && ty < height) {
+            grid[ty][tx] = 'X';
+        }
     }
 
     // Project and render drones
@@ -129,13 +131,13 @@ void Renderer3D::printConsole(const std::vector<Drone3D>& drones,
 
 void Renderer3D::exportOBJ(const std::vector<Drone3D>& drones,
                            const std::vector<Obstacle3D>& obstacles,
-                           const Vec3& target,
+                           const std::vector<Vec3>& targets,
                            const std::string& filename) const {
     std::ofstream obj(filename);
     if (!obj.is_open()) return;
 
     obj << "# 3D Drone Swarm Simulation\n";
-    obj << "# Drones, Obstacles, Target\n\n";
+    obj << "# Drones, Obstacles, Targets\n\n";
 
     int vertexCount = 1;
 
@@ -162,15 +164,18 @@ void Renderer3D::exportOBJ(const std::vector<Drone3D>& drones,
         }
     }
 
-    // Write target as a star/marker
-    obj << "\n# Target\n";
-    obj << "v " << target.x << " " << target.y << " " << target.z << "\n";
-    obj << "v " << (target.x + 2.0) << " " << target.y << " " << target.z << "\n";
-    obj << "v " << (target.x - 2.0) << " " << target.y << " " << target.z << "\n";
-    obj << "v " << target.x << " " << (target.y + 2.0) << " " << target.z << "\n";
-    obj << "v " << target.x << " " << (target.y - 2.0) << " " << target.z << "\n";
-    obj << "v " << target.x << " " << target.y << " " << (target.z + 2.0) << "\n";
-    obj << "v " << target.x << " " << target.y << " " << (target.z - 2.0) << "\n";
+    // Write targets as star markers
+    obj << "\n# Targets\n";
+    for (const auto& target : targets) {
+        obj << "# Target\n";
+        obj << "v " << target.x << " " << target.y << " " << target.z << "\n";
+        obj << "v " << (target.x + 2.0) << " " << target.y << " " << target.z << "\n";
+        obj << "v " << (target.x - 2.0) << " " << target.y << " " << target.z << "\n";
+        obj << "v " << target.x << " " << (target.y + 2.0) << " " << target.z << "\n";
+        obj << "v " << target.x << " " << (target.y - 2.0) << " " << target.z << "\n";
+        obj << "v " << target.x << " " << target.y << " " << (target.z + 2.0) << "\n";
+        obj << "v " << target.x << " " << target.y << " " << (target.z - 2.0) << "\n";
+    }
 
     // Write drones as small spheres
     obj << "\n# Drones\n";

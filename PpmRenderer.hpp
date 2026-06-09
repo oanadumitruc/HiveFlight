@@ -13,7 +13,7 @@ public:
     // framesDir is where frame_00000.ppm etc are written.
     PpmRenderer(int imageW = 800, int imageH = 600, std::string framesDir = "frames");
 
-    void render(const std::vector<DroneState>& drones, int step, const SimConfig& cfg) const;
+    void render(const std::vector<DroneState>& drones, const std::vector<Vec2>& targets, int step, const SimConfig& cfg) const;
 
 private:
     int m_imageW;

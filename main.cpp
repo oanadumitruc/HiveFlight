@@ -27,12 +27,12 @@ int main(int argc, char** argv) {
 
     for (int step = 0; step < cfg.steps; ++step) {
         if (step % 2 == 0) {
-            console.print(sim.drones(), sim.obstacles(), sim.target(), 
+            console.print(sim.drones(), sim.obstacles(), sim.targets(), 
                          step, sim.time(), cfg);
         }
         
         if (cfg.renderPpm && (step % cfg.renderEvery == 0)) {
-            ppm.render(sim.drones(), step, sim.config());
+            ppm.render(sim.drones(), sim.targets(), step, sim.config());
         }
         
         sim.step();

@@ -1,5 +1,6 @@
 #include "PpmRenderer.hpp"
 
+#include <cmath>
 #include <fstream>
 #include <iomanip>
 #include <sstream>
@@ -33,7 +34,7 @@ bool PpmRenderer::writeTextFile(const std::string& path, const std::string& cont
     return true;
 }
 
-void PpmRenderer::render(const std::vector<DroneState>& drones, int step, const SimConfig& cfg) const {
+void PpmRenderer::render(const std::vector<DroneState>& drones, const std::vector<Vec2>& targets, int step, const SimConfig& cfg) const {
     // PPM P3 (ASCII) for maximum portability.
     // For speed/size you could switch to P6 (binary).
 
@@ -70,6 +71,21 @@ void PpmRenderer::render(const std::vector<DroneState>& drones, int step, const 
             for (int ox = -radius; ox <= radius; ++ox) {
                 if (ox * ox + oy * oy <= radius * radius) {
                     setPixel(px + ox, py + oy, r, g, b);
+                }
+            }
+        }
+    }
+
+    // Draw targets as red crosses for visibility.
+    const int targetRadius = 4;
+    for (const auto& target : targets) {
+        int tx = static_cast<int>((target.x / cfg.worldWidth) * (W - 1));
+        int ty = static_cast<int>((1.0 - target.y / cfg.worldHeight) * (H - 1));
+
+        for (int oy = -targetRadius; oy <= targetRadius; ++oy) {
+            for (int ox = -targetRadius; ox <= targetRadius; ++ox) {
+                if (std::abs(ox) == targetRadius || std::abs(oy) == targetRadius) {
+                    setPixel(tx + ox, ty + oy, 220, 40, 40);
                 }
             }
         }

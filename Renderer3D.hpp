@@ -15,14 +15,14 @@ public:
     // Console-based 3D ASCII projection
     void printConsole(const std::vector<Drone3D>& drones,
                       const std::vector<Obstacle3D>& obstacles,
-                      const Vec3& target,
+                      const std::vector<Vec3>& targets,
                       const SwarmConfig3D& cfg,
                       int step) const;
 
     // Export to OBJ format for external visualization
     void exportOBJ(const std::vector<Drone3D>& drones,
                    const std::vector<Obstacle3D>& obstacles,
-                   const Vec3& target,
+                   const std::vector<Vec3>& targets,
                    const std::string& filename) const;
 
     // Export to CSV for data analysis

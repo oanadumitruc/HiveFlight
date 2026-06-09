@@ -79,6 +79,7 @@ static bool loadKeyValuePairs(const std::string& path, SimConfig& cfg) {
         }
 
         if (key == "droneCount" && parseSizeT(cfg.droneCount)) continue;
+        if (key == "targetCount" && parseSizeT(cfg.targetCount)) continue;
         if (key == "seed" && parseUInt(cfg.seed)) continue;
 
         if (key == "posMin" && parseDouble(cfg.posMin)) continue;
@@ -99,8 +100,13 @@ static bool loadKeyValuePairs(const std::string& path, SimConfig& cfg) {
         if (key == "weightSeparation" && parseDouble(cfg.weightSeparation)) continue;
         if (key == "weightAlignment" && parseDouble(cfg.weightAlignment)) continue;
         if (key == "weightCohesion" && parseDouble(cfg.weightCohesion)) continue;
+        if (key == "weightTarget" && parseDouble(cfg.weightTarget)) continue;
+        if (key == "weightObstacle" && parseDouble(cfg.weightObstacle)) continue;
 
         if (key == "maxSpeed" && parseDouble(cfg.maxSpeed)) continue;
+        if (key == "maxForce" && parseDouble(cfg.maxForce)) continue;
+        if (key == "batteryDrainRate" && parseDouble(cfg.batteryDrainRate)) continue;
+        if (key == "obstacleBuffer" && parseDouble(cfg.obstacleBuffer)) continue;
 
         // Visualization
         if (key == "renderPpm" && parseBool(value, b)) {
@@ -222,7 +228,12 @@ SimConfig loadConfigFromArgs(int argc, char** argv) {
         if (parseOverrideDouble("--weightSeparation", cfg.weightSeparation)) continue;
         if (parseOverrideDouble("--weightAlignment", cfg.weightAlignment)) continue;
         if (parseOverrideDouble("--weightCohesion", cfg.weightCohesion)) continue;
+        if (parseOverrideDouble("--weightTarget", cfg.weightTarget)) continue;
+        if (parseOverrideDouble("--weightObstacle", cfg.weightObstacle)) continue;
         if (parseOverrideDouble("--maxSpeed", cfg.maxSpeed)) continue;
+        if (parseOverrideDouble("--maxForce", cfg.maxForce)) continue;
+        if (parseOverrideDouble("--batteryDrainRate", cfg.batteryDrainRate)) continue;
+        if (parseOverrideDouble("--obstacleBuffer", cfg.obstacleBuffer)) continue;
 
         // Ints
         if (parseOverrideInt("--steps", cfg.steps)) continue;
@@ -235,6 +246,7 @@ SimConfig loadConfigFromArgs(int argc, char** argv) {
         // UInt/size
         if (parseOverrideUInt("--seed", cfg.seed)) continue;
         if (parseOverrideSizeT("--droneCount", cfg.droneCount)) continue;
+        if (parseOverrideSizeT("--targetCount", cfg.targetCount)) continue;
 
         // Bool
         if (parseOverrideBool("--wrapAround", cfg.wrapAround)) continue;

@@ -1,7 +1,7 @@
 #include <chrono>
 #include <thread>
 #include <iostream>
-#include <cstring>
+#include <cstdlib>
 
 #include "SwarmSimulation3D.hpp"
 #include "Renderer3D.hpp"
@@ -22,6 +22,8 @@ int main(int argc, char** argv) {
             // steps can be controlled via fps and duration
         } else if (arg == "--seed" && i + 1 < argc) {
             cfg.seed = std::atoi(argv[++i]);
+        } else if (arg == "--targets" && i + 1 < argc) {
+            cfg.targetCount = static_cast<std::size_t>(std::atoi(argv[++i]));
         } else if (arg == "--export" && i + 1 < argc) {
             exportFormat = argv[++i];
             if (i + 1 < argc) exportFile = argv[++i];
@@ -30,6 +32,7 @@ int main(int argc, char** argv) {
             std::cout << "Usage: drone_swarm_3d [options]\n";
             std::cout << "Options:\n";
             std::cout << "  --drones N          Number of drones (default: 30)\n";
+            std::cout << "  --targets N         Number of moving targets (default: 3)\n";
             std::cout << "  --seed S            Random seed (default: 42)\n";
             std::cout << "  --export fmt file   Export to format (obj/csv)\n";
             std::cout << "  --help              Show this help\n";
@@ -61,7 +64,7 @@ int main(int argc, char** argv) {
 
     for (int frame = 0; frame < TOTAL_FRAMES; ++frame) {
         if (frame % RENDER_EVERY == 0) {
-            renderer.printConsole(sim.drones(), sim.obstacles(), sim.target(), cfg, frame);
+            renderer.printConsole(sim.drones(), sim.obstacles(), sim.targets(), cfg, frame);
         }
 
         sim.step();
@@ -82,7 +85,7 @@ int main(int argc, char** argv) {
     // Export if requested
     if (!exportFormat.empty() && !exportFile.empty()) {
         if (exportFormat == "obj") {
-            renderer.exportOBJ(sim.drones(), sim.obstacles(), sim.target(), exportFile);
+            renderer.exportOBJ(sim.drones(), sim.obstacles(), sim.targets(), exportFile);
             std::cout << "\n✓ Exported to OBJ: " << exportFile << "\n";
         } else if (exportFormat == "csv") {
             renderer.exportCSV(sim.drones(), exportFile);

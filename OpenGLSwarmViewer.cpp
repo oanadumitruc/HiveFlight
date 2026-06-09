@@ -5,6 +5,14 @@
 #include <cstdlib>
 #include <cmath>
 
+using namespace std;
+
+#if defined(_WIN32) || defined(_WIN64)
+#define NOMINMAX
+#define _HAS_STD_BYTE 0
+//#include <windows.h>
+#endif
+
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
@@ -16,6 +24,15 @@ OpenGLSwarmViewer* g_viewer = nullptr;
 
 constexpr double kPi = 3.14159265358979323846;
 constexpr double kRadToDeg = 180.0 / kPi;
+
+static const float kTargetColors[6][3] = {
+    {0.96f, 0.57f, 0.21f},  // amber
+    {0.16f, 0.77f, 0.68f},  // teal
+    {0.60f, 0.40f, 0.92f},  // violet
+    {0.95f, 0.24f, 0.36f},  // coral
+    {0.30f, 0.72f, 0.94f},  // sky
+    {0.88f, 0.88f, 0.26f}   // lemon
+};
 
 double toRadians(double degrees) {
     return degrees * kPi / 180.0;
@@ -74,15 +91,25 @@ int OpenGLSwarmViewer::run(int argc, char** argv) {
 
 void OpenGLSwarmViewer::display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // Basic fixed-function sanity: ensure we're drawing with an active model-view/projection.
+    // Some GLUT/driver combinations can leave matrices in an unexpected state between frames.
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glMatrixMode(GL_MODELVIEW);
+
     setCamera();
     drawScene();
     drawOverlay();
     glutSwapBuffers();
 }
 
+
 void OpenGLSwarmViewer::reshape(int width, int height) {
-    m_width = std::max(1, width);
-    m_height = std::max(1, height);
+    m_width = max(1, width);
+    m_height = max(1, height);
     glViewport(0, 0, m_width, m_height);
 }
 
@@ -106,11 +133,11 @@ void OpenGLSwarmViewer::keyboard(unsigned char key, int, int) {
         break;
     case '+':
     case '=':
-        m_stepsPerFrame = std::min(16, m_stepsPerFrame + 1);
+        m_stepsPerFrame = min(16, m_stepsPerFrame + 1);
         break;
     case '-':
     case '_':
-        m_stepsPerFrame = std::max(1, m_stepsPerFrame - 1);
+        m_stepsPerFrame = max(1, m_stepsPerFrame - 1);
         break;
     case '0':
         m_yaw = 42.0;
@@ -132,10 +159,10 @@ void OpenGLSwarmViewer::special(int key, int, int) {
         m_yaw += 4.0;
         break;
     case GLUT_KEY_UP:
-        m_pitch = std::min(85.0, m_pitch + 3.0);
+        m_pitch = min(85.0, m_pitch + 3.0);
         break;
     case GLUT_KEY_DOWN:
-        m_pitch = std::max(-20.0, m_pitch - 3.0);
+        m_pitch = max(-20.0, m_pitch - 3.0);
         break;
     default:
         break;
@@ -149,9 +176,9 @@ void OpenGLSwarmViewer::mouse(int button, int state, int x, int y) {
         m_lastMouseX = x;
         m_lastMouseY = y;
     } else if (button == 3 && state == GLUT_DOWN) {
-        m_distance = std::max(80.0, m_distance - 15.0);
+        m_distance = max(80.0, m_distance - 15.0);
     } else if (button == 4 && state == GLUT_DOWN) {
-        m_distance = std::min(700.0, m_distance + 15.0);
+        m_distance = min(700.0, m_distance + 15.0);
     }
     glutPostRedisplay();
 }
@@ -174,9 +201,27 @@ void OpenGLSwarmViewer::timer(int) {
             m_sim.step();
         }
     }
+
+    // Force a redisplay and also detect common “rendering nothing” cases.
+    // If all drones lose health immediately, nothing will be drawn.
+    static int s_printEvery = 60;
+    if ((m_sim.tick() % s_printEvery) == 0) {
+        const auto& drones = m_sim.drones();
+        std::size_t alive = 0;
+        for (const auto& d : drones) if (d.health > 0.0) ++alive;
+        std::fprintf(stderr,
+            "[HiveFlight OpenGL] tick=%d time=%.2fs drones=%zu alive=%zu targets=%zu\n",
+            m_sim.tick(), m_sim.time(), drones.size(), alive, m_sim.targets().size());
+        std::fflush(stderr);
+
+        // After a first few prints, reduce spam.
+        if (s_printEvery > 240) s_printEvery = 240;
+    }
+
     glutPostRedisplay();
     glutTimerFunc(16, timerCallback, 0);
 }
+
 
 void OpenGLSwarmViewer::drawScene() {
     drawGrid();
@@ -189,9 +234,10 @@ void OpenGLSwarmViewer::drawScene() {
 void OpenGLSwarmViewer::setCamera() const {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(50.0, static_cast<double>(m_width) / static_cast<double>(m_height), 1.0, 1600.0);
+    gluPerspective(60.0, static_cast<double>(m_width) / static_cast<double>(m_height), 1.0, 1600.0);
 
     glMatrixMode(GL_MODELVIEW);
+
     glLoadIdentity();
 
     const Vec3 center(m_cfg.worldWidth * 0.5, m_cfg.worldHeight * 0.5, m_cfg.worldDepth * 0.5);
@@ -282,42 +328,58 @@ void OpenGLSwarmViewer::drawObstacles() const {
 }
 
 void OpenGLSwarmViewer::drawTarget() const {
-    const Vec3& target = m_sim.target();
-    drawSphere(target, 3.4, 0.95f, 0.82f, 0.20f);
+    const auto& targets = m_sim.targets();
+    if (targets.empty()) {
+        return;
+    }
+    for (std::size_t idx = 0; idx < targets.size(); ++idx) {
+        const auto& target = targets[idx];
+        const auto& color = kTargetColors[idx % 6];
+        drawSphere(target, 3.4, color[0], color[1], color[2]);
+        drawTargetLabel(target, static_cast<int>(idx + 1));
+    }
 
     glDisable(GL_LIGHTING);
     glLineWidth(2.2f);
     glColor3f(0.95f, 0.82f, 0.20f);
     glBegin(GL_LINES);
-    glVertex3d(target.x - 7.0, target.y, target.z);
-    glVertex3d(target.x + 7.0, target.y, target.z);
-    glVertex3d(target.x, target.y - 7.0, target.z);
-    glVertex3d(target.x, target.y + 7.0, target.z);
-    glVertex3d(target.x, target.y, target.z - 7.0);
-    glVertex3d(target.x, target.y, target.z + 7.0);
+    for (const auto& target : targets) {
+        glVertex3d(target.x - 7.0, target.y, target.z);
+        glVertex3d(target.x + 7.0, target.y, target.z);
+        glVertex3d(target.x, target.y - 7.0, target.z);
+        glVertex3d(target.x, target.y + 7.0, target.z);
+        glVertex3d(target.x, target.y, target.z - 7.0);
+        glVertex3d(target.x, target.y, target.z + 7.0);
+    }
     glEnd();
     glLineWidth(1.0f);
     glEnable(GL_LIGHTING);
 }
 
 void OpenGLSwarmViewer::drawDrones() const {
-    for (const auto& drone : m_sim.drones()) {
+    for (std::size_t i = 0; i < m_sim.drones().size(); ++i) {
+        const auto& drone = m_sim.drones()[i];
         if (drone.health <= 0.0) continue;
+
+        const std::size_t tIdx = m_sim.assignedTarget(i);
+        const auto& base = kTargetColors[tIdx % 6];
 
         const double speed = drone.velocity.magnitude();
         const float heat = static_cast<float>(std::clamp(speed / m_cfg.maxSpeed, 0.0, 1.0));
-        const float r = 0.10f + 0.80f * heat;
-        const float g = 0.78f - 0.32f * heat;
-        const float b = 0.95f - 0.60f * heat;
+
+        const float r = std::clamp(base[0] + 0.25f * heat, 0.0f, 1.0f);
+        const float g = std::clamp(base[1] + 0.25f * heat, 0.0f, 1.0f);
+        const float b = std::clamp(base[2] + 0.25f * heat, 0.0f, 1.0f);
 
         drawDroneModel(drone, r, g, b);
 
         if (m_showVelocity && speed > 1e-6) {
             const Vec3 tip = drone.position + drone.velocity.normalized() * 13.0;
-            drawLine(drone.position, tip, 0.65f, 0.90f, 1.0f);
+            drawLine(drone.position, tip, r, g, b);
         }
     }
 }
+
 
 void OpenGLSwarmViewer::drawOverlay() const {
     glMatrixMode(GL_PROJECTION);
@@ -335,8 +397,8 @@ void OpenGLSwarmViewer::drawOverlay() const {
 
     char line[256];
     std::snprintf(line, sizeof(line),
-                  "HiveFlight OpenGL | tick %d | time %.2fs | drones %zu | speed x%d%s",
-                  m_sim.tick(), m_sim.time(), m_sim.drones().size(), m_stepsPerFrame,
+                  "HiveFlight OpenGL | tick %d | time %.2fs | drones %zu | targets %zu | speed x%d%s",
+                  m_sim.tick(), m_sim.time(), m_sim.drones().size(), m_sim.targets().size(), m_stepsPerFrame,
                   m_paused ? " | paused" : "");
     drawText(16.0f, static_cast<float>(m_height - 26), line);
     drawText(16.0f, 20.0f,
@@ -378,7 +440,7 @@ void OpenGLSwarmViewer::drawDroneModel(const Drone3D& drone, float r, float g, f
     glutSolidCube(2.0);
     glPopMatrix();
 
-    setMaterial(std::min(1.0f, r + 0.18f), std::min(1.0f, g + 0.18f), std::min(1.0f, b + 0.18f));
+    setMaterial(min(1.0f, r + 0.18f), min(1.0f, g + 0.18f), min(1.0f, b + 0.18f));
     glPushMatrix();
     glTranslated(0.0, 0.0, 2.45);
     glutSolidCone(0.85, 1.35, 18, 8);
@@ -455,6 +517,18 @@ void OpenGLSwarmViewer::drawLine(const Vec3& a, const Vec3& b, float r, float g,
     glVertex3d(b.x, b.y, b.z);
     glEnd();
     glLineWidth(1.0f);
+    glEnable(GL_LIGHTING);
+}
+
+void OpenGLSwarmViewer::drawTargetLabel(const Vec3& position, int index) const {
+    char label[16];
+    std::snprintf(label, sizeof(label), "T%d", index);
+    glDisable(GL_LIGHTING);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glRasterPos3d(position.x + 4.0, position.y + 4.0, position.z);
+    for (const char* p = label; *p != '\0'; ++p) {
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *p);
+    }
     glEnable(GL_LIGHTING);
 }
 

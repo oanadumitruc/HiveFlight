@@ -22,6 +22,7 @@ private:
     void drawGrid() const;
     void drawObstacles() const;
     void drawTarget() const;
+    void drawTargetLabel(const Vec3& position, int index) const;
     void drawDrones() const;
     void drawOverlay() const;
 

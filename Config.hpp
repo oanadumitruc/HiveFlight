@@ -11,7 +11,14 @@ struct SimConfig {
 
     // Swarm
     std::size_t droneCount = 5;
+    std::size_t targetCount = 3;
     unsigned int seed = 0; // 0 => random_device
+
+    // Swarm splitting (drone -> target assignment)
+    // Drones are assigned to a specific target and flock only with drones assigned to the same target.
+    // Periodically reassigned so the split can follow moving targets.
+    double reassignmentInterval = 5.0; // seconds (0 => never reassign)
+
 
     // Initialization ranges
     double posMin = 200.0;

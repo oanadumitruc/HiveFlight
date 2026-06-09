@@ -10,6 +10,7 @@ void printHelp() {
               << "Usage: hiveflight_gl_viewer [options]\n"
               << "Options:\n"
               << "  --drones N       Number of drones (default: 30)\n"
+              << "  --targets N      Number of moving targets (default: 3)\n"
               << "  --seed S         Random seed, use 0 for random_device (default: 42)\n"
               << "  --world W H D    World size (default: 200 200 150)\n"
               << "  --vectors        Start with velocity vectors enabled\n"
@@ -26,6 +27,8 @@ int main(int argc, char** argv) {
 
         if (arg == "--drones" && i + 1 < argc) {
             cfg.droneCount = static_cast<std::size_t>(std::strtoull(argv[++i], nullptr, 10));
+        } else if (arg == "--targets" && i + 1 < argc) {
+            cfg.targetCount = static_cast<std::size_t>(std::strtoull(argv[++i], nullptr, 10));
         } else if (arg == "--seed" && i + 1 < argc) {
             cfg.seed = static_cast<unsigned int>(std::strtoul(argv[++i], nullptr, 10));
         } else if (arg == "--world" && i + 3 < argc) {
