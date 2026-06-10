@@ -28,7 +28,10 @@ add_executable(drone_swarm_3d
     main_3d.cpp
     SwarmSimulation3D.cpp
     Renderer3D.cpp
+    SpatialGrid3D.cpp
+    DroneCommunication3D.cpp
 )
+
 
 target_include_directories(drone_swarm_3d PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(drone_swarm_3d Threads::Threads)
@@ -42,6 +45,8 @@ if(HIVEFLIGHT_BUILD_OPENGL_VIEWER)
             main_opengl.cpp
             OpenGLSwarmViewer.cpp
             SwarmSimulation3D.cpp
+            SpatialGrid3D.cpp
+            DroneCommunication3D.cpp
         )
 
         target_include_directories(hiveflight_gl_viewer PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

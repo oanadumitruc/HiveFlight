@@ -144,6 +144,10 @@ void OpenGLSwarmViewer::keyboard(unsigned char key, int, int) {
         m_pitch = 26.0;
         m_distance = 330.0;
         break;
+    case 'c':
+    case 'C':
+        m_sim.toggleComm();
+        break;
     default:
         break;
     }
@@ -401,8 +405,21 @@ void OpenGLSwarmViewer::drawOverlay() const {
                   m_sim.tick(), m_sim.time(), m_sim.drones().size(), m_sim.targets().size(), m_stepsPerFrame,
                   m_paused ? " | paused" : "");
     drawText(16.0f, static_cast<float>(m_height - 26), line);
+
+    // Communication stats line
+    char commLine[256];
+    std::snprintf(commLine, sizeof(commLine),
+                  "Comm: %s | msgs/frame %zu | C to toggle",
+                  m_sim.commEnabled() ? "ON" : "OFF",
+                  m_sim.commMessagesLastFrame());
+    glColor3f(m_sim.commEnabled() ? 0.40f : 0.55f,
+              m_sim.commEnabled() ? 0.92f : 0.55f,
+              m_sim.commEnabled() ? 0.60f : 0.55f);
+    drawText(16.0f, static_cast<float>(m_height - 46), commLine);
+    glColor3f(0.88f, 0.92f, 0.95f);
+
     drawText(16.0f, 20.0f,
-             "Mouse drag/orbit, wheel/zoom, arrows/camera, Space/pause, R/reset, V/vectors, +/- speed, 0/view, Q/quit");
+             "Mouse drag/orbit, wheel/zoom, arrows/camera, Space/pause, R/reset, V/vectors, C/comm, +/- speed, 0/view, Q/quit");
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_LIGHTING);
