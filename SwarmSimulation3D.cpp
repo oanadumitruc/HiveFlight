@@ -38,6 +38,10 @@ SwarmSimulation3D::SwarmSimulation3D(const SwarmConfig3D& cfg)
     reset();
 }
 
+void SwarmSimulation3D::queueCommunicationMessage(const DroneMessage3D& message) {
+    m_communicator.queueExternalMessage(message);
+}
+
 // ---------------------------------------------------------------------------
 // reset
 // ---------------------------------------------------------------------------
@@ -85,7 +89,9 @@ void SwarmSimulation3D::initDrones() {
         d.velocity     = Vec3(vd(gen), vd(gen), vd(gen));
         d.acceleration = Vec3(0.0, 0.0, 0.0);
         d.health       = 100.0;
-        d.radius       = 2.0;
+        // Matches the enlarged Gazebo marker used in the demo, so obstacle
+        // clearance remains visually believable.
+        d.radius       = 3.2;
     }
 }
 
@@ -178,10 +184,12 @@ void SwarmSimulation3D::updateTargets() {
     const std::size_t n = m_targets.size();
 
     for (std::size_t t = 0; t < n; ++t) {
-        const double speed  = 0.20 + 0.04 * static_cast<double>(t);
+        const double speed = (0.20 + 0.04 * static_cast<double>(t))
+                           * m_cfg.targetMotionSpeedMultiplier;
         const double phaseX = m_time * speed + 2.0 * kPi * static_cast<double>(t) / static_cast<double>(n);
         const double phaseZ = m_time * speed * 0.8 + 2.0 * kPi * static_cast<double>(t) / static_cast<double>(n) + 0.6;
-        const double phaseY = m_time * 0.12 + static_cast<double>(t) * 1.1;
+        const double phaseY = m_time * 0.12 * m_cfg.targetMotionSpeedMultiplier
+                            + static_cast<double>(t) * 1.1;
 
         m_targets[t] = Vec3(
             cx + rx * std::cos(phaseX),
@@ -299,9 +307,10 @@ void SwarmSimulation3D::step() {
 
     // Commit
     for (std::size_t i = 0; i < m_drones.size(); ++i) {
+        const Vec3 previousVelocity = m_drones[i].velocity;
         m_drones[i].velocity     = nextVel[i];
         m_drones[i].position     = nextPos[i];
-        m_drones[i].acceleration = (nextVel[i] - m_drones[i].velocity) / m_cfg.dt;
+        m_drones[i].acceleration = (nextVel[i] - previousVelocity) / m_cfg.dt;
         m_drones[i].health       = nextHealth[i];
     }
 

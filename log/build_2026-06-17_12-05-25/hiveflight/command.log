@@ -1,0 +1,2 @@
+Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/build/hiveflight': /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/install/hiveflight
+Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/build/hiveflight' returned '1': /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/install/hiveflight

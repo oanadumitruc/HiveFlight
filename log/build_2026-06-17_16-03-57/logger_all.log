@@ -1,0 +1,275 @@
+[0.169s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--base-paths', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src', '--build-base', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build', '--install-base', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install', '--merge-install', '--event-handlers', 'console_direct+', '--parallel-workers', '4']
+[0.170s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build', install_base='/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install', merge_install=True, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=['console_direct+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x798dda333790>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x798dda333340>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x798dda333340>>)
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.281s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'colcon_meta'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extensions ['cmake', 'python']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'python'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extensions ['python_setup_py']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src) by extension 'python_setup_py'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extension 'colcon_meta'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extensions ['ros']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces) by extension 'ros'
+[0.349s] DEBUG:colcon.colcon_core.package_identification:Package '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces' with type 'ros.ament_cmake' and name 'hiveflight_interfaces'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extension 'colcon_pkg'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extensions ['colcon_meta']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extension 'colcon_meta'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extensions ['ros']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim) by extension 'ros'
+[0.380s] DEBUG:colcon.colcon_core.package_identification:Package '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim' with type 'ros.ament_cmake' and name 'hiveflight_sim'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extension 'ignore'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extension 'ignore_ament_install'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extensions ['colcon_pkg']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extension 'colcon_pkg'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extensions ['colcon_meta']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extension 'colcon_meta'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extensions ['ros']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node) by extension 'ros'
+[0.410s] DEBUG:colcon.colcon_core.package_identification:Package '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node' with type 'ros.ament_cmake' and name 'hiveflight_sim_node'
+[0.410s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.437s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.442s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' in the environment variable AMENT_PREFIX_PATH doesn't contain any 'local_setup.*' files.
+[0.452s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[0.453s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ivano/hiveflight_ws/install
+[0.453s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 300 installed packages in /opt/ros/humble
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.488s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.489s] DEBUG:colcon.colcon_core.verb:Building package 'hiveflight_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install', 'merge_install': True, 'path': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'cmake_args' from command line to 'None'
+[0.489s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'cmake_target' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.490s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.491s] DEBUG:colcon.colcon_core.verb:Building package 'hiveflight_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install', 'merge_install': True, 'path': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim', 'symlink_install': False, 'test_result_base': None}
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'cmake_target' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'hiveflight_sim_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.493s] DEBUG:colcon.colcon_core.verb:Building package 'hiveflight_sim_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install', 'merge_install': True, 'path': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node', 'symlink_install': False, 'test_result_base': None}
+[0.493s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.494s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.494s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces' with build type 'ament_cmake'
+[0.495s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces'
+[0.497s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.497s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[13.282s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[13.296s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces -- -j16 -l16
+[17.712s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces -- -j16 -l16
+[17.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces
+[25.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiveflight_interfaces)
+[25.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces
+[25.106s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake module files
+[25.278s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake config files
+[25.414s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_interfaces', 'cmake_prefix_path')
+[25.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/cmake_prefix_path.ps1'
+[25.424s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/cmake_prefix_path.dsv'
+[25.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/cmake_prefix_path.sh'
+[25.452s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib'
+[25.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_interfaces', 'ld_library_path_lib')
+[25.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/ld_library_path_lib.ps1'
+[25.467s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/ld_library_path_lib.dsv'
+[25.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/ld_library_path_lib.sh'
+[25.489s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[25.490s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/pkgconfig/hiveflight_interfaces.pc'
+[25.492s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/python3.10/site-packages'
+[25.493s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[25.494s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.ps1'
+[25.504s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.dsv'
+[25.514s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.sh'
+[25.523s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.bash'
+[25.534s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.zsh'
+[25.543s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/colcon-core/packages/hiveflight_interfaces)
+[25.567s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiveflight_interfaces)
+[25.567s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake module files
+[25.744s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake config files
+[25.886s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_interfaces', 'cmake_prefix_path')
+[25.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/cmake_prefix_path.ps1'
+[25.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/cmake_prefix_path.dsv'
+[25.909s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/cmake_prefix_path.sh'
+[25.923s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib'
+[25.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_interfaces', 'ld_library_path_lib')
+[25.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/ld_library_path_lib.ps1'
+[25.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/ld_library_path_lib.dsv'
+[25.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/hook/ld_library_path_lib.sh'
+[25.962s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[25.964s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/pkgconfig/hiveflight_interfaces.pc'
+[25.965s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/python3.10/site-packages'
+[25.967s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[25.968s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.ps1'
+[25.978s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.dsv'
+[25.987s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.sh'
+[25.997s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.bash'
+[26.006s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.zsh'
+[26.016s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/colcon-core/packages/hiveflight_interfaces)
+[26.023s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim' with build type 'ament_cmake'
+[26.024s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim'
+[26.024s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[26.024s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[26.252s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[39.264s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[39.274s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim -- -j16 -l16
+[53.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim -- -j16 -l16
+[53.398s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim
+[55.290s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiveflight_sim)
+[55.291s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake module files
+[55.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim
+[55.366s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake config files
+[55.513s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim', 'cmake_prefix_path')
+[55.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/cmake_prefix_path.ps1'
+[55.523s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/cmake_prefix_path.dsv'
+[55.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/cmake_prefix_path.sh'
+[55.550s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib'
+[55.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim', 'ld_library_path_lib')
+[55.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/ld_library_path_lib.ps1'
+[55.564s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/ld_library_path_lib.dsv'
+[55.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/ld_library_path_lib.sh'
+[55.585s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[55.586s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/pkgconfig/hiveflight_sim.pc'
+[55.588s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/python3.10/site-packages'
+[55.589s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[55.591s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.ps1'
+[55.600s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.dsv'
+[55.609s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.sh'
+[55.618s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.bash'
+[55.628s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.zsh'
+[55.638s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/colcon-core/packages/hiveflight_sim)
+[55.660s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiveflight_sim)
+[55.661s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake module files
+[55.742s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake config files
+[55.889s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim', 'cmake_prefix_path')
+[55.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/cmake_prefix_path.ps1'
+[55.900s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/cmake_prefix_path.dsv'
+[55.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/cmake_prefix_path.sh'
+[55.924s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib'
+[55.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim', 'ld_library_path_lib')
+[55.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/ld_library_path_lib.ps1'
+[55.941s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/ld_library_path_lib.dsv'
+[55.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/hook/ld_library_path_lib.sh'
+[55.963s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[55.965s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/pkgconfig/hiveflight_sim.pc'
+[55.966s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/python3.10/site-packages'
+[55.968s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[55.969s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.ps1'
+[55.978s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.dsv'
+[55.987s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.sh'
+[55.996s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.bash'
+[56.006s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.zsh'
+[56.015s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/colcon-core/packages/hiveflight_sim)
+[56.022s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node' with build type 'ament_cmake'
+[56.022s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node'
+[56.022s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[56.023s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[56.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[69.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[69.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[83.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[83.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[84.505s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiveflight_sim_node)
+[84.506s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake module files
+[84.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[84.572s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake config files
+[84.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim_node', 'cmake_prefix_path')
+[84.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/cmake_prefix_path.ps1'
+[84.742s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/cmake_prefix_path.dsv'
+[84.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/cmake_prefix_path.sh'
+[84.767s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib'
+[84.770s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim_node', 'ld_library_path_lib')
+[84.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/ld_library_path_lib.ps1'
+[84.781s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/ld_library_path_lib.dsv'
+[84.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/ld_library_path_lib.sh'
+[84.803s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[84.805s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/pkgconfig/hiveflight_sim_node.pc'
+[84.806s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/python3.10/site-packages'
+[84.808s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[84.809s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.ps1'
+[84.818s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.dsv'
+[84.828s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.sh'
+[84.837s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.bash'
+[84.846s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.zsh'
+[84.854s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/colcon-core/packages/hiveflight_sim_node)
+[84.874s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hiveflight_sim_node)
+[84.875s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake module files
+[84.945s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install' for CMake config files
+[85.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim_node', 'cmake_prefix_path')
+[85.096s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/cmake_prefix_path.ps1'
+[85.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/cmake_prefix_path.dsv'
+[85.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/cmake_prefix_path.sh'
+[85.133s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib'
+[85.136s] Level 1:colcon.colcon_core.shell:create_environment_hook('hiveflight_sim_node', 'ld_library_path_lib')
+[85.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/ld_library_path_lib.ps1'
+[85.147s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/ld_library_path_lib.dsv'
+[85.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/hook/ld_library_path_lib.sh'
+[85.169s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[85.170s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/pkgconfig/hiveflight_sim_node.pc'
+[85.172s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/python3.10/site-packages'
+[85.173s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/bin'
+[85.174s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.ps1'
+[85.183s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.dsv'
+[85.193s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.sh'
+[85.202s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.bash'
+[85.212s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.zsh'
+[85.221s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/colcon-core/packages/hiveflight_sim_node)
+[85.229s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[85.229s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[85.230s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[85.230s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[85.268s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[85.268s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[85.269s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[85.269s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[85.269s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[85.269s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[85.270s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local_setup.ps1'
+[85.276s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/_local_setup_util_ps1.py'
+[85.282s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/setup.ps1'
+[85.294s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local_setup.sh'
+[85.299s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/_local_setup_util_sh.py'
+[85.305s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/setup.sh'
+[85.315s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local_setup.bash'
+[85.321s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/setup.bash'
+[85.332s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local_setup.zsh'
+[85.337s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/setup.zsh'

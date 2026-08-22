@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhiveflight_ros2_adapter.a CMakeFiles/hiveflight_ros2_adapter.dir/src/DroneRos2Adapter.cpp.o CMakeFiles/hiveflight_ros2_adapter.dir/src/DroneCommunication3D.cpp.o CMakeFiles/hiveflight_ros2_adapter.dir/mnt/c/work/ubuntu_work/HiveFlight/SwarmSimulation3D.cpp.o CMakeFiles/hiveflight_ros2_adapter.dir/mnt/c/work/ubuntu_work/HiveFlight/SpatialGrid3D.cpp.o
+/usr/bin/ranlib libhiveflight_ros2_adapter.a

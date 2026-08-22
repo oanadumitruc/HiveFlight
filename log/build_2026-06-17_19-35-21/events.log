@@ -1,0 +1,2178 @@
+[0.000000] (-) TimerEvent: {}
+[0.001117] (hiveflight_interfaces) JobQueued: {'identifier': 'hiveflight_interfaces', 'dependencies': OrderedDict()}
+[0.001619] (hiveflight_sim) JobQueued: {'identifier': 'hiveflight_sim', 'dependencies': OrderedDict([('hiveflight_interfaces', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install')])}
+[0.002010] (hiveflight_sim_node) JobQueued: {'identifier': 'hiveflight_sim_node', 'dependencies': OrderedDict([('hiveflight_interfaces', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install'), ('hiveflight_sim', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install')])}
+[0.002583] (hiveflight_interfaces) JobStarted: {'identifier': 'hiveflight_interfaces'}
+[0.097340] (-) TimerEvent: {}
+[0.121403] (hiveflight_interfaces) JobProgress: {'identifier': 'hiveflight_interfaces', 'progress': 'cmake'}
+[0.197505] (-) TimerEvent: {}
+[0.240792] (hiveflight_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces', '-DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.297695] (-) TimerEvent: {}
+[0.398664] (-) TimerEvent: {}
+[0.499691] (-) TimerEvent: {}
+[0.600723] (-) TimerEvent: {}
+[0.701939] (-) TimerEvent: {}
+[0.803261] (-) TimerEvent: {}
+[0.904318] (-) TimerEvent: {}
+[1.005431] (-) TimerEvent: {}
+[1.106923] (-) TimerEvent: {}
+[1.161674] (hiveflight_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.207146] (-) TimerEvent: {}
+[1.308135] (-) TimerEvent: {}
+[1.415952] (-) TimerEvent: {}
+[1.516942] (-) TimerEvent: {}
+[1.617932] (-) TimerEvent: {}
+[1.718959] (-) TimerEvent: {}
+[1.820110] (-) TimerEvent: {}
+[1.921141] (-) TimerEvent: {}
+[2.022111] (-) TimerEvent: {}
+[2.123143] (-) TimerEvent: {}
+[2.224244] (-) TimerEvent: {}
+[2.325269] (-) TimerEvent: {}
+[2.356617] (hiveflight_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.425588] (-) TimerEvent: {}
+[2.526742] (-) TimerEvent: {}
+[2.627791] (-) TimerEvent: {}
+[2.728855] (-) TimerEvent: {}
+[2.829955] (-) TimerEvent: {}
+[2.872187] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.930191] (-) TimerEvent: {}
+[3.031122] (-) TimerEvent: {}
+[3.132205] (-) TimerEvent: {}
+[3.233118] (-) TimerEvent: {}
+[3.334015] (-) TimerEvent: {}
+[3.434984] (-) TimerEvent: {}
+[3.536019] (-) TimerEvent: {}
+[3.637143] (-) TimerEvent: {}
+[3.737922] (-) TimerEvent: {}
+[3.838888] (-) TimerEvent: {}
+[3.940091] (-) TimerEvent: {}
+[4.041066] (-) TimerEvent: {}
+[4.142028] (-) TimerEvent: {}
+[4.236501] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.242176] (-) TimerEvent: {}
+[4.278913] (hiveflight_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.280904] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.282531] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.342440] (-) TimerEvent: {}
+[4.370195] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.442674] (-) TimerEvent: {}
+[4.544751] (-) TimerEvent: {}
+[4.646050] (-) TimerEvent: {}
+[4.747111] (-) TimerEvent: {}
+[4.848366] (-) TimerEvent: {}
+[4.949576] (-) TimerEvent: {}
+[5.050943] (-) TimerEvent: {}
+[5.152901] (-) TimerEvent: {}
+[5.273165] (-) TimerEvent: {}
+[5.374157] (-) TimerEvent: {}
+[5.475487] (-) TimerEvent: {}
+[5.577024] (-) TimerEvent: {}
+[5.678324] (-) TimerEvent: {}
+[5.781650] (-) TimerEvent: {}
+[5.883072] (-) TimerEvent: {}
+[5.942584] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.988052] (-) TimerEvent: {}
+[5.988944] (hiveflight_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.991201] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.993857] (hiveflight_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.088348] (-) TimerEvent: {}
+[6.135151] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[6.188550] (-) TimerEvent: {}
+[6.289619] (-) TimerEvent: {}
+[6.390510] (-) TimerEvent: {}
+[6.491438] (-) TimerEvent: {}
+[6.632655] (-) TimerEvent: {}
+[6.665181] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[6.732918] (-) TimerEvent: {}
+[6.833922] (-) TimerEvent: {}
+[6.934868] (-) TimerEvent: {}
+[7.035820] (-) TimerEvent: {}
+[7.137063] (-) TimerEvent: {}
+[7.238143] (-) TimerEvent: {}
+[7.339102] (-) TimerEvent: {}
+[7.440080] (-) TimerEvent: {}
+[7.541095] (-) TimerEvent: {}
+[7.642190] (-) TimerEvent: {}
+[7.675983] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[7.742432] (-) TimerEvent: {}
+[7.843523] (-) TimerEvent: {}
+[7.989180] (-) TimerEvent: {}
+[8.090670] (-) TimerEvent: {}
+[8.191884] (-) TimerEvent: {}
+[8.292848] (-) TimerEvent: {}
+[8.393960] (-) TimerEvent: {}
+[8.466512] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[8.494137] (-) TimerEvent: {}
+[8.595853] (-) TimerEvent: {}
+[8.601709] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[8.696056] (-) TimerEvent: {}
+[8.701292] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[8.796291] (-) TimerEvent: {}
+[8.804719] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.896477] (-) TimerEvent: {}
+[8.968241] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.996675] (-) TimerEvent: {}
+[9.097528] (-) TimerEvent: {}
+[9.138958] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[9.197783] (-) TimerEvent: {}
+[9.298814] (-) TimerEvent: {}
+[9.399891] (-) TimerEvent: {}
+[9.501109] (-) TimerEvent: {}
+[9.608828] (-) TimerEvent: {}
+[9.709918] (-) TimerEvent: {}
+[9.810943] (-) TimerEvent: {}
+[9.912043] (-) TimerEvent: {}
+[10.013124] (-) TimerEvent: {}
+[10.114067] (-) TimerEvent: {}
+[10.215578] (-) TimerEvent: {}
+[10.316815] (-) TimerEvent: {}
+[10.417877] (-) TimerEvent: {}
+[10.518962] (-) TimerEvent: {}
+[10.620194] (-) TimerEvent: {}
+[10.721145] (-) TimerEvent: {}
+[10.822045] (-) TimerEvent: {}
+[10.923007] (-) TimerEvent: {}
+[11.024074] (-) TimerEvent: {}
+[11.030259] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[11.124320] (-) TimerEvent: {}
+[11.225421] (-) TimerEvent: {}
+[11.326561] (-) TimerEvent: {}
+[11.427881] (-) TimerEvent: {}
+[11.528984] (-) TimerEvent: {}
+[11.630392] (-) TimerEvent: {}
+[11.731998] (-) TimerEvent: {}
+[11.832923] (-) TimerEvent: {}
+[11.933854] (-) TimerEvent: {}
+[12.035149] (-) TimerEvent: {}
+[12.136548] (-) TimerEvent: {}
+[12.238171] (-) TimerEvent: {}
+[12.339543] (-) TimerEvent: {}
+[12.440666] (-) TimerEvent: {}
+[12.541999] (-) TimerEvent: {}
+[12.643181] (-) TimerEvent: {}
+[12.745228] (-) TimerEvent: {}
+[12.846193] (-) TimerEvent: {}
+[12.947383] (-) TimerEvent: {}
+[13.048304] (-) TimerEvent: {}
+[13.149474] (-) TimerEvent: {}
+[13.250522] (-) TimerEvent: {}
+[13.351591] (-) TimerEvent: {}
+[13.452927] (-) TimerEvent: {}
+[13.554023] (-) TimerEvent: {}
+[13.655209] (-) TimerEvent: {}
+[13.756438] (-) TimerEvent: {}
+[13.857778] (-) TimerEvent: {}
+[13.958897] (-) TimerEvent: {}
+[14.059873] (-) TimerEvent: {}
+[14.161299] (-) TimerEvent: {}
+[14.262419] (-) TimerEvent: {}
+[14.363736] (-) TimerEvent: {}
+[14.465024] (-) TimerEvent: {}
+[14.566154] (-) TimerEvent: {}
+[14.667478] (-) TimerEvent: {}
+[14.775845] (-) TimerEvent: {}
+[14.877365] (-) TimerEvent: {}
+[14.978560] (-) TimerEvent: {}
+[15.079791] (-) TimerEvent: {}
+[15.180827] (-) TimerEvent: {}
+[15.282672] (-) TimerEvent: {}
+[15.389145] (-) TimerEvent: {}
+[15.490298] (-) TimerEvent: {}
+[15.591546] (-) TimerEvent: {}
+[15.692787] (-) TimerEvent: {}
+[15.793918] (-) TimerEvent: {}
+[15.894800] (-) TimerEvent: {}
+[15.995576] (-) TimerEvent: {}
+[16.096519] (-) TimerEvent: {}
+[16.197435] (-) TimerEvent: {}
+[16.298395] (-) TimerEvent: {}
+[16.399302] (-) TimerEvent: {}
+[16.500184] (-) TimerEvent: {}
+[16.572971] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[16.600392] (-) TimerEvent: {}
+[16.701327] (-) TimerEvent: {}
+[16.802321] (-) TimerEvent: {}
+[16.903333] (-) TimerEvent: {}
+[17.004291] (-) TimerEvent: {}
+[17.105245] (-) TimerEvent: {}
+[17.206524] (-) TimerEvent: {}
+[17.307712] (-) TimerEvent: {}
+[17.408715] (-) TimerEvent: {}
+[17.509693] (-) TimerEvent: {}
+[17.610836] (-) TimerEvent: {}
+[17.711863] (-) TimerEvent: {}
+[17.812805] (-) TimerEvent: {}
+[17.913747] (-) TimerEvent: {}
+[18.014713] (-) TimerEvent: {}
+[18.115755] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[18.120400] (-) TimerEvent: {}
+[18.221240] (-) TimerEvent: {}
+[18.322228] (-) TimerEvent: {}
+[18.377557] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[18.421688] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[18.423486] (-) TimerEvent: {}
+[18.524329] (-) TimerEvent: {}
+[18.625347] (-) TimerEvent: {}
+[18.726431] (-) TimerEvent: {}
+[18.827620] (-) TimerEvent: {}
+[18.928576] (-) TimerEvent: {}
+[18.946138] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[18.948807] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[18.950709] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[18.952572] (hiveflight_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[19.005454] (hiveflight_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[19.028782] (-) TimerEvent: {}
+[19.129869] (-) TimerEvent: {}
+[19.230918] (-) TimerEvent: {}
+[19.331917] (-) TimerEvent: {}
+[19.432877] (-) TimerEvent: {}
+[19.533777] (-) TimerEvent: {}
+[19.634703] (-) TimerEvent: {}
+[19.735702] (-) TimerEvent: {}
+[19.837206] (-) TimerEvent: {}
+[19.938583] (-) TimerEvent: {}
+[20.039724] (-) TimerEvent: {}
+[20.140713] (-) TimerEvent: {}
+[20.241709] (-) TimerEvent: {}
+[20.342614] (-) TimerEvent: {}
+[20.443670] (-) TimerEvent: {}
+[20.544659] (-) TimerEvent: {}
+[20.645548] (-) TimerEvent: {}
+[20.746458] (-) TimerEvent: {}
+[20.847443] (-) TimerEvent: {}
+[20.948383] (-) TimerEvent: {}
+[21.049264] (-) TimerEvent: {}
+[21.150155] (-) TimerEvent: {}
+[21.251515] (-) TimerEvent: {}
+[21.352657] (-) TimerEvent: {}
+[21.453767] (-) TimerEvent: {}
+[21.554575] (-) TimerEvent: {}
+[21.655464] (-) TimerEvent: {}
+[21.756441] (-) TimerEvent: {}
+[21.857361] (-) TimerEvent: {}
+[21.958338] (-) TimerEvent: {}
+[22.059236] (-) TimerEvent: {}
+[22.105713] (hiveflight_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[22.160398] (-) TimerEvent: {}
+[22.262137] (-) TimerEvent: {}
+[22.363145] (-) TimerEvent: {}
+[22.472420] (-) TimerEvent: {}
+[22.573503] (-) TimerEvent: {}
+[22.674497] (-) TimerEvent: {}
+[22.775808] (-) TimerEvent: {}
+[22.878079] (-) TimerEvent: {}
+[22.981972] (-) TimerEvent: {}
+[23.082947] (-) TimerEvent: {}
+[23.183929] (-) TimerEvent: {}
+[23.285297] (-) TimerEvent: {}
+[23.386227] (-) TimerEvent: {}
+[23.487202] (-) TimerEvent: {}
+[23.588351] (-) TimerEvent: {}
+[23.689290] (-) TimerEvent: {}
+[23.790546] (-) TimerEvent: {}
+[23.891505] (-) TimerEvent: {}
+[23.992562] (-) TimerEvent: {}
+[24.093912] (-) TimerEvent: {}
+[24.194951] (-) TimerEvent: {}
+[24.296308] (-) TimerEvent: {}
+[24.397807] (-) TimerEvent: {}
+[24.498765] (-) TimerEvent: {}
+[24.599798] (-) TimerEvent: {}
+[24.700888] (-) TimerEvent: {}
+[24.801937] (-) TimerEvent: {}
+[24.903086] (-) TimerEvent: {}
+[25.004205] (-) TimerEvent: {}
+[25.105470] (-) TimerEvent: {}
+[25.206582] (-) TimerEvent: {}
+[25.307924] (-) TimerEvent: {}
+[25.409667] (-) TimerEvent: {}
+[25.513205] (-) TimerEvent: {}
+[25.614139] (-) TimerEvent: {}
+[25.714961] (-) TimerEvent: {}
+[25.815984] (-) TimerEvent: {}
+[25.919581] (-) TimerEvent: {}
+[26.021149] (-) TimerEvent: {}
+[26.122324] (-) TimerEvent: {}
+[26.216064] (hiveflight_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[26.222453] (-) TimerEvent: {}
+[26.323247] (-) TimerEvent: {}
+[26.424368] (-) TimerEvent: {}
+[26.525360] (-) TimerEvent: {}
+[26.626352] (-) TimerEvent: {}
+[26.727266] (-) TimerEvent: {}
+[26.828644] (-) TimerEvent: {}
+[26.930299] (-) TimerEvent: {}
+[27.031144] (-) TimerEvent: {}
+[27.132084] (-) TimerEvent: {}
+[27.233195] (-) TimerEvent: {}
+[27.334286] (-) TimerEvent: {}
+[27.435278] (-) TimerEvent: {}
+[27.536337] (-) TimerEvent: {}
+[27.572479] (hiveflight_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces\n'}
+[27.583475] (hiveflight_interfaces) CommandEnded: {'returncode': 0}
+[27.599280] (hiveflight_interfaces) JobProgress: {'identifier': 'hiveflight_interfaces', 'progress': 'build'}
+[27.621652] (hiveflight_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces', '--', '-j16', '-l16'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[27.659734] (-) TimerEvent: {}
+[27.760998] (-) TimerEvent: {}
+[27.862014] (-) TimerEvent: {}
+[27.962944] (-) TimerEvent: {}
+[28.064065] (-) TimerEvent: {}
+[28.165932] (-) TimerEvent: {}
+[28.169916] (hiveflight_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[28.205191] (hiveflight_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[28.243150] (hiveflight_interfaces) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[28.266112] (-) TimerEvent: {}
+[28.284722] (hiveflight_interfaces) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_copy_hiveflight_interfaces\n'}
+[28.366337] (-) TimerEvent: {}
+[28.467202] (-) TimerEvent: {}
+[28.568244] (-) TimerEvent: {}
+[28.669272] (hiveflight_interfaces) StdoutLine: {'line': b'[  9%] Built target hiveflight_interfaces__rs\n'}
+[28.671074] (-) TimerEvent: {}
+[28.768874] (hiveflight_interfaces) StdoutLine: {'line': b'[  9%] Built target hiveflight_interfaces__cpp\n'}
+[28.771214] (-) TimerEvent: {}
+[28.825176] (hiveflight_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hiveflight_interfaces/msg/detail/drone_message__functions.c.o\x1b[0m\n'}
+[28.839825] (hiveflight_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[28.842685] (hiveflight_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[28.871404] (-) TimerEvent: {}
+[28.885118] (hiveflight_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[28.886913] (hiveflight_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[28.888737] (hiveflight_interfaces) StdoutLine: {'line': b'creating hiveflight_interfaces.egg-info\n'}
+[28.892815] (hiveflight_interfaces) StdoutLine: {'line': b'writing hiveflight_interfaces.egg-info/PKG-INFO\n'}
+[28.901266] (hiveflight_interfaces) StdoutLine: {'line': b'writing dependency_links to hiveflight_interfaces.egg-info/dependency_links.txt\n'}
+[28.911494] (hiveflight_interfaces) StdoutLine: {'line': b'writing top-level names to hiveflight_interfaces.egg-info/top_level.txt\n'}
+[28.919069] (hiveflight_interfaces) StdoutLine: {'line': b"writing manifest file 'hiveflight_interfaces.egg-info/SOURCES.txt'\n"}
+[28.949492] (hiveflight_interfaces) StdoutLine: {'line': b"reading manifest file 'hiveflight_interfaces.egg-info/SOURCES.txt'\n"}
+[28.971537] (-) TimerEvent: {}
+[28.988254] (hiveflight_interfaces) StdoutLine: {'line': b"writing manifest file 'hiveflight_interfaces.egg-info/SOURCES.txt'\n"}
+[29.071754] (-) TimerEvent: {}
+[29.117610] (hiveflight_interfaces) StdoutLine: {'line': b'[ 21%] Built target ament_cmake_python_build_hiveflight_interfaces_egg\n'}
+[29.171950] (-) TimerEvent: {}
+[29.228627] (hiveflight_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libhiveflight_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[29.272202] (-) TimerEvent: {}
+[29.278400] (hiveflight_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hiveflight_interfaces/msg/drone_message__type_support.cpp.o\x1b[0m\n'}
+[29.361314] (hiveflight_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hiveflight_interfaces/msg/detail/drone_message__type_support.cpp.o\x1b[0m\n'}
+[29.372342] (-) TimerEvent: {}
+[29.440105] (hiveflight_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hiveflight_interfaces/msg/detail/dds_fastrtps/drone_message__type_support.cpp.o\x1b[0m\n'}
+[29.472574] (-) TimerEvent: {}
+[29.573613] (-) TimerEvent: {}
+[29.674439] (-) TimerEvent: {}
+[29.714026] (hiveflight_interfaces) StdoutLine: {'line': b'[ 34%] Built target hiveflight_interfaces__rosidl_generator_c\n'}
+[29.774635] (-) TimerEvent: {}
+[29.805457] (hiveflight_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[29.828121] (hiveflight_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[29.854274] (hiveflight_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[29.874810] (-) TimerEvent: {}
+[29.975754] (-) TimerEvent: {}
+[30.076461] (-) TimerEvent: {}
+[30.168273] (hiveflight_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[30.176618] (-) TimerEvent: {}
+[30.246899] (hiveflight_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hiveflight_interfaces/msg/drone_message__type_support.cpp.o\x1b[0m\n'}
+[30.276817] (-) TimerEvent: {}
+[30.378241] (-) TimerEvent: {}
+[30.409467] (hiveflight_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hiveflight_interfaces/msg/detail/drone_message__type_support_c.cpp.o\x1b[0m\n'}
+[30.433229] (hiveflight_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hiveflight_interfaces/msg/detail/drone_message__type_support.c.o\x1b[0m\n'}
+[30.478430] (-) TimerEvent: {}
+[30.524170] (hiveflight_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[30.578622] (-) TimerEvent: {}
+[30.605863] (hiveflight_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[30.641597] (hiveflight_interfaces) StdoutLine: {'line': b'[ 62%] Built target hiveflight_interfaces__rosidl_typesupport_cpp\n'}
+[30.678836] (-) TimerEvent: {}
+[30.780012] (-) TimerEvent: {}
+[30.848909] (hiveflight_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[30.880200] (-) TimerEvent: {}
+[30.981163] (-) TimerEvent: {}
+[30.984254] (hiveflight_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking C shared library libhiveflight_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[31.063330] (hiveflight_interfaces) StdoutLine: {'line': b'[ 68%] Built target hiveflight_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[31.081395] (-) TimerEvent: {}
+[31.170427] (hiveflight_interfaces) StdoutLine: {'line': b'[ 68%] Built target hiveflight_interfaces__rosidl_typesupport_c\n'}
+[31.181505] (-) TimerEvent: {}
+[31.282405] (-) TimerEvent: {}
+[31.384182] (-) TimerEvent: {}
+[31.440320] (hiveflight_interfaces) StdoutLine: {'line': b'[ 68%] Built target hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[31.484368] (-) TimerEvent: {}
+[31.498880] (hiveflight_interfaces) StdoutLine: {'line': b'[ 68%] Built target hiveflight_interfaces__rosidl_typesupport_introspection_c\n'}
+[31.584615] (-) TimerEvent: {}
+[31.685598] (-) TimerEvent: {}
+[31.700132] (hiveflight_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[31.785807] (-) TimerEvent: {}
+[31.886708] (-) TimerEvent: {}
+[31.987688] (-) TimerEvent: {}
+[32.088808] (-) TimerEvent: {}
+[32.152466] (hiveflight_interfaces) StdoutLine: {'line': b'[ 71%] Built target hiveflight_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[32.189024] (-) TimerEvent: {}
+[32.290245] (-) TimerEvent: {}
+[32.391144] (-) TimerEvent: {}
+[32.397882] (hiveflight_interfaces) StdoutLine: {'line': b'[ 71%] Built target hiveflight_interfaces\n'}
+[32.491475] (-) TimerEvent: {}
+[32.592557] (-) TimerEvent: {}
+[32.689863] (hiveflight_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[32.692654] (-) TimerEvent: {}
+[32.793611] (-) TimerEvent: {}
+[32.894881] (-) TimerEvent: {}
+[32.996002] (-) TimerEvent: {}
+[33.096879] (-) TimerEvent: {}
+[33.197910] (-) TimerEvent: {}
+[33.249001] (hiveflight_interfaces) StdoutLine: {'line': b'[ 75%] Built target hiveflight_interfaces__py\n'}
+[33.298124] (-) TimerEvent: {}
+[33.399091] (-) TimerEvent: {}
+[33.500316] (-) TimerEvent: {}
+[33.513602] (hiveflight_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hiveflight_interfaces/msg/_drone_message_s.c.o\x1b[0m\n'}
+[33.600494] (-) TimerEvent: {}
+[33.701468] (-) TimerEvent: {}
+[33.802457] (-) TimerEvent: {}
+[33.906557] (-) TimerEvent: {}
+[34.008054] (-) TimerEvent: {}
+[34.109313] (-) TimerEvent: {}
+[34.210490] (-) TimerEvent: {}
+[34.311947] (-) TimerEvent: {}
+[34.354668] (hiveflight_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[34.412191] (-) TimerEvent: {}
+[34.513247] (-) TimerEvent: {}
+[34.614273] (-) TimerEvent: {}
+[34.715254] (-) TimerEvent: {}
+[34.816249] (-) TimerEvent: {}
+[34.872907] (hiveflight_interfaces) StdoutLine: {'line': b'[ 81%] Built target hiveflight_interfaces__rosidl_generator_py\n'}
+[34.916492] (-) TimerEvent: {}
+[35.017570] (-) TimerEvent: {}
+[35.076390] (hiveflight_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[35.090986] (hiveflight_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[35.102155] (hiveflight_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[35.117788] (-) TimerEvent: {}
+[35.218757] (-) TimerEvent: {}
+[35.319728] (-) TimerEvent: {}
+[35.420650] (-) TimerEvent: {}
+[35.521568] (-) TimerEvent: {}
+[35.622571] (-) TimerEvent: {}
+[35.723733] (-) TimerEvent: {}
+[35.738101] (hiveflight_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[35.823907] (-) TimerEvent: {}
+[35.874910] (hiveflight_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[35.924137] (-) TimerEvent: {}
+[35.937249] (hiveflight_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[36.024345] (-) TimerEvent: {}
+[36.125434] (-) TimerEvent: {}
+[36.226335] (-) TimerEvent: {}
+[36.303406] (hiveflight_interfaces) StdoutLine: {'line': b'[100%] Built target hiveflight_interfaces__rosidl_typesupport_c__pyext\n'}
+[36.326564] (-) TimerEvent: {}
+[36.385714] (hiveflight_interfaces) StdoutLine: {'line': b'[100%] Built target hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[36.426794] (-) TimerEvent: {}
+[36.527915] (-) TimerEvent: {}
+[36.550401] (hiveflight_interfaces) StdoutLine: {'line': b'[100%] Built target hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[36.628164] (-) TimerEvent: {}
+[36.729074] (-) TimerEvent: {}
+[36.790531] (hiveflight_interfaces) CommandEnded: {'returncode': 0}
+[36.819315] (hiveflight_interfaces) JobProgress: {'identifier': 'hiveflight_interfaces', 'progress': 'install'}
+[36.829198] (-) TimerEvent: {}
+[36.882192] (hiveflight_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[36.920422] (hiveflight_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[36.929326] (-) TimerEvent: {}
+[36.974406] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/rosidl_interfaces/hiveflight_interfaces\n'}
+[37.029607] (-) TimerEvent: {}
+[37.094893] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces\n'}
+[37.129820] (-) TimerEvent: {}
+[37.132289] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg\n'}
+[37.184784] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail\n'}
+[37.230159] (-) TimerEvent: {}
+[37.255524] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__functions.c\n'}
+[37.330320] (-) TimerEvent: {}
+[37.404015] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__functions.h\n'}
+[37.430528] (-) TimerEvent: {}
+[37.531467] (-) TimerEvent: {}
+[37.569739] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__struct.h\n'}
+[37.632215] (-) TimerEvent: {}
+[37.733560] (-) TimerEvent: {}
+[37.757229] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.h\n'}
+[37.833795] (-) TimerEvent: {}
+[37.934723] (-) TimerEvent: {}
+[37.965153] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/drone_message.h\n'}
+[38.034928] (-) TimerEvent: {}
+[38.085185] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[38.135138] (-) TimerEvent: {}
+[38.211042] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/library_path.sh\n'}
+[38.235446] (-) TimerEvent: {}
+[38.300260] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/library_path.dsv\n'}
+[38.335645] (-) TimerEvent: {}
+[38.436509] (-) TimerEvent: {}
+[38.441119] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_c.so\n'}
+[38.536730] (-) TimerEvent: {}
+[38.581250] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_c.so" to ""\n'}
+[38.595658] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces\n'}
+[38.630027] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg\n'}
+[38.636845] (-) TimerEvent: {}
+[38.671892] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail\n'}
+[38.736569] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_fastrtps_c.h\n'}
+[38.738773] (-) TimerEvent: {}
+[38.839679] (-) TimerEvent: {}
+[38.884655] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[38.939923] (-) TimerEvent: {}
+[39.041201] (-) TimerEvent: {}
+[39.044523] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[39.141404] (-) TimerEvent: {}
+[39.189873] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[39.204685] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces\n'}
+[39.241652] (-) TimerEvent: {}
+[39.272387] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg\n'}
+[39.323721] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail\n'}
+[39.341983] (-) TimerEvent: {}
+[39.380826] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__builder.hpp\n'}
+[39.442206] (-) TimerEvent: {}
+[39.525890] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__struct.hpp\n'}
+[39.542339] (-) TimerEvent: {}
+[39.643204] (-) TimerEvent: {}
+[39.678970] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__traits.hpp\n'}
+[39.743464] (-) TimerEvent: {}
+[39.844380] (-) TimerEvent: {}
+[39.845003] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.hpp\n'}
+[39.944628] (-) TimerEvent: {}
+[39.984950] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/drone_message.hpp\n'}
+[40.044841] (-) TimerEvent: {}
+[40.109173] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[40.145094] (-) TimerEvent: {}
+[40.216865] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces\n'}
+[40.245349] (-) TimerEvent: {}
+[40.252339] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg\n'}
+[40.295606] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail\n'}
+[40.344122] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/dds_fastrtps\n'}
+[40.346209] (-) TimerEvent: {}
+[40.418935] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[40.446553] (-) TimerEvent: {}
+[40.547996] (-) TimerEvent: {}
+[40.562323] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[40.648217] (-) TimerEvent: {}
+[40.687598] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[40.748471] (-) TimerEvent: {}
+[40.849797] (-) TimerEvent: {}
+[40.851906] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[40.865641] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces\n'}
+[40.900902] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg\n'}
+[40.941396] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail\n'}
+[40.949946] (-) TimerEvent: {}
+[40.994729] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_introspection_c.h\n'}
+[41.050206] (-) TimerEvent: {}
+[41.140985] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.c\n'}
+[41.150320] (-) TimerEvent: {}
+[41.251791] (-) TimerEvent: {}
+[41.287246] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[41.351992] (-) TimerEvent: {}
+[41.408087] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[41.452248] (-) TimerEvent: {}
+[41.546048] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[41.552360] (-) TimerEvent: {}
+[41.566734] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_c.so\n'}
+[41.652638] (-) TimerEvent: {}
+[41.696809] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[41.711827] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces\n'}
+[41.746114] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg\n'}
+[41.752793] (-) TimerEvent: {}
+[41.791984] (hiveflight_interfaces) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail\n'}
+[41.847896] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.852921] (-) TimerEvent: {}
+[41.953636] (-) TimerEvent: {}
+[42.040690] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.cpp\n'}
+[42.053742] (-) TimerEvent: {}
+[42.154562] (-) TimerEvent: {}
+[42.175639] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[42.254785] (-) TimerEvent: {}
+[42.302960] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[42.321242] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_cpp.so\n'}
+[42.354966] (-) TimerEvent: {}
+[42.455920] (-) TimerEvent: {}
+[42.461019] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[42.486833] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/pythonpath.sh\n'}
+[42.556650] (-) TimerEvent: {}
+[42.658078] (-) TimerEvent: {}
+[42.669487] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/pythonpath.dsv\n'}
+[42.758303] (-) TimerEvent: {}
+[42.768275] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info\n'}
+[42.831768] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[42.858420] (-) TimerEvent: {}
+[42.959278] (-) TimerEvent: {}
+[42.968127] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[43.059505] (-) TimerEvent: {}
+[43.110191] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[43.159702] (-) TimerEvent: {}
+[43.250749] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[43.259830] (-) TimerEvent: {}
+[43.360942] (-) TimerEvent: {}
+[43.383399] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces\n'}
+[43.440981] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[43.461055] (-) TimerEvent: {}
+[43.561901] (-) TimerEvent: {}
+[43.586776] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[43.662168] (-) TimerEvent: {}
+[43.763423] (-) TimerEvent: {}
+[43.780458] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[43.863620] (-) TimerEvent: {}
+[43.916424] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so\n'}
+[43.963982] (-) TimerEvent: {}
+[44.047602] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg\n'}
+[44.064137] (-) TimerEvent: {}
+[44.120141] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/_drone_message.py\n'}
+[44.164372] (-) TimerEvent: {}
+[44.265378] (-) TimerEvent: {}
+[44.271065] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/_drone_message_s.c\n'}
+[44.365606] (-) TimerEvent: {}
+[44.424193] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/__init__.py\n'}
+[44.465830] (-) TimerEvent: {}
+[44.567007] (-) TimerEvent: {}
+[44.573355] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[44.667216] (-) TimerEvent: {}
+[44.753954] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[44.767366] (-) TimerEvent: {}
+[44.868185] (-) TimerEvent: {}
+[44.882151] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[44.968444] (-) TimerEvent: {}
+[45.015237] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/__init__.py\n'}
+[45.068641] (-) TimerEvent: {}
+[45.169563] (-) TimerEvent: {}
+[45.270434] (-) TimerEvent: {}
+[45.371385] (-) TimerEvent: {}
+[45.472323] (-) TimerEvent: {}
+[45.573258] (-) TimerEvent: {}
+[45.674189] (-) TimerEvent: {}
+[45.775233] (-) TimerEvent: {}
+[45.876257] (-) TimerEvent: {}
+[45.918829] (hiveflight_interfaces) StdoutLine: {'line': b"Listing '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces'...\n"}
+[45.920827] (hiveflight_interfaces) StdoutLine: {'line': b"Compiling '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/__init__.py'...\n"}
+[45.922492] (hiveflight_interfaces) StdoutLine: {'line': b"Listing '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg'...\n"}
+[45.924358] (hiveflight_interfaces) StdoutLine: {'line': b"Compiling '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/__init__.py'...\n"}
+[45.925768] (hiveflight_interfaces) StdoutLine: {'line': b"Compiling '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/_drone_message.py'...\n"}
+[45.976484] (-) TimerEvent: {}
+[46.021769] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[46.076692] (-) TimerEvent: {}
+[46.177686] (-) TimerEvent: {}
+[46.237563] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[46.277922] (-) TimerEvent: {}
+[46.341856] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[46.378092] (-) TimerEvent: {}
+[46.480099] (-) TimerEvent: {}
+[46.569855] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[46.580236] (-) TimerEvent: {}
+[46.681059] (-) TimerEvent: {}
+[46.682178] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[46.781253] (-) TimerEvent: {}
+[46.882092] (-) TimerEvent: {}
+[46.917992] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[46.960424] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_py.so\n'}
+[46.982280] (-) TimerEvent: {}
+[47.083236] (-) TimerEvent: {}
+[47.109183] (hiveflight_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_py.so" to ""\n'}
+[47.166893] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/rust_packages/hiveflight_interfaces\n'}
+[47.183386] (-) TimerEvent: {}
+[47.284306] (-) TimerEvent: {}
+[47.289891] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust\n'}
+[47.335591] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/build.rs\n'}
+[47.384548] (-) TimerEvent: {}
+[47.485461] (-) TimerEvent: {}
+[47.487759] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/Cargo.toml\n'}
+[47.585669] (-) TimerEvent: {}
+[47.591613] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src\n'}
+[47.648934] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/lib.rs\n'}
+[47.685890] (-) TimerEvent: {}
+[47.774109] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/msg\n'}
+[47.786022] (-) TimerEvent: {}
+[47.845723] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/msg/rmw.rs\n'}
+[47.886235] (-) TimerEvent: {}
+[47.987234] (-) TimerEvent: {}
+[47.997759] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/msg.rs\n'}
+[48.087480] (-) TimerEvent: {}
+[48.151809] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/msg/DroneMessage.idl\n'}
+[48.187669] (-) TimerEvent: {}
+[48.268588] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/msg/DroneMessage.msg\n'}
+[48.287850] (-) TimerEvent: {}
+[48.388911] (-) TimerEvent: {}
+[48.458985] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_interfaces\n'}
+[48.489112] (-) TimerEvent: {}
+[48.591810] (-) TimerEvent: {}
+[48.693232] (-) TimerEvent: {}
+[48.723705] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_interfaces\n'}
+[48.793445] (-) TimerEvent: {}
+[48.854379] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/ament_prefix_path.sh\n'}
+[48.893636] (-) TimerEvent: {}
+[48.943089] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/ament_prefix_path.dsv\n'}
+[48.993854] (-) TimerEvent: {}
+[49.035957] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/path.sh\n'}
+[49.094095] (-) TimerEvent: {}
+[49.132227] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/path.dsv\n'}
+[49.194315] (-) TimerEvent: {}
+[49.232989] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.bash\n'}
+[49.295017] (-) TimerEvent: {}
+[49.364697] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.sh\n'}
+[49.395386] (-) TimerEvent: {}
+[49.453926] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.zsh\n'}
+[49.495632] (-) TimerEvent: {}
+[49.549765] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.dsv\n'}
+[49.595814] (-) TimerEvent: {}
+[49.643915] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.dsv\n'}
+[49.696038] (-) TimerEvent: {}
+[49.779994] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_interfaces\n'}
+[49.796246] (-) TimerEvent: {}
+[49.897339] (-) TimerEvent: {}
+[49.965055] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_cExport.cmake\n'}
+[49.997615] (-) TimerEvent: {}
+[50.098742] (-) TimerEvent: {}
+[50.102257] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[50.198962] (-) TimerEvent: {}
+[50.245866] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[50.299227] (-) TimerEvent: {}
+[50.400472] (-) TimerEvent: {}
+[50.425292] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[50.500704] (-) TimerEvent: {}
+[50.567232] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_cppExport.cmake\n'}
+[50.600892] (-) TimerEvent: {}
+[50.701858] (-) TimerEvent: {}
+[50.777458] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[50.802327] (-) TimerEvent: {}
+[50.903368] (-) TimerEvent: {}
+[50.910661] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[51.003603] (-) TimerEvent: {}
+[51.061356] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[51.103852] (-) TimerEvent: {}
+[51.199238] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[51.203984] (-) TimerEvent: {}
+[51.304931] (-) TimerEvent: {}
+[51.337005] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[51.405158] (-) TimerEvent: {}
+[51.478844] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[51.505318] (-) TimerEvent: {}
+[51.606220] (-) TimerEvent: {}
+[51.652093] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[51.706488] (-) TimerEvent: {}
+[51.807868] (-) TimerEvent: {}
+[51.874116] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[51.908028] (-) TimerEvent: {}
+[52.008991] (-) TimerEvent: {}
+[52.045744] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[52.109223] (-) TimerEvent: {}
+[52.186049] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[52.209404] (-) TimerEvent: {}
+[52.310344] (-) TimerEvent: {}
+[52.326884] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_pyExport.cmake\n'}
+[52.410711] (-) TimerEvent: {}
+[52.464067] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[52.510982] (-) TimerEvent: {}
+[52.589495] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[52.611192] (-) TimerEvent: {}
+[52.691154] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[52.711450] (-) TimerEvent: {}
+[52.794757] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[52.811616] (-) TimerEvent: {}
+[52.906614] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[52.911754] (-) TimerEvent: {}
+[53.008056] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[53.011934] (-) TimerEvent: {}
+[53.111658] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[53.113439] (-) TimerEvent: {}
+[53.214305] (-) TimerEvent: {}
+[53.215467] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[53.314525] (-) TimerEvent: {}
+[53.317844] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfacesConfig.cmake\n'}
+[53.414773] (-) TimerEvent: {}
+[53.448477] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfacesConfig-version.cmake\n'}
+[53.514999] (-) TimerEvent: {}
+[53.552056] (hiveflight_interfaces) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.xml\n'}
+[53.615198] (-) TimerEvent: {}
+[53.656634] (hiveflight_interfaces) CommandEnded: {'returncode': 0}
+[53.715369] (-) TimerEvent: {}
+[53.816179] (-) TimerEvent: {}
+[53.917131] (-) TimerEvent: {}
+[54.017973] (-) TimerEvent: {}
+[54.118895] (-) TimerEvent: {}
+[54.219958] (-) TimerEvent: {}
+[54.320932] (-) TimerEvent: {}
+[54.422488] (-) TimerEvent: {}
+[54.523482] (-) TimerEvent: {}
+[54.624794] (-) TimerEvent: {}
+[54.725913] (-) TimerEvent: {}
+[54.826742] (-) TimerEvent: {}
+[54.927692] (-) TimerEvent: {}
+[55.028483] (-) TimerEvent: {}
+[55.129360] (-) TimerEvent: {}
+[55.230211] (-) TimerEvent: {}
+[55.331095] (-) TimerEvent: {}
+[55.431952] (-) TimerEvent: {}
+[55.532836] (-) TimerEvent: {}
+[55.633686] (-) TimerEvent: {}
+[55.735033] (-) TimerEvent: {}
+[55.835822] (-) TimerEvent: {}
+[55.907472] (hiveflight_interfaces) JobEnded: {'identifier': 'hiveflight_interfaces', 'rc': 0}
+[55.920693] (hiveflight_sim) JobStarted: {'identifier': 'hiveflight_sim'}
+[55.936004] (-) TimerEvent: {}
+[56.036958] (-) TimerEvent: {}
+[56.137895] (-) TimerEvent: {}
+[56.238978] (-) TimerEvent: {}
+[56.323369] (hiveflight_sim) JobProgress: {'identifier': 'hiveflight_sim', 'progress': 'cmake'}
+[56.339078] (-) TimerEvent: {}
+[56.438130] (hiveflight_sim) Command: {'cmd': ['/usr/bin/cmake', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim', '-DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[56.463681] (-) TimerEvent: {}
+[56.564407] (-) TimerEvent: {}
+[56.665450] (-) TimerEvent: {}
+[56.766402] (-) TimerEvent: {}
+[56.867351] (-) TimerEvent: {}
+[56.968273] (-) TimerEvent: {}
+[57.069201] (-) TimerEvent: {}
+[57.170094] (-) TimerEvent: {}
+[57.271095] (-) TimerEvent: {}
+[57.372339] (-) TimerEvent: {}
+[57.473571] (-) TimerEvent: {}
+[57.539979] (hiveflight_sim) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[57.573776] (-) TimerEvent: {}
+[57.674722] (-) TimerEvent: {}
+[57.775723] (-) TimerEvent: {}
+[57.876712] (-) TimerEvent: {}
+[57.977704] (-) TimerEvent: {}
+[58.079015] (-) TimerEvent: {}
+[58.179961] (-) TimerEvent: {}
+[58.280946] (-) TimerEvent: {}
+[58.382053] (-) TimerEvent: {}
+[58.482937] (-) TimerEvent: {}
+[58.584078] (-) TimerEvent: {}
+[58.645764] (hiveflight_sim) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[58.684313] (-) TimerEvent: {}
+[58.785297] (-) TimerEvent: {}
+[58.886267] (-) TimerEvent: {}
+[58.987232] (-) TimerEvent: {}
+[59.088263] (-) TimerEvent: {}
+[59.170466] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[59.188381] (-) TimerEvent: {}
+[59.289218] (-) TimerEvent: {}
+[59.390643] (-) TimerEvent: {}
+[59.491508] (-) TimerEvent: {}
+[59.592629] (-) TimerEvent: {}
+[59.693656] (-) TimerEvent: {}
+[59.794842] (-) TimerEvent: {}
+[59.895944] (-) TimerEvent: {}
+[59.997122] (-) TimerEvent: {}
+[60.098169] (-) TimerEvent: {}
+[60.199135] (-) TimerEvent: {}
+[60.300169] (-) TimerEvent: {}
+[60.401257] (-) TimerEvent: {}
+[60.502321] (-) TimerEvent: {}
+[60.603246] (-) TimerEvent: {}
+[60.704204] (-) TimerEvent: {}
+[60.805178] (-) TimerEvent: {}
+[60.906159] (-) TimerEvent: {}
+[60.955723] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[60.994302] (hiveflight_sim) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[60.996920] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[60.999007] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[61.006280] (-) TimerEvent: {}
+[61.086350] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[61.125081] (-) TimerEvent: {}
+[61.225922] (-) TimerEvent: {}
+[61.327117] (-) TimerEvent: {}
+[61.428611] (-) TimerEvent: {}
+[61.529914] (-) TimerEvent: {}
+[61.630951] (-) TimerEvent: {}
+[61.731985] (-) TimerEvent: {}
+[61.832953] (-) TimerEvent: {}
+[61.933864] (-) TimerEvent: {}
+[62.034842] (-) TimerEvent: {}
+[62.135886] (-) TimerEvent: {}
+[62.237324] (-) TimerEvent: {}
+[62.338486] (-) TimerEvent: {}
+[62.439465] (-) TimerEvent: {}
+[62.552134] (-) TimerEvent: {}
+[62.653122] (-) TimerEvent: {}
+[62.754233] (-) TimerEvent: {}
+[62.855368] (-) TimerEvent: {}
+[62.956674] (-) TimerEvent: {}
+[63.057742] (-) TimerEvent: {}
+[63.158868] (-) TimerEvent: {}
+[63.219279] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[63.258153] (hiveflight_sim) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[63.259952] (-) TimerEvent: {}
+[63.260500] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[63.262424] (hiveflight_sim) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[63.360187] (-) TimerEvent: {}
+[63.402882] (hiveflight_sim) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[63.460410] (-) TimerEvent: {}
+[63.561415] (-) TimerEvent: {}
+[63.662560] (-) TimerEvent: {}
+[63.763503] (-) TimerEvent: {}
+[63.904204] (-) TimerEvent: {}
+[64.005205] (-) TimerEvent: {}
+[64.106135] (-) TimerEvent: {}
+[64.207366] (-) TimerEvent: {}
+[64.308283] (-) TimerEvent: {}
+[64.409199] (-) TimerEvent: {}
+[64.510202] (-) TimerEvent: {}
+[64.611409] (-) TimerEvent: {}
+[64.712253] (-) TimerEvent: {}
+[64.813011] (-) TimerEvent: {}
+[64.914070] (-) TimerEvent: {}
+[65.002691] (hiveflight_sim) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[65.050749] (-) TimerEvent: {}
+[65.151631] (-) TimerEvent: {}
+[65.252584] (-) TimerEvent: {}
+[65.353521] (-) TimerEvent: {}
+[65.454452] (-) TimerEvent: {}
+[65.555518] (-) TimerEvent: {}
+[65.656779] (-) TimerEvent: {}
+[65.758016] (-) TimerEvent: {}
+[65.859209] (-) TimerEvent: {}
+[65.960273] (-) TimerEvent: {}
+[66.061209] (-) TimerEvent: {}
+[66.162260] (-) TimerEvent: {}
+[66.263262] (-) TimerEvent: {}
+[66.364276] (-) TimerEvent: {}
+[66.465202] (-) TimerEvent: {}
+[66.566156] (-) TimerEvent: {}
+[66.667064] (-) TimerEvent: {}
+[66.716502] (hiveflight_sim) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[66.767212] (-) TimerEvent: {}
+[66.868072] (-) TimerEvent: {}
+[66.969037] (-) TimerEvent: {}
+[67.069993] (-) TimerEvent: {}
+[67.170954] (-) TimerEvent: {}
+[67.272060] (-) TimerEvent: {}
+[67.373190] (-) TimerEvent: {}
+[67.474290] (-) TimerEvent: {}
+[67.575339] (-) TimerEvent: {}
+[67.591758] (hiveflight_sim) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[67.675524] (-) TimerEvent: {}
+[67.723174] (hiveflight_sim) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[67.775739] (-) TimerEvent: {}
+[67.860685] (hiveflight_sim) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[67.900869] (-) TimerEvent: {}
+[68.001785] (-) TimerEvent: {}
+[68.041281] (hiveflight_sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[68.102006] (-) TimerEvent: {}
+[68.202926] (-) TimerEvent: {}
+[68.257027] (hiveflight_sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[68.303133] (-) TimerEvent: {}
+[68.404143] (-) TimerEvent: {}
+[68.505129] (-) TimerEvent: {}
+[68.606241] (-) TimerEvent: {}
+[68.707195] (-) TimerEvent: {}
+[68.808215] (-) TimerEvent: {}
+[68.909160] (-) TimerEvent: {}
+[69.010170] (-) TimerEvent: {}
+[69.063235] (hiveflight_sim) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[69.110426] (-) TimerEvent: {}
+[69.182111] (hiveflight_sim) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[69.210642] (-) TimerEvent: {}
+[69.311751] (-) TimerEvent: {}
+[69.412846] (-) TimerEvent: {}
+[69.513930] (-) TimerEvent: {}
+[69.614954] (-) TimerEvent: {}
+[69.716009] (-) TimerEvent: {}
+[69.817303] (-) TimerEvent: {}
+[69.918293] (-) TimerEvent: {}
+[70.019353] (-) TimerEvent: {}
+[70.120211] (-) TimerEvent: {}
+[70.221178] (-) TimerEvent: {}
+[70.322966] (-) TimerEvent: {}
+[70.424054] (-) TimerEvent: {}
+[70.525035] (-) TimerEvent: {}
+[70.626088] (-) TimerEvent: {}
+[70.733440] (-) TimerEvent: {}
+[70.834378] (-) TimerEvent: {}
+[70.935397] (-) TimerEvent: {}
+[71.036444] (-) TimerEvent: {}
+[71.137433] (-) TimerEvent: {}
+[71.238420] (-) TimerEvent: {}
+[71.339472] (-) TimerEvent: {}
+[71.440507] (-) TimerEvent: {}
+[71.541456] (-) TimerEvent: {}
+[71.642417] (-) TimerEvent: {}
+[71.743408] (-) TimerEvent: {}
+[71.844377] (-) TimerEvent: {}
+[71.945400] (-) TimerEvent: {}
+[72.083993] (-) TimerEvent: {}
+[72.165833] (hiveflight_sim) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[72.184127] (-) TimerEvent: {}
+[72.284924] (-) TimerEvent: {}
+[72.386052] (-) TimerEvent: {}
+[72.487126] (-) TimerEvent: {}
+[72.588169] (-) TimerEvent: {}
+[72.689170] (-) TimerEvent: {}
+[72.790116] (-) TimerEvent: {}
+[72.891061] (-) TimerEvent: {}
+[72.992131] (-) TimerEvent: {}
+[73.093109] (-) TimerEvent: {}
+[73.194388] (-) TimerEvent: {}
+[73.295719] (-) TimerEvent: {}
+[73.396786] (-) TimerEvent: {}
+[73.497760] (-) TimerEvent: {}
+[73.598722] (-) TimerEvent: {}
+[73.699746] (-) TimerEvent: {}
+[73.800810] (-) TimerEvent: {}
+[73.901838] (-) TimerEvent: {}
+[74.002790] (-) TimerEvent: {}
+[74.034556] (hiveflight_sim) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[74.103044] (-) TimerEvent: {}
+[74.204205] (-) TimerEvent: {}
+[74.305311] (-) TimerEvent: {}
+[74.406468] (-) TimerEvent: {}
+[74.507497] (-) TimerEvent: {}
+[74.608709] (-) TimerEvent: {}
+[74.709933] (-) TimerEvent: {}
+[74.811066] (-) TimerEvent: {}
+[74.912073] (-) TimerEvent: {}
+[75.013049] (-) TimerEvent: {}
+[75.113976] (-) TimerEvent: {}
+[75.214951] (-) TimerEvent: {}
+[75.315984] (-) TimerEvent: {}
+[75.416938] (-) TimerEvent: {}
+[75.517967] (-) TimerEvent: {}
+[75.618932] (-) TimerEvent: {}
+[75.720241] (-) TimerEvent: {}
+[75.821273] (-) TimerEvent: {}
+[75.922265] (-) TimerEvent: {}
+[76.023244] (-) TimerEvent: {}
+[76.124251] (-) TimerEvent: {}
+[76.225226] (-) TimerEvent: {}
+[76.326195] (-) TimerEvent: {}
+[76.427143] (-) TimerEvent: {}
+[76.528199] (-) TimerEvent: {}
+[76.629060] (-) TimerEvent: {}
+[76.730074] (-) TimerEvent: {}
+[76.831335] (-) TimerEvent: {}
+[76.932479] (-) TimerEvent: {}
+[77.033466] (-) TimerEvent: {}
+[77.134605] (-) TimerEvent: {}
+[77.235751] (-) TimerEvent: {}
+[77.321958] (hiveflight_sim) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[77.335913] (-) TimerEvent: {}
+[77.436802] (-) TimerEvent: {}
+[77.537879] (-) TimerEvent: {}
+[77.638886] (-) TimerEvent: {}
+[77.661411] (hiveflight_sim) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[77.739660] (-) TimerEvent: {}
+[77.840609] (-) TimerEvent: {}
+[77.941489] (-) TimerEvent: {}
+[78.042415] (-) TimerEvent: {}
+[78.143375] (-) TimerEvent: {}
+[78.244288] (-) TimerEvent: {}
+[78.345343] (-) TimerEvent: {}
+[78.446761] (-) TimerEvent: {}
+[78.547685] (-) TimerEvent: {}
+[78.648676] (-) TimerEvent: {}
+[78.749656] (-) TimerEvent: {}
+[78.850702] (-) TimerEvent: {}
+[78.951781] (-) TimerEvent: {}
+[79.052793] (-) TimerEvent: {}
+[79.153745] (-) TimerEvent: {}
+[79.254665] (-) TimerEvent: {}
+[79.355790] (-) TimerEvent: {}
+[79.456890] (-) TimerEvent: {}
+[79.465332] (hiveflight_sim) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[79.483997] (hiveflight_sim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[79.557117] (-) TimerEvent: {}
+[79.658011] (-) TimerEvent: {}
+[79.759118] (-) TimerEvent: {}
+[79.860045] (-) TimerEvent: {}
+[79.961190] (-) TimerEvent: {}
+[80.062604] (-) TimerEvent: {}
+[80.163612] (-) TimerEvent: {}
+[80.264595] (-) TimerEvent: {}
+[80.365746] (-) TimerEvent: {}
+[80.466833] (-) TimerEvent: {}
+[80.567879] (-) TimerEvent: {}
+[80.668827] (-) TimerEvent: {}
+[80.769742] (-) TimerEvent: {}
+[80.870740] (-) TimerEvent: {}
+[80.971826] (-) TimerEvent: {}
+[81.073023] (-) TimerEvent: {}
+[81.174146] (-) TimerEvent: {}
+[81.275268] (-) TimerEvent: {}
+[81.376510] (-) TimerEvent: {}
+[81.446061] (hiveflight_sim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[81.453854] (hiveflight_sim) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[81.476721] (-) TimerEvent: {}
+[81.577670] (-) TimerEvent: {}
+[81.678703] (-) TimerEvent: {}
+[81.779636] (-) TimerEvent: {}
+[81.854209] (hiveflight_sim) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[81.879920] (-) TimerEvent: {}
+[81.981610] (-) TimerEvent: {}
+[81.994829] (hiveflight_sim) StdoutLine: {'line': b'-- Found hiveflight_interfaces: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake)\n'}
+[82.081809] (-) TimerEvent: {}
+[82.182797] (-) TimerEvent: {}
+[82.283934] (-) TimerEvent: {}
+[82.385189] (-) TimerEvent: {}
+[82.486113] (-) TimerEvent: {}
+[82.587092] (-) TimerEvent: {}
+[82.688118] (-) TimerEvent: {}
+[82.789061] (-) TimerEvent: {}
+[82.890283] (-) TimerEvent: {}
+[82.991235] (-) TimerEvent: {}
+[83.092124] (-) TimerEvent: {}
+[83.193222] (-) TimerEvent: {}
+[83.294212] (-) TimerEvent: {}
+[83.395370] (-) TimerEvent: {}
+[83.496351] (-) TimerEvent: {}
+[83.597281] (-) TimerEvent: {}
+[83.698400] (-) TimerEvent: {}
+[83.799427] (-) TimerEvent: {}
+[83.900636] (-) TimerEvent: {}
+[84.001635] (-) TimerEvent: {}
+[84.103122] (-) TimerEvent: {}
+[84.204274] (-) TimerEvent: {}
+[84.305246] (-) TimerEvent: {}
+[84.406236] (-) TimerEvent: {}
+[84.507277] (-) TimerEvent: {}
+[84.578600] (hiveflight_sim) StdoutLine: {'line': b'-- Configuring done\n'}
+[84.607443] (-) TimerEvent: {}
+[84.708281] (-) TimerEvent: {}
+[84.809279] (-) TimerEvent: {}
+[84.910222] (-) TimerEvent: {}
+[85.011467] (-) TimerEvent: {}
+[85.112453] (-) TimerEvent: {}
+[85.213400] (-) TimerEvent: {}
+[85.314429] (-) TimerEvent: {}
+[85.415348] (-) TimerEvent: {}
+[85.510791] (hiveflight_sim) StdoutLine: {'line': b'-- Generating done\n'}
+[85.515452] (-) TimerEvent: {}
+[85.616276] (-) TimerEvent: {}
+[85.717341] (-) TimerEvent: {}
+[85.818396] (-) TimerEvent: {}
+[85.849004] (hiveflight_sim) StdoutLine: {'line': b'-- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim\n'}
+[85.865701] (hiveflight_sim) CommandEnded: {'returncode': 0}
+[85.912264] (hiveflight_sim) JobProgress: {'identifier': 'hiveflight_sim', 'progress': 'build'}
+[85.912669] (hiveflight_sim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim', '--', '-j16', '-l16'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[85.918521] (-) TimerEvent: {}
+[86.019403] (-) TimerEvent: {}
+[86.120496] (-) TimerEvent: {}
+[86.221441] (-) TimerEvent: {}
+[86.322613] (-) TimerEvent: {}
+[86.423702] (-) TimerEvent: {}
+[86.524879] (-) TimerEvent: {}
+[86.625943] (-) TimerEvent: {}
+[86.726903] (-) TimerEvent: {}
+[86.827965] (-) TimerEvent: {}
+[86.928967] (-) TimerEvent: {}
+[87.029955] (-) TimerEvent: {}
+[87.074547] (hiveflight_sim) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_ros2_adapter.dir/src/DroneRos2Adapter.cpp.o\x1b[0m\n'}
+[87.083117] (hiveflight_sim) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_ros2_adapter.dir/src/DroneCommunication3D.cpp.o\x1b[0m\n'}
+[87.092119] (hiveflight_sim) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_ros2_adapter.dir/mnt/c/work/ubuntu_work/HiveFlight/SwarmSimulation3D.cpp.o\x1b[0m\n'}
+[87.109859] (hiveflight_sim) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/hiveflight_ros2_adapter.dir/mnt/c/work/ubuntu_work/HiveFlight/SpatialGrid3D.cpp.o\x1b[0m\n'}
+[87.130144] (-) TimerEvent: {}
+[87.231447] (-) TimerEvent: {}
+[87.332311] (-) TimerEvent: {}
+[87.433367] (-) TimerEvent: {}
+[87.534321] (-) TimerEvent: {}
+[87.639146] (-) TimerEvent: {}
+[87.741194] (-) TimerEvent: {}
+[87.846620] (-) TimerEvent: {}
+[87.947812] (-) TimerEvent: {}
+[88.049098] (-) TimerEvent: {}
+[88.150113] (-) TimerEvent: {}
+[88.251136] (-) TimerEvent: {}
+[88.352166] (-) TimerEvent: {}
+[88.453055] (-) TimerEvent: {}
+[88.553974] (-) TimerEvent: {}
+[88.654812] (-) TimerEvent: {}
+[88.755698] (-) TimerEvent: {}
+[88.856532] (-) TimerEvent: {}
+[88.957240] (-) TimerEvent: {}
+[89.058149] (-) TimerEvent: {}
+[89.159162] (-) TimerEvent: {}
+[89.260648] (-) TimerEvent: {}
+[89.361745] (-) TimerEvent: {}
+[89.462656] (-) TimerEvent: {}
+[89.563692] (-) TimerEvent: {}
+[89.664859] (-) TimerEvent: {}
+[89.808992] (-) TimerEvent: {}
+[89.909874] (-) TimerEvent: {}
+[90.010804] (-) TimerEvent: {}
+[90.111820] (-) TimerEvent: {}
+[90.212868] (-) TimerEvent: {}
+[90.313784] (-) TimerEvent: {}
+[90.414767] (-) TimerEvent: {}
+[90.515860] (-) TimerEvent: {}
+[90.616840] (-) TimerEvent: {}
+[90.717965] (-) TimerEvent: {}
+[90.818911] (-) TimerEvent: {}
+[90.919898] (-) TimerEvent: {}
+[91.020883] (-) TimerEvent: {}
+[91.122001] (-) TimerEvent: {}
+[91.223277] (-) TimerEvent: {}
+[91.324514] (-) TimerEvent: {}
+[91.425631] (-) TimerEvent: {}
+[91.526559] (-) TimerEvent: {}
+[91.627601] (-) TimerEvent: {}
+[91.728635] (-) TimerEvent: {}
+[91.830011] (-) TimerEvent: {}
+[91.931189] (-) TimerEvent: {}
+[92.032666] (-) TimerEvent: {}
+[92.133953] (-) TimerEvent: {}
+[92.235073] (-) TimerEvent: {}
+[92.336220] (-) TimerEvent: {}
+[92.437355] (-) TimerEvent: {}
+[92.538519] (-) TimerEvent: {}
+[92.639851] (-) TimerEvent: {}
+[92.740875] (-) TimerEvent: {}
+[92.842128] (-) TimerEvent: {}
+[92.943050] (-) TimerEvent: {}
+[93.044024] (-) TimerEvent: {}
+[93.145107] (-) TimerEvent: {}
+[93.246173] (-) TimerEvent: {}
+[93.347070] (-) TimerEvent: {}
+[93.448137] (-) TimerEvent: {}
+[93.549111] (-) TimerEvent: {}
+[93.650178] (-) TimerEvent: {}
+[93.751259] (-) TimerEvent: {}
+[93.852154] (-) TimerEvent: {}
+[93.953230] (-) TimerEvent: {}
+[94.054003] (-) TimerEvent: {}
+[94.173616] (-) TimerEvent: {}
+[94.274637] (-) TimerEvent: {}
+[94.375948] (-) TimerEvent: {}
+[94.477181] (-) TimerEvent: {}
+[94.578184] (-) TimerEvent: {}
+[94.679198] (-) TimerEvent: {}
+[94.780286] (-) TimerEvent: {}
+[94.881388] (-) TimerEvent: {}
+[94.982387] (-) TimerEvent: {}
+[95.083422] (-) TimerEvent: {}
+[95.186242] (-) TimerEvent: {}
+[95.287697] (-) TimerEvent: {}
+[95.388625] (-) TimerEvent: {}
+[95.489619] (-) TimerEvent: {}
+[95.591131] (-) TimerEvent: {}
+[95.692712] (-) TimerEvent: {}
+[95.794270] (-) TimerEvent: {}
+[95.895906] (-) TimerEvent: {}
+[95.997656] (-) TimerEvent: {}
+[96.099320] (-) TimerEvent: {}
+[96.200672] (-) TimerEvent: {}
+[96.301953] (-) TimerEvent: {}
+[96.403509] (-) TimerEvent: {}
+[96.504812] (-) TimerEvent: {}
+[96.633078] (-) TimerEvent: {}
+[96.734874] (-) TimerEvent: {}
+[96.836116] (-) TimerEvent: {}
+[96.937818] (-) TimerEvent: {}
+[97.039012] (-) TimerEvent: {}
+[97.140317] (-) TimerEvent: {}
+[97.241590] (-) TimerEvent: {}
+[97.343068] (-) TimerEvent: {}
+[97.444210] (-) TimerEvent: {}
+[97.545829] (-) TimerEvent: {}
+[97.646840] (-) TimerEvent: {}
+[97.747837] (-) TimerEvent: {}
+[97.848960] (-) TimerEvent: {}
+[97.990421] (-) TimerEvent: {}
+[98.091642] (-) TimerEvent: {}
+[98.193622] (-) TimerEvent: {}
+[98.294893] (-) TimerEvent: {}
+[98.395890] (-) TimerEvent: {}
+[98.497086] (-) TimerEvent: {}
+[98.598373] (-) TimerEvent: {}
+[98.699878] (-) TimerEvent: {}
+[98.801400] (-) TimerEvent: {}
+[98.902685] (-) TimerEvent: {}
+[99.003940] (-) TimerEvent: {}
+[99.112967] (-) TimerEvent: {}
+[99.214182] (-) TimerEvent: {}
+[99.346507] (-) TimerEvent: {}
+[99.447590] (-) TimerEvent: {}
+[99.548703] (-) TimerEvent: {}
+[99.650076] (-) TimerEvent: {}
+[99.751464] (-) TimerEvent: {}
+[99.852789] (-) TimerEvent: {}
+[99.953928] (-) TimerEvent: {}
+[100.055249] (-) TimerEvent: {}
+[100.156656] (-) TimerEvent: {}
+[100.258030] (-) TimerEvent: {}
+[100.359663] (-) TimerEvent: {}
+[100.460982] (-) TimerEvent: {}
+[100.562331] (-) TimerEvent: {}
+[100.663703] (-) TimerEvent: {}
+[100.764898] (-) TimerEvent: {}
+[100.866393] (-) TimerEvent: {}
+[100.967772] (-) TimerEvent: {}
+[101.069223] (-) TimerEvent: {}
+[101.170753] (-) TimerEvent: {}
+[101.272687] (-) TimerEvent: {}
+[101.374067] (-) TimerEvent: {}
+[101.475248] (-) TimerEvent: {}
+[101.576403] (-) TimerEvent: {}
+[101.677820] (-) TimerEvent: {}
+[101.779770] (-) TimerEvent: {}
+[101.881254] (-) TimerEvent: {}
+[101.982565] (-) TimerEvent: {}
+[102.084065] (-) TimerEvent: {}
+[102.185497] (-) TimerEvent: {}
+[102.286762] (-) TimerEvent: {}
+[102.387887] (-) TimerEvent: {}
+[102.489241] (-) TimerEvent: {}
+[102.591375] (-) TimerEvent: {}
+[102.692600] (-) TimerEvent: {}
+[102.793904] (-) TimerEvent: {}
+[102.895224] (-) TimerEvent: {}
+[102.996672] (-) TimerEvent: {}
+[103.097684] (-) TimerEvent: {}
+[103.198625] (-) TimerEvent: {}
+[103.299479] (-) TimerEvent: {}
+[103.441496] (-) TimerEvent: {}
+[103.542407] (-) TimerEvent: {}
+[103.643471] (-) TimerEvent: {}
+[103.744351] (-) TimerEvent: {}
+[103.845247] (-) TimerEvent: {}
+[103.946218] (-) TimerEvent: {}
+[104.047068] (-) TimerEvent: {}
+[104.147917] (-) TimerEvent: {}
+[104.248749] (-) TimerEvent: {}
+[104.350070] (-) TimerEvent: {}
+[104.450919] (-) TimerEvent: {}
+[104.551783] (-) TimerEvent: {}
+[104.652721] (-) TimerEvent: {}
+[104.797258] (-) TimerEvent: {}
+[104.890427] (hiveflight_sim) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX static library libhiveflight_ros2_adapter.a\x1b[0m\n'}
+[104.897376] (-) TimerEvent: {}
+[104.998116] (-) TimerEvent: {}
+[105.098983] (-) TimerEvent: {}
+[105.200026] (-) TimerEvent: {}
+[105.300984] (-) TimerEvent: {}
+[105.402446] (-) TimerEvent: {}
+[105.503458] (-) TimerEvent: {}
+[105.604592] (-) TimerEvent: {}
+[105.705481] (-) TimerEvent: {}
+[105.806443] (-) TimerEvent: {}
+[105.907718] (-) TimerEvent: {}
+[106.008756] (-) TimerEvent: {}
+[106.109750] (-) TimerEvent: {}
+[106.210705] (-) TimerEvent: {}
+[106.311909] (-) TimerEvent: {}
+[106.413086] (-) TimerEvent: {}
+[106.514028] (-) TimerEvent: {}
+[106.614981] (-) TimerEvent: {}
+[106.715892] (-) TimerEvent: {}
+[106.816711] (-) TimerEvent: {}
+[106.917640] (-) TimerEvent: {}
+[107.018647] (-) TimerEvent: {}
+[107.119764] (-) TimerEvent: {}
+[107.220669] (-) TimerEvent: {}
+[107.321639] (-) TimerEvent: {}
+[107.422758] (-) TimerEvent: {}
+[107.526393] (-) TimerEvent: {}
+[107.627540] (-) TimerEvent: {}
+[107.728494] (-) TimerEvent: {}
+[107.829478] (-) TimerEvent: {}
+[107.930375] (-) TimerEvent: {}
+[108.031338] (-) TimerEvent: {}
+[108.132229] (-) TimerEvent: {}
+[108.233172] (-) TimerEvent: {}
+[108.334105] (-) TimerEvent: {}
+[108.435061] (-) TimerEvent: {}
+[108.536021] (-) TimerEvent: {}
+[108.637001] (-) TimerEvent: {}
+[108.737949] (-) TimerEvent: {}
+[108.838883] (-) TimerEvent: {}
+[108.939923] (-) TimerEvent: {}
+[109.040788] (-) TimerEvent: {}
+[109.142073] (-) TimerEvent: {}
+[109.243008] (-) TimerEvent: {}
+[109.343895] (-) TimerEvent: {}
+[109.445201] (-) TimerEvent: {}
+[109.595529] (-) TimerEvent: {}
+[109.696506] (-) TimerEvent: {}
+[109.797791] (-) TimerEvent: {}
+[109.898750] (-) TimerEvent: {}
+[109.999791] (-) TimerEvent: {}
+[110.100691] (-) TimerEvent: {}
+[110.201782] (-) TimerEvent: {}
+[110.303054] (-) TimerEvent: {}
+[110.404244] (-) TimerEvent: {}
+[110.505212] (-) TimerEvent: {}
+[110.606216] (-) TimerEvent: {}
+[110.707275] (-) TimerEvent: {}
+[110.808230] (-) TimerEvent: {}
+[110.909174] (-) TimerEvent: {}
+[111.010412] (-) TimerEvent: {}
+[111.111854] (-) TimerEvent: {}
+[111.213190] (-) TimerEvent: {}
+[111.314218] (-) TimerEvent: {}
+[111.415169] (-) TimerEvent: {}
+[111.516214] (-) TimerEvent: {}
+[111.538293] (hiveflight_sim) StdoutLine: {'line': b'[100%] Built target hiveflight_ros2_adapter\n'}
+[111.616459] (-) TimerEvent: {}
+[111.717392] (-) TimerEvent: {}
+[111.741743] (hiveflight_sim) CommandEnded: {'returncode': 0}
+[111.773604] (hiveflight_sim) JobProgress: {'identifier': 'hiveflight_sim', 'progress': 'install'}
+[111.781909] (hiveflight_sim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[111.817517] (-) TimerEvent: {}
+[111.918345] (-) TimerEvent: {}
+[111.919907] (hiveflight_sim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[111.940802] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_ros2_adapter.a\n'}
+[112.018574] (-) TimerEvent: {}
+[112.119507] (-) TimerEvent: {}
+[112.220383] (-) TimerEvent: {}
+[112.321382] (-) TimerEvent: {}
+[112.422356] (-) TimerEvent: {}
+[112.523354] (-) TimerEvent: {}
+[112.624384] (-) TimerEvent: {}
+[112.725246] (-) TimerEvent: {}
+[112.826193] (-) TimerEvent: {}
+[112.927403] (-) TimerEvent: {}
+[113.028933] (-) TimerEvent: {}
+[113.130011] (-) TimerEvent: {}
+[113.167916] (hiveflight_sim) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include\n'}
+[113.218730] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/DroneCommunication3D.hpp\n'}
+[113.230190] (-) TimerEvent: {}
+[113.311946] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/DroneRos2Adapter.hpp\n'}
+[113.330400] (-) TimerEvent: {}
+[113.431528] (-) TimerEvent: {}
+[113.440155] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/SpatialGrid3D.hpp\n'}
+[113.530926] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/SwarmSimulation3D.hpp\n'}
+[113.532603] (-) TimerEvent: {}
+[113.633425] (-) TimerEvent: {}
+[113.650608] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/Vec3.hpp\n'}
+[113.734048] (-) TimerEvent: {}
+[113.741532] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/environment/library_path.sh\n'}
+[113.831154] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/environment/library_path.dsv\n'}
+[113.834158] (-) TimerEvent: {}
+[113.934948] (-) TimerEvent: {}
+[113.944224] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_sim\n'}
+[114.035188] (-) TimerEvent: {}
+[114.114462] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_sim\n'}
+[114.135373] (-) TimerEvent: {}
+[114.236435] (-) TimerEvent: {}
+[114.257692] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/environment/ament_prefix_path.sh\n'}
+[114.336655] (-) TimerEvent: {}
+[114.361319] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/environment/ament_prefix_path.dsv\n'}
+[114.436918] (-) TimerEvent: {}
+[114.454605] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/environment/path.sh\n'}
+[114.537095] (-) TimerEvent: {}
+[114.555089] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/environment/path.dsv\n'}
+[114.637333] (-) TimerEvent: {}
+[114.649599] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/local_setup.bash\n'}
+[114.737586] (-) TimerEvent: {}
+[114.739914] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/local_setup.sh\n'}
+[114.837826] (-) TimerEvent: {}
+[114.883983] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/local_setup.zsh\n'}
+[114.938099] (-) TimerEvent: {}
+[114.974640] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/local_setup.dsv\n'}
+[115.038312] (-) TimerEvent: {}
+[115.060938] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.dsv\n'}
+[115.138549] (-) TimerEvent: {}
+[115.168580] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_sim\n'}
+[115.238779] (-) TimerEvent: {}
+[115.331366] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake/hiveflight_ros2_adapterTargetsExport.cmake\n'}
+[115.338891] (-) TimerEvent: {}
+[115.439714] (-) TimerEvent: {}
+[115.468440] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake/hiveflight_ros2_adapterTargetsExport-noconfig.cmake\n'}
+[115.539971] (-) TimerEvent: {}
+[115.624826] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[115.640147] (-) TimerEvent: {}
+[115.741656] (-) TimerEvent: {}
+[115.783333] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[115.841975] (-) TimerEvent: {}
+[115.890345] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake/hiveflight_simConfig.cmake\n'}
+[115.942193] (-) TimerEvent: {}
+[115.985664] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake/hiveflight_simConfig-version.cmake\n'}
+[116.042423] (-) TimerEvent: {}
+[116.087254] (hiveflight_sim) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/package.xml\n'}
+[116.142634] (-) TimerEvent: {}
+[116.165941] (hiveflight_sim) CommandEnded: {'returncode': 0}
+[116.242816] (-) TimerEvent: {}
+[116.343777] (-) TimerEvent: {}
+[116.444592] (-) TimerEvent: {}
+[116.545468] (-) TimerEvent: {}
+[116.646356] (-) TimerEvent: {}
+[116.747427] (-) TimerEvent: {}
+[116.848271] (-) TimerEvent: {}
+[116.949065] (-) TimerEvent: {}
+[117.068075] (-) TimerEvent: {}
+[117.168912] (-) TimerEvent: {}
+[117.269818] (-) TimerEvent: {}
+[117.370784] (-) TimerEvent: {}
+[117.472116] (-) TimerEvent: {}
+[117.573254] (-) TimerEvent: {}
+[117.673983] (-) TimerEvent: {}
+[117.775016] (-) TimerEvent: {}
+[117.840159] (hiveflight_sim) JobEnded: {'identifier': 'hiveflight_sim', 'rc': 0}
+[117.855558] (hiveflight_sim_node) JobStarted: {'identifier': 'hiveflight_sim_node'}
+[117.875141] (-) TimerEvent: {}
+[117.975933] (-) TimerEvent: {}
+[118.076789] (-) TimerEvent: {}
+[118.177665] (-) TimerEvent: {}
+[118.278826] (-) TimerEvent: {}
+[118.379880] (-) TimerEvent: {}
+[118.447545] (hiveflight_sim_node) JobProgress: {'identifier': 'hiveflight_sim_node', 'progress': 'cmake'}
+[118.480046] (-) TimerEvent: {}
+[118.561396] (hiveflight_sim_node) Command: {'cmd': ['/usr/bin/cmake', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node', '-DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[118.624111] (-) TimerEvent: {}
+[118.724944] (-) TimerEvent: {}
+[118.825928] (-) TimerEvent: {}
+[118.927261] (-) TimerEvent: {}
+[119.028307] (-) TimerEvent: {}
+[119.129312] (-) TimerEvent: {}
+[119.230297] (-) TimerEvent: {}
+[119.331235] (-) TimerEvent: {}
+[119.432497] (-) TimerEvent: {}
+[119.533560] (-) TimerEvent: {}
+[119.634623] (-) TimerEvent: {}
+[119.714801] (hiveflight_sim_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[119.734829] (-) TimerEvent: {}
+[119.836112] (-) TimerEvent: {}
+[119.936996] (-) TimerEvent: {}
+[120.038062] (-) TimerEvent: {}
+[120.139016] (-) TimerEvent: {}
+[120.240015] (-) TimerEvent: {}
+[120.340946] (-) TimerEvent: {}
+[120.441885] (-) TimerEvent: {}
+[120.542916] (-) TimerEvent: {}
+[120.643934] (-) TimerEvent: {}
+[120.744909] (-) TimerEvent: {}
+[120.808885] (hiveflight_sim_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[120.845157] (-) TimerEvent: {}
+[120.946305] (-) TimerEvent: {}
+[121.047361] (-) TimerEvent: {}
+[121.148201] (-) TimerEvent: {}
+[121.249151] (-) TimerEvent: {}
+[121.350233] (-) TimerEvent: {}
+[121.402644] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[121.450481] (-) TimerEvent: {}
+[121.551741] (-) TimerEvent: {}
+[121.652952] (-) TimerEvent: {}
+[121.753885] (-) TimerEvent: {}
+[121.854878] (-) TimerEvent: {}
+[121.957578] (-) TimerEvent: {}
+[122.058534] (-) TimerEvent: {}
+[122.159608] (-) TimerEvent: {}
+[122.260610] (-) TimerEvent: {}
+[122.361560] (-) TimerEvent: {}
+[122.462579] (-) TimerEvent: {}
+[122.563644] (-) TimerEvent: {}
+[122.664613] (-) TimerEvent: {}
+[122.765547] (-) TimerEvent: {}
+[122.866548] (-) TimerEvent: {}
+[122.967480] (-) TimerEvent: {}
+[123.068453] (-) TimerEvent: {}
+[123.169380] (-) TimerEvent: {}
+[123.171917] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[123.210378] (hiveflight_sim_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[123.212279] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[123.213904] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[123.269583] (-) TimerEvent: {}
+[123.302485] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[123.369831] (-) TimerEvent: {}
+[123.470806] (-) TimerEvent: {}
+[123.571797] (-) TimerEvent: {}
+[123.674691] (-) TimerEvent: {}
+[123.775784] (-) TimerEvent: {}
+[123.876816] (-) TimerEvent: {}
+[123.977724] (-) TimerEvent: {}
+[124.078577] (-) TimerEvent: {}
+[124.179755] (-) TimerEvent: {}
+[124.280810] (-) TimerEvent: {}
+[124.381871] (-) TimerEvent: {}
+[124.482768] (-) TimerEvent: {}
+[124.583809] (-) TimerEvent: {}
+[124.684863] (-) TimerEvent: {}
+[124.786127] (-) TimerEvent: {}
+[124.887398] (-) TimerEvent: {}
+[124.988604] (-) TimerEvent: {}
+[125.089826] (-) TimerEvent: {}
+[125.190827] (-) TimerEvent: {}
+[125.291813] (-) TimerEvent: {}
+[125.392970] (-) TimerEvent: {}
+[125.421090] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[125.459280] (hiveflight_sim_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[125.461219] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[125.463393] (hiveflight_sim_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[125.493229] (-) TimerEvent: {}
+[125.594255] (-) TimerEvent: {}
+[125.607573] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[125.694505] (-) TimerEvent: {}
+[125.795446] (-) TimerEvent: {}
+[125.896415] (-) TimerEvent: {}
+[125.997429] (-) TimerEvent: {}
+[126.098697] (-) TimerEvent: {}
+[126.199666] (-) TimerEvent: {}
+[126.300604] (-) TimerEvent: {}
+[126.401475] (-) TimerEvent: {}
+[126.502342] (-) TimerEvent: {}
+[126.617954] (-) TimerEvent: {}
+[126.719699] (-) TimerEvent: {}
+[126.820442] (-) TimerEvent: {}
+[126.921325] (-) TimerEvent: {}
+[127.022205] (-) TimerEvent: {}
+[127.123170] (-) TimerEvent: {}
+[127.160419] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[127.223470] (-) TimerEvent: {}
+[127.324369] (-) TimerEvent: {}
+[127.425198] (-) TimerEvent: {}
+[127.526237] (-) TimerEvent: {}
+[127.627349] (-) TimerEvent: {}
+[127.728452] (-) TimerEvent: {}
+[127.829793] (-) TimerEvent: {}
+[127.971208] (-) TimerEvent: {}
+[128.072263] (-) TimerEvent: {}
+[128.173201] (-) TimerEvent: {}
+[128.274259] (-) TimerEvent: {}
+[128.375423] (-) TimerEvent: {}
+[128.476359] (-) TimerEvent: {}
+[128.577250] (-) TimerEvent: {}
+[128.678295] (-) TimerEvent: {}
+[128.779225] (-) TimerEvent: {}
+[128.880255] (-) TimerEvent: {}
+[128.975168] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[129.021523] (-) TimerEvent: {}
+[129.122297] (-) TimerEvent: {}
+[129.223227] (-) TimerEvent: {}
+[129.340607] (-) TimerEvent: {}
+[129.441511] (-) TimerEvent: {}
+[129.542452] (-) TimerEvent: {}
+[129.643428] (-) TimerEvent: {}
+[129.744387] (-) TimerEvent: {}
+[129.845328] (-) TimerEvent: {}
+[129.895468] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[129.945534] (-) TimerEvent: {}
+[130.028889] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[130.045667] (-) TimerEvent: {}
+[130.146815] (-) TimerEvent: {}
+[130.167425] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[130.247058] (-) TimerEvent: {}
+[130.313756] (hiveflight_sim_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[130.347343] (-) TimerEvent: {}
+[130.448297] (-) TimerEvent: {}
+[130.526559] (hiveflight_sim_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[130.548552] (-) TimerEvent: {}
+[130.649599] (-) TimerEvent: {}
+[130.750557] (-) TimerEvent: {}
+[130.851483] (-) TimerEvent: {}
+[130.952543] (-) TimerEvent: {}
+[131.053545] (-) TimerEvent: {}
+[131.154453] (-) TimerEvent: {}
+[131.216278] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[131.254651] (-) TimerEvent: {}
+[131.287685] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[131.354959] (-) TimerEvent: {}
+[131.456045] (-) TimerEvent: {}
+[131.557104] (-) TimerEvent: {}
+[131.658020] (-) TimerEvent: {}
+[131.759007] (-) TimerEvent: {}
+[131.859943] (-) TimerEvent: {}
+[131.960856] (-) TimerEvent: {}
+[132.066849] (-) TimerEvent: {}
+[132.167777] (-) TimerEvent: {}
+[132.268825] (-) TimerEvent: {}
+[132.369873] (-) TimerEvent: {}
+[132.470735] (-) TimerEvent: {}
+[132.571807] (-) TimerEvent: {}
+[132.672778] (-) TimerEvent: {}
+[132.773726] (-) TimerEvent: {}
+[132.874707] (-) TimerEvent: {}
+[132.975776] (-) TimerEvent: {}
+[133.076740] (-) TimerEvent: {}
+[133.177657] (-) TimerEvent: {}
+[133.278590] (-) TimerEvent: {}
+[133.379667] (-) TimerEvent: {}
+[133.480587] (-) TimerEvent: {}
+[133.581527] (-) TimerEvent: {}
+[133.682530] (-) TimerEvent: {}
+[133.783638] (-) TimerEvent: {}
+[133.884577] (-) TimerEvent: {}
+[133.985560] (-) TimerEvent: {}
+[134.086454] (-) TimerEvent: {}
+[134.184845] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[134.187479] (-) TimerEvent: {}
+[134.288204] (-) TimerEvent: {}
+[134.389154] (-) TimerEvent: {}
+[134.490141] (-) TimerEvent: {}
+[134.591151] (-) TimerEvent: {}
+[134.692236] (-) TimerEvent: {}
+[134.793319] (-) TimerEvent: {}
+[134.894324] (-) TimerEvent: {}
+[134.995524] (-) TimerEvent: {}
+[135.096544] (-) TimerEvent: {}
+[135.197453] (-) TimerEvent: {}
+[135.298342] (-) TimerEvent: {}
+[135.399268] (-) TimerEvent: {}
+[135.500241] (-) TimerEvent: {}
+[135.601182] (-) TimerEvent: {}
+[135.702124] (-) TimerEvent: {}
+[135.803097] (-) TimerEvent: {}
+[135.840397] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[135.903392] (-) TimerEvent: {}
+[136.004894] (-) TimerEvent: {}
+[136.106002] (-) TimerEvent: {}
+[136.206850] (-) TimerEvent: {}
+[136.307832] (-) TimerEvent: {}
+[136.408886] (-) TimerEvent: {}
+[136.509840] (-) TimerEvent: {}
+[136.610796] (-) TimerEvent: {}
+[136.711831] (-) TimerEvent: {}
+[136.812815] (-) TimerEvent: {}
+[136.913751] (-) TimerEvent: {}
+[137.014698] (-) TimerEvent: {}
+[137.115724] (-) TimerEvent: {}
+[137.216633] (-) TimerEvent: {}
+[137.317561] (-) TimerEvent: {}
+[137.418559] (-) TimerEvent: {}
+[137.519573] (-) TimerEvent: {}
+[137.620597] (-) TimerEvent: {}
+[137.721532] (-) TimerEvent: {}
+[137.822659] (-) TimerEvent: {}
+[137.923770] (-) TimerEvent: {}
+[138.024739] (-) TimerEvent: {}
+[138.125666] (-) TimerEvent: {}
+[138.226581] (-) TimerEvent: {}
+[138.327589] (-) TimerEvent: {}
+[138.428682] (-) TimerEvent: {}
+[138.530014] (-) TimerEvent: {}
+[138.631259] (-) TimerEvent: {}
+[138.732424] (-) TimerEvent: {}
+[138.877338] (-) TimerEvent: {}
+[138.978256] (-) TimerEvent: {}
+[139.079467] (-) TimerEvent: {}
+[139.098187] (hiveflight_sim_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[139.179713] (-) TimerEvent: {}
+[139.280680] (-) TimerEvent: {}
+[139.369901] (hiveflight_sim_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[139.380792] (-) TimerEvent: {}
+[139.481785] (-) TimerEvent: {}
+[139.583157] (-) TimerEvent: {}
+[139.684571] (-) TimerEvent: {}
+[139.786093] (-) TimerEvent: {}
+[139.887196] (-) TimerEvent: {}
+[139.988251] (-) TimerEvent: {}
+[140.089213] (-) TimerEvent: {}
+[140.190204] (-) TimerEvent: {}
+[140.291424] (-) TimerEvent: {}
+[140.392564] (-) TimerEvent: {}
+[140.493513] (-) TimerEvent: {}
+[140.594768] (-) TimerEvent: {}
+[140.695874] (-) TimerEvent: {}
+[140.796870] (-) TimerEvent: {}
+[140.897839] (-) TimerEvent: {}
+[140.998861] (-) TimerEvent: {}
+[141.099987] (-) TimerEvent: {}
+[141.200896] (-) TimerEvent: {}
+[141.248917] (hiveflight_sim_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[141.266301] (hiveflight_sim_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[141.301079] (-) TimerEvent: {}
+[141.402060] (-) TimerEvent: {}
+[141.503117] (-) TimerEvent: {}
+[141.607280] (-) TimerEvent: {}
+[141.708295] (-) TimerEvent: {}
+[141.809337] (-) TimerEvent: {}
+[141.910267] (-) TimerEvent: {}
+[142.011253] (-) TimerEvent: {}
+[142.112414] (-) TimerEvent: {}
+[142.213371] (-) TimerEvent: {}
+[142.314317] (-) TimerEvent: {}
+[142.415384] (-) TimerEvent: {}
+[142.516515] (-) TimerEvent: {}
+[142.617512] (-) TimerEvent: {}
+[142.718459] (-) TimerEvent: {}
+[142.819465] (-) TimerEvent: {}
+[142.920735] (-) TimerEvent: {}
+[143.021650] (-) TimerEvent: {}
+[143.042801] (hiveflight_sim_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[143.052417] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[143.121934] (-) TimerEvent: {}
+[143.223046] (-) TimerEvent: {}
+[143.323940] (-) TimerEvent: {}
+[143.424873] (-) TimerEvent: {}
+[143.499760] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found hiveflight_interfaces: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake)\n'}
+[143.525071] (-) TimerEvent: {}
+[143.626063] (-) TimerEvent: {}
+[143.727024] (-) TimerEvent: {}
+[143.827986] (-) TimerEvent: {}
+[143.928962] (-) TimerEvent: {}
+[144.029900] (-) TimerEvent: {}
+[144.130826] (-) TimerEvent: {}
+[144.231830] (-) TimerEvent: {}
+[144.332970] (-) TimerEvent: {}
+[144.433918] (-) TimerEvent: {}
+[144.534825] (-) TimerEvent: {}
+[144.541302] (hiveflight_sim_node) StdoutLine: {'line': b'-- Found hiveflight_sim: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake)\n'}
+[144.635072] (-) TimerEvent: {}
+[144.736059] (-) TimerEvent: {}
+[144.837053] (-) TimerEvent: {}
+[144.938079] (-) TimerEvent: {}
+[145.039021] (-) TimerEvent: {}
+[145.139989] (-) TimerEvent: {}
+[145.240993] (-) TimerEvent: {}
+[145.342043] (-) TimerEvent: {}
+[145.443020] (-) TimerEvent: {}
+[145.543904] (-) TimerEvent: {}
+[145.645405] (-) TimerEvent: {}
+[145.746586] (-) TimerEvent: {}
+[145.847624] (-) TimerEvent: {}
+[145.889464] (hiveflight_sim_node) StdoutLine: {'line': b'-- Configuring done\n'}
+[145.947922] (-) TimerEvent: {}
+[146.048915] (-) TimerEvent: {}
+[146.149958] (-) TimerEvent: {}
+[146.250842] (-) TimerEvent: {}
+[146.351721] (-) TimerEvent: {}
+[146.452709] (-) TimerEvent: {}
+[146.553736] (-) TimerEvent: {}
+[146.654863] (-) TimerEvent: {}
+[146.756203] (-) TimerEvent: {}
+[146.857498] (-) TimerEvent: {}
+[146.958629] (-) TimerEvent: {}
+[147.059949] (hiveflight_sim_node) StdoutLine: {'line': b'-- Generating done\n'}
+[147.061473] (-) TimerEvent: {}
+[147.162364] (-) TimerEvent: {}
+[147.263413] (-) TimerEvent: {}
+[147.364506] (-) TimerEvent: {}
+[147.423915] (hiveflight_sim_node) StdoutLine: {'line': b'-- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node\n'}
+[147.441199] (hiveflight_sim_node) CommandEnded: {'returncode': 0}
+[147.458232] (hiveflight_sim_node) JobProgress: {'identifier': 'hiveflight_sim_node', 'progress': 'build'}
+[147.464679] (-) TimerEvent: {}
+[147.474487] (hiveflight_sim_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node', '--', '-j16', '-l16'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[147.564912] (-) TimerEvent: {}
+[147.666096] (-) TimerEvent: {}
+[147.767059] (-) TimerEvent: {}
+[147.868249] (-) TimerEvent: {}
+[147.969222] (-) TimerEvent: {}
+[148.070175] (-) TimerEvent: {}
+[148.171136] (-) TimerEvent: {}
+[148.272206] (-) TimerEvent: {}
+[148.373124] (-) TimerEvent: {}
+[148.474057] (-) TimerEvent: {}
+[148.575004] (-) TimerEvent: {}
+[148.676124] (-) TimerEvent: {}
+[148.762568] (hiveflight_sim_node) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/simulation_node.dir/src/simulation_node.cpp.o\x1b[0m\n'}
+[148.776242] (-) TimerEvent: {}
+[148.878513] (-) TimerEvent: {}
+[148.979650] (-) TimerEvent: {}
+[149.080650] (-) TimerEvent: {}
+[149.181656] (-) TimerEvent: {}
+[149.282574] (-) TimerEvent: {}
+[149.383619] (-) TimerEvent: {}
+[149.484571] (-) TimerEvent: {}
+[149.585679] (-) TimerEvent: {}
+[149.686662] (-) TimerEvent: {}
+[149.789753] (-) TimerEvent: {}
+[149.890824] (-) TimerEvent: {}
+[149.991907] (-) TimerEvent: {}
+[150.093173] (-) TimerEvent: {}
+[150.194167] (-) TimerEvent: {}
+[150.295339] (-) TimerEvent: {}
+[150.396428] (-) TimerEvent: {}
+[150.497576] (-) TimerEvent: {}
+[150.598902] (-) TimerEvent: {}
+[150.699982] (-) TimerEvent: {}
+[150.801196] (-) TimerEvent: {}
+[150.902760] (-) TimerEvent: {}
+[151.003764] (-) TimerEvent: {}
+[151.148600] (-) TimerEvent: {}
+[151.249865] (-) TimerEvent: {}
+[151.350978] (-) TimerEvent: {}
+[151.452263] (-) TimerEvent: {}
+[151.553667] (-) TimerEvent: {}
+[151.654778] (-) TimerEvent: {}
+[151.755788] (-) TimerEvent: {}
+[151.856922] (-) TimerEvent: {}
+[151.957950] (-) TimerEvent: {}
+[152.059010] (-) TimerEvent: {}
+[152.160827] (-) TimerEvent: {}
+[152.261817] (-) TimerEvent: {}
+[152.362851] (-) TimerEvent: {}
+[152.507937] (-) TimerEvent: {}
+[152.608990] (-) TimerEvent: {}
+[152.710028] (-) TimerEvent: {}
+[152.811030] (-) TimerEvent: {}
+[152.912040] (-) TimerEvent: {}
+[153.012990] (-) TimerEvent: {}
+[153.114039] (-) TimerEvent: {}
+[153.215238] (-) TimerEvent: {}
+[153.316255] (-) TimerEvent: {}
+[153.417194] (-) TimerEvent: {}
+[153.518147] (-) TimerEvent: {}
+[153.619061] (-) TimerEvent: {}
+[153.719996] (-) TimerEvent: {}
+[153.821007] (-) TimerEvent: {}
+[153.922117] (-) TimerEvent: {}
+[154.023072] (-) TimerEvent: {}
+[154.124001] (-) TimerEvent: {}
+[154.224931] (-) TimerEvent: {}
+[154.325895] (-) TimerEvent: {}
+[154.426799] (-) TimerEvent: {}
+[154.527891] (-) TimerEvent: {}
+[154.628848] (-) TimerEvent: {}
+[154.729918] (-) TimerEvent: {}
+[154.830970] (-) TimerEvent: {}
+[154.932191] (-) TimerEvent: {}
+[155.033197] (-) TimerEvent: {}
+[155.134117] (-) TimerEvent: {}
+[155.235348] (-) TimerEvent: {}
+[155.336276] (-) TimerEvent: {}
+[155.437229] (-) TimerEvent: {}
+[155.538203] (-) TimerEvent: {}
+[155.639132] (-) TimerEvent: {}
+[155.740196] (-) TimerEvent: {}
+[155.841111] (-) TimerEvent: {}
+[155.942073] (-) TimerEvent: {}
+[156.042989] (-) TimerEvent: {}
+[156.143902] (-) TimerEvent: {}
+[156.244842] (-) TimerEvent: {}
+[156.345811] (-) TimerEvent: {}
+[156.446803] (-) TimerEvent: {}
+[156.547777] (-) TimerEvent: {}
+[156.648718] (-) TimerEvent: {}
+[156.749619] (-) TimerEvent: {}
+[156.850509] (-) TimerEvent: {}
+[156.951536] (-) TimerEvent: {}
+[157.052500] (-) TimerEvent: {}
+[157.153427] (-) TimerEvent: {}
+[157.254376] (-) TimerEvent: {}
+[157.355344] (-) TimerEvent: {}
+[157.456283] (-) TimerEvent: {}
+[157.557275] (-) TimerEvent: {}
+[157.658295] (-) TimerEvent: {}
+[157.759366] (-) TimerEvent: {}
+[157.860340] (-) TimerEvent: {}
+[157.968943] (-) TimerEvent: {}
+[158.069854] (-) TimerEvent: {}
+[158.171025] (-) TimerEvent: {}
+[158.272126] (-) TimerEvent: {}
+[158.373083] (-) TimerEvent: {}
+[158.474145] (-) TimerEvent: {}
+[158.575151] (-) TimerEvent: {}
+[158.676320] (-) TimerEvent: {}
+[158.777712] (-) TimerEvent: {}
+[158.878733] (-) TimerEvent: {}
+[158.979866] (-) TimerEvent: {}
+[159.080788] (-) TimerEvent: {}
+[159.181730] (-) TimerEvent: {}
+[159.282785] (-) TimerEvent: {}
+[159.383817] (-) TimerEvent: {}
+[159.485042] (-) TimerEvent: {}
+[159.585989] (-) TimerEvent: {}
+[159.687053] (-) TimerEvent: {}
+[159.788083] (-) TimerEvent: {}
+[159.888997] (-) TimerEvent: {}
+[159.990049] (-) TimerEvent: {}
+[160.091036] (-) TimerEvent: {}
+[160.192140] (-) TimerEvent: {}
+[160.293117] (-) TimerEvent: {}
+[160.394142] (-) TimerEvent: {}
+[160.495062] (-) TimerEvent: {}
+[160.596088] (-) TimerEvent: {}
+[160.697061] (-) TimerEvent: {}
+[160.797988] (-) TimerEvent: {}
+[160.898907] (-) TimerEvent: {}
+[160.999831] (-) TimerEvent: {}
+[161.100715] (-) TimerEvent: {}
+[161.201660] (-) TimerEvent: {}
+[161.303906] (-) TimerEvent: {}
+[161.404893] (-) TimerEvent: {}
+[161.505847] (-) TimerEvent: {}
+[161.606805] (-) TimerEvent: {}
+[161.707816] (-) TimerEvent: {}
+[161.808747] (-) TimerEvent: {}
+[161.909710] (-) TimerEvent: {}
+[162.010610] (-) TimerEvent: {}
+[162.111615] (-) TimerEvent: {}
+[162.212753] (-) TimerEvent: {}
+[162.313764] (-) TimerEvent: {}
+[162.414819] (-) TimerEvent: {}
+[162.515819] (-) TimerEvent: {}
+[162.616783] (-) TimerEvent: {}
+[162.717756] (-) TimerEvent: {}
+[162.818635] (-) TimerEvent: {}
+[162.919924] (-) TimerEvent: {}
+[163.021044] (-) TimerEvent: {}
+[163.122071] (-) TimerEvent: {}
+[163.223127] (-) TimerEvent: {}
+[163.324309] (-) TimerEvent: {}
+[163.425353] (-) TimerEvent: {}
+[163.526327] (-) TimerEvent: {}
+[163.627379] (-) TimerEvent: {}
+[163.728738] (-) TimerEvent: {}
+[163.830615] (-) TimerEvent: {}
+[163.932201] (-) TimerEvent: {}
+[164.033832] (-) TimerEvent: {}
+[164.135433] (-) TimerEvent: {}
+[164.236684] (-) TimerEvent: {}
+[164.337846] (-) TimerEvent: {}
+[164.439244] (-) TimerEvent: {}
+[164.540684] (-) TimerEvent: {}
+[164.641972] (-) TimerEvent: {}
+[164.785452] (-) TimerEvent: {}
+[164.886762] (-) TimerEvent: {}
+[164.987783] (-) TimerEvent: {}
+[165.089103] (-) TimerEvent: {}
+[165.190235] (-) TimerEvent: {}
+[165.291497] (-) TimerEvent: {}
+[165.392904] (-) TimerEvent: {}
+[165.494415] (-) TimerEvent: {}
+[165.595772] (-) TimerEvent: {}
+[165.697337] (-) TimerEvent: {}
+[165.798343] (-) TimerEvent: {}
+[165.899465] (-) TimerEvent: {}
+[166.000759] (-) TimerEvent: {}
+[166.139721] (-) TimerEvent: {}
+[166.240724] (-) TimerEvent: {}
+[166.341799] (-) TimerEvent: {}
+[166.444279] (-) TimerEvent: {}
+[166.545680] (-) TimerEvent: {}
+[166.646969] (-) TimerEvent: {}
+[166.748361] (-) TimerEvent: {}
+[166.849829] (-) TimerEvent: {}
+[166.951279] (-) TimerEvent: {}
+[167.052402] (-) TimerEvent: {}
+[167.153648] (-) TimerEvent: {}
+[167.254814] (-) TimerEvent: {}
+[167.356433] (-) TimerEvent: {}
+[167.457926] (-) TimerEvent: {}
+[167.559383] (-) TimerEvent: {}
+[167.660915] (-) TimerEvent: {}
+[167.762696] (-) TimerEvent: {}
+[167.864020] (-) TimerEvent: {}
+[167.965715] (-) TimerEvent: {}
+[168.066860] (-) TimerEvent: {}
+[168.167936] (-) TimerEvent: {}
+[168.269006] (-) TimerEvent: {}
+[168.369995] (-) TimerEvent: {}
+[168.471024] (-) TimerEvent: {}
+[168.571922] (-) TimerEvent: {}
+[168.672915] (-) TimerEvent: {}
+[168.773972] (-) TimerEvent: {}
+[168.875154] (-) TimerEvent: {}
+[168.976358] (-) TimerEvent: {}
+[169.050603] (hiveflight_sim_node) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable simulation_node\x1b[0m\n'}
+[169.076634] (-) TimerEvent: {}
+[169.177678] (-) TimerEvent: {}
+[169.278641] (-) TimerEvent: {}
+[169.379694] (-) TimerEvent: {}
+[169.481802] (-) TimerEvent: {}
+[169.588963] (-) TimerEvent: {}
+[169.689921] (-) TimerEvent: {}
+[169.792791] (-) TimerEvent: {}
+[169.893723] (-) TimerEvent: {}
+[169.994793] (-) TimerEvent: {}
+[170.095998] (-) TimerEvent: {}
+[170.232292] (-) TimerEvent: {}
+[170.333589] (-) TimerEvent: {}
+[170.436559] (-) TimerEvent: {}
+[170.537646] (-) TimerEvent: {}
+[170.638608] (-) TimerEvent: {}
+[170.739906] (-) TimerEvent: {}
+[170.840840] (-) TimerEvent: {}
+[170.941697] (-) TimerEvent: {}
+[171.042517] (-) TimerEvent: {}
+[171.143508] (-) TimerEvent: {}
+[171.245081] (-) TimerEvent: {}
+[171.346345] (-) TimerEvent: {}
+[171.447678] (-) TimerEvent: {}
+[171.548952] (-) TimerEvent: {}
+[171.650640] (-) TimerEvent: {}
+[171.752038] (-) TimerEvent: {}
+[171.853456] (-) TimerEvent: {}
+[171.954405] (-) TimerEvent: {}
+[172.055245] (-) TimerEvent: {}
+[172.156128] (-) TimerEvent: {}
+[172.256907] (-) TimerEvent: {}
+[172.357835] (-) TimerEvent: {}
+[172.458870] (-) TimerEvent: {}
+[172.559797] (-) TimerEvent: {}
+[172.660779] (-) TimerEvent: {}
+[172.761529] (-) TimerEvent: {}
+[172.862465] (-) TimerEvent: {}
+[172.969275] (-) TimerEvent: {}
+[173.070252] (-) TimerEvent: {}
+[173.171349] (-) TimerEvent: {}
+[173.272328] (-) TimerEvent: {}
+[173.373307] (-) TimerEvent: {}
+[173.474185] (-) TimerEvent: {}
+[173.575051] (-) TimerEvent: {}
+[173.675950] (-) TimerEvent: {}
+[173.776772] (-) TimerEvent: {}
+[173.877630] (-) TimerEvent: {}
+[173.978710] (-) TimerEvent: {}
+[174.079734] (-) TimerEvent: {}
+[174.180873] (-) TimerEvent: {}
+[174.319680] (-) TimerEvent: {}
+[174.420703] (-) TimerEvent: {}
+[174.521556] (-) TimerEvent: {}
+[174.622508] (-) TimerEvent: {}
+[174.723488] (-) TimerEvent: {}
+[174.824387] (-) TimerEvent: {}
+[174.925277] (-) TimerEvent: {}
+[175.026135] (-) TimerEvent: {}
+[175.127233] (-) TimerEvent: {}
+[175.228329] (-) TimerEvent: {}
+[175.329463] (-) TimerEvent: {}
+[175.430858] (-) TimerEvent: {}
+[175.531832] (-) TimerEvent: {}
+[175.633732] (-) TimerEvent: {}
+[175.702850] (hiveflight_sim_node) StdoutLine: {'line': b'[100%] Built target simulation_node\n'}
+[175.733947] (-) TimerEvent: {}
+[175.834926] (-) TimerEvent: {}
+[175.871220] (hiveflight_sim_node) CommandEnded: {'returncode': 0}
+[175.907471] (hiveflight_sim_node) JobProgress: {'identifier': 'hiveflight_sim_node', 'progress': 'install'}
+[175.917046] (hiveflight_sim_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node'], 'cwd': '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ivano'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/ivano'), ('OLDPWD', '/mnt/c/work/ubuntu_work/HiveFlight'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ivano'), ('NAME', 'LAPTOP-7K9MEH4D'), ('WSL_INTEROP', '/run/WSL/331_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/ivano/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files/HP/1E.Performance.Assist/Extensibility/NomadBranch:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/vcpkg:/mnt/c/Users/ivano/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/home/ivano/hiveflight_ws/install/hiveflight_interfaces:/home/ivano/hiveflight_ws/install/hiveflight:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[175.935063] (-) TimerEvent: {}
+[176.035943] (-) TimerEvent: {}
+[176.082535] (hiveflight_sim_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[176.111605] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node\n'}
+[176.136351] (-) TimerEvent: {}
+[176.237518] (-) TimerEvent: {}
+[176.338722] (-) TimerEvent: {}
+[176.439788] (-) TimerEvent: {}
+[176.540752] (-) TimerEvent: {}
+[176.641798] (-) TimerEvent: {}
+[176.742930] (-) TimerEvent: {}
+[176.747479] (hiveflight_sim_node) StdoutLine: {'line': b'-- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node" to ""\n'}
+[176.768995] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch\n'}
+[176.843205] (-) TimerEvent: {}
+[176.856391] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch/hiveflight.launch.py\n'}
+[176.943488] (-) TimerEvent: {}
+[177.044389] (-) TimerEvent: {}
+[177.055616] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_sim_node\n'}
+[177.144602] (-) TimerEvent: {}
+[177.245782] (-) TimerEvent: {}
+[177.346782] (-) TimerEvent: {}
+[177.350184] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_sim_node\n'}
+[177.447086] (-) TimerEvent: {}
+[177.549199] (-) TimerEvent: {}
+[177.652330] (-) TimerEvent: {}
+[177.682510] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.sh\n'}
+[177.752544] (-) TimerEvent: {}
+[177.844787] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.dsv\n'}
+[177.852688] (-) TimerEvent: {}
+[177.953545] (-) TimerEvent: {}
+[177.975904] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.sh\n'}
+[178.053710] (-) TimerEvent: {}
+[178.068162] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.dsv\n'}
+[178.153891] (-) TimerEvent: {}
+[178.167401] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.bash\n'}
+[178.249215] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.sh\n'}
+[178.254073] (-) TimerEvent: {}
+[178.333220] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.zsh\n'}
+[178.354266] (-) TimerEvent: {}
+[178.417481] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.dsv\n'}
+[178.454447] (-) TimerEvent: {}
+[178.496732] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.dsv\n'}
+[178.554661] (-) TimerEvent: {}
+[178.599136] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_sim_node\n'}
+[178.654871] (-) TimerEvent: {}
+[178.755824] (-) TimerEvent: {}
+[178.830154] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig.cmake\n'}
+[178.856018] (-) TimerEvent: {}
+[178.973302] (-) TimerEvent: {}
+[179.073930] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig-version.cmake\n'}
+[179.076183] (-) TimerEvent: {}
+[179.177189] (-) TimerEvent: {}
+[179.207874] (hiveflight_sim_node) StdoutLine: {'line': b'-- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.xml\n'}
+[179.277401] (-) TimerEvent: {}
+[179.297765] (hiveflight_sim_node) CommandEnded: {'returncode': 0}
+[179.377573] (-) TimerEvent: {}
+[179.478397] (-) TimerEvent: {}
+[179.583042] (-) TimerEvent: {}
+[179.686601] (-) TimerEvent: {}
+[179.787418] (-) TimerEvent: {}
+[179.888366] (-) TimerEvent: {}
+[179.989132] (-) TimerEvent: {}
+[180.089925] (-) TimerEvent: {}
+[180.190643] (-) TimerEvent: {}
+[180.291564] (-) TimerEvent: {}
+[180.392676] (-) TimerEvent: {}
+[180.493527] (-) TimerEvent: {}
+[180.594333] (-) TimerEvent: {}
+[180.695122] (-) TimerEvent: {}
+[180.795959] (-) TimerEvent: {}
+[180.896845] (-) TimerEvent: {}
+[180.945676] (hiveflight_sim_node) JobEnded: {'identifier': 'hiveflight_sim_node', 'rc': 0}
+[180.958203] (-) EventReactorShutdown: {}

@@ -1,0 +1,4 @@
+source;share/hiveflight_sim_node/local_setup.bash
+source;share/hiveflight_sim_node/local_setup.dsv
+source;share/hiveflight_sim_node/local_setup.sh
+source;share/hiveflight_sim_node/local_setup.zsh

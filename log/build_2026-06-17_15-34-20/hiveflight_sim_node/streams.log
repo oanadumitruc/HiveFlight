@@ -1,0 +1,65 @@
+[0.322s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[0.791s] -- The C compiler identification is GNU 11.4.0
+[1.301s] -- The CXX compiler identification is GNU 11.4.0
+[1.539s] -- Detecting C compiler ABI info
+[2.354s] -- Detecting C compiler ABI info - done
+[2.372s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.373s] -- Detecting C compile features
+[2.374s] -- Detecting C compile features - done
+[2.414s] -- Detecting CXX compiler ABI info
+[3.201s] -- Detecting CXX compiler ABI info - done
+[3.220s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.220s] -- Detecting CXX compile features
+[3.222s] -- Detecting CXX compile features - done
+[3.288s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.984s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.781s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[5.263s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[5.336s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[5.409s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[5.477s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.575s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.924s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[5.964s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[7.310s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[8.092s] -- Found FastRTPS: /opt/ros/humble/include  
+[9.544s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[9.663s] -- Looking for pthread.h
+[10.478s] -- Looking for pthread.h - found
+[10.488s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[11.275s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[11.280s] -- Found Threads: TRUE  
+[11.483s] -- Found hiveflight_interfaces: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake)
+[11.933s] -- Found hiveflight_sim: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake)
+[12.475s] -- Configuring done
+[12.861s] -- Generating done
+[13.011s] -- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[13.023s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[13.035s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[13.610s] [ 50%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/simulation_node.cpp.o[0m
+[23.121s] [100%] [32m[1mLinking CXX executable simulation_node[0m
+[26.177s] [100%] Built target simulation_node
+[26.259s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[26.280s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[26.343s] -- Install configuration: ""
+[26.355s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node
+[26.593s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node" to ""
+[26.600s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch
+[26.621s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch/hiveflight.launch.py
+[26.674s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/gazebo_swarm_bridge.py
+[26.741s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_sim_node
+[26.814s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_sim_node
+[26.876s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.sh
+[26.917s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.dsv
+[26.960s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.sh
+[27.000s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.dsv
+[27.046s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.bash
+[27.090s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.sh
+[27.137s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.zsh
+[27.181s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.dsv
+[27.223s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.dsv
+[27.272s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_sim_node
+[27.339s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig.cmake
+[27.385s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig-version.cmake
+[27.432s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.xml
+[27.470s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/home/ivano/hiveflight_ws/install/hiveflight_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node

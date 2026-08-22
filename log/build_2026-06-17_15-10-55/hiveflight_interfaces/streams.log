@@ -1,0 +1,246 @@
+[0.103s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[0.569s] -- The C compiler identification is GNU 11.4.0
+[1.116s] -- The CXX compiler identification is GNU 11.4.0
+[1.377s] -- Detecting C compiler ABI info
+[1.995s] -- Detecting C compiler ABI info - done
+[2.014s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.020s] -- Detecting C compile features
+[2.021s] -- Detecting C compile features - done
+[2.071s] -- Detecting CXX compiler ABI info
+[2.690s] -- Detecting CXX compiler ABI info - done
+[2.711s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.712s] -- Detecting CXX compile features
+[2.713s] -- Detecting CXX compile features - done
+[2.777s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.038s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.505s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.962s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.006s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.063s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.122s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.204s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.306s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[5.206s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[7.308s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.049s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.153s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[8.175s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[8.427s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[8.428s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[8.429s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[8.430s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[8.460s] -- Found PythonExtra: .so  
+[10.006s] -- Configuring done
+[11.549s] -- Generating done
+[12.078s] -- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces
+[12.087s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[12.101s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces -- -j16 -l16
+[12.329s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[12.376s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[12.407s] [  9%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[12.423s] [  9%] Built target ament_cmake_python_copy_hiveflight_interfaces
+[12.632s] [  9%] Built target hiveflight_interfaces__cpp
+[12.674s] [  9%] Built target hiveflight_interfaces__rs
+[12.678s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[12.681s] [ 18%] [32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_generator_c.dir/rosidl_generator_c/hiveflight_interfaces/msg/detail/drone_message__functions.c.o[0m
+[12.683s] [ 18%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[12.706s] [ 21%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[12.726s] running egg_info
+[12.728s] creating hiveflight_interfaces.egg-info
+[12.730s] writing hiveflight_interfaces.egg-info/PKG-INFO
+[12.734s] writing dependency_links to hiveflight_interfaces.egg-info/dependency_links.txt
+[12.741s] writing top-level names to hiveflight_interfaces.egg-info/top_level.txt
+[12.747s] writing manifest file 'hiveflight_interfaces.egg-info/SOURCES.txt'
+[12.766s] reading manifest file 'hiveflight_interfaces.egg-info/SOURCES.txt'
+[12.791s] writing manifest file 'hiveflight_interfaces.egg-info/SOURCES.txt'
+[12.848s] [ 21%] Built target ament_cmake_python_build_hiveflight_interfaces_egg
+[12.904s] [ 25%] [32m[1mLinking C shared library libhiveflight_interfaces__rosidl_generator_c.so[0m
+[12.913s] [ 28%] [32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hiveflight_interfaces/msg/drone_message__type_support.cpp.o[0m
+[12.952s] [ 31%] [32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hiveflight_interfaces/msg/detail/drone_message__type_support.cpp.o[0m
+[12.998s] [ 34%] [32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hiveflight_interfaces/msg/detail/dds_fastrtps/drone_message__type_support.cpp.o[0m
+[13.147s] [ 34%] Built target hiveflight_interfaces__rosidl_generator_c
+[13.206s] [ 37%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[13.221s] [ 40%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[13.240s] [ 43%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[13.532s] [ 46%] [32m[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_cpp.so[0m
+[13.605s] [ 50%] [32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/hiveflight_interfaces/msg/drone_message__type_support.cpp.o[0m
+[13.670s] [ 53%] [32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hiveflight_interfaces/msg/detail/drone_message__type_support.c.o[0m
+[13.689s] [ 56%] [32mBuilding CXX object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hiveflight_interfaces/msg/detail/drone_message__type_support_c.cpp.o[0m
+[13.791s] [ 59%] [32m[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[13.806s] [ 62%] [32m[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_c.so[0m
+[13.813s] [ 65%] [32m[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[13.816s] [ 65%] Built target hiveflight_interfaces__rosidl_typesupport_cpp
+[14.022s] [ 68%] [32m[1mLinking C shared library libhiveflight_interfaces__rosidl_typesupport_introspection_c.so[0m
+[14.042s] [ 68%] Built target hiveflight_interfaces__rosidl_typesupport_c
+[14.048s] [ 68%] Built target hiveflight_interfaces__rosidl_typesupport_introspection_cpp
+[14.085s] [ 68%] Built target hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp
+[14.237s] [ 68%] Built target hiveflight_interfaces__rosidl_typesupport_introspection_c
+[14.366s] [ 71%] [32m[1mLinking CXX shared library libhiveflight_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[14.583s] [ 71%] Built target hiveflight_interfaces__rosidl_typesupport_fastrtps_c
+[14.686s] [ 71%] Built target hiveflight_interfaces
+[14.804s] [ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[15.073s] [ 75%] Built target hiveflight_interfaces__py
+[15.162s] gmake[2]: Warning: File 'rosidl_generator_py/hiveflight_interfaces/msg/_drone_message_s.c' has modification time 0.0059 s in the future
+[15.217s] [ 78%] [32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_generator_py.dir/rosidl_generator_py/hiveflight_interfaces/msg/_drone_message_s.c.o[0m
+[15.590s] [ 81%] [32m[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so[0m
+[15.816s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[15.852s] [ 81%] Built target hiveflight_interfaces__rosidl_generator_py
+[15.920s] gmake[2]: Warning: File 'rosidl_generator_py/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so' has modification time 0.046 s in the future
+[15.929s] gmake[2]: Warning: File 'rosidl_generator_py/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so' has modification time 0.037 s in the future
+[15.934s] [ 84%] [32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[15.949s] [ 87%] [32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[15.957s] gmake[2]: Warning: File 'rosidl_generator_py/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so' has modification time 0.0095 s in the future
+[15.978s] [ 90%] [32mBuilding C object CMakeFiles/hiveflight_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[16.289s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[16.298s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[16.302s] [100%] [32m[1mLinking C shared library rosidl_generator_py/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[16.481s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[16.482s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[16.499s] [100%] Built target hiveflight_interfaces__rosidl_typesupport_c__pyext
+[16.515s] [100%] Built target hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[16.588s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[16.625s] [100%] Built target hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext
+[16.733s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces -- -j16 -l16
+[16.777s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces
+[16.797s] -- Install configuration: ""
+[16.823s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/rosidl_interfaces/hiveflight_interfaces
+[16.882s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces
+[16.900s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg
+[16.923s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail
+[16.954s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__functions.c
+[17.024s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__functions.h
+[17.093s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__struct.h
+[17.169s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.h
+[17.234s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/drone_message.h
+[17.294s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_generator_c__visibility_control.h
+[17.352s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/library_path.sh
+[17.395s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/library_path.dsv
+[17.449s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_c.so
+[17.517s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_c.so" to ""
+[17.524s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces
+[17.541s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg
+[17.561s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail
+[17.588s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_fastrtps_c.h
+[17.653s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[17.719s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_c.so
+[17.787s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[17.794s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces
+[17.816s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg
+[17.836s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail
+[17.863s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__builder.hpp
+[17.933s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__struct.hpp
+[18.003s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__traits.hpp
+[18.073s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.hpp
+[18.140s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/drone_message.hpp
+[18.199s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[18.252s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces
+[18.268s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg
+[18.288s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail
+[18.310s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/dds_fastrtps
+[18.347s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_fastrtps_cpp.hpp
+[18.420s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[18.480s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[18.555s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[18.563s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces
+[18.578s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg
+[18.598s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail
+[18.624s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_introspection_c.h
+[18.698s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.c
+[18.771s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[18.832s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_c.so
+[18.899s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[18.908s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_c.so
+[18.970s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_c.so" to ""
+[18.977s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces
+[18.993s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg
+[19.013s] -- Up-to-date: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail
+[19.038s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_introspection_cpp.hpp
+[19.111s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/include/hiveflight_interfaces/hiveflight_interfaces/msg/detail/drone_message__type_support.cpp
+[19.174s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_cpp.so
+[19.240s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[19.249s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_cpp.so
+[19.320s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_typesupport_cpp.so" to ""
+[19.332s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/pythonpath.sh
+[19.386s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/pythonpath.dsv
+[19.428s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info
+[19.456s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/dependency_links.txt
+[19.521s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/PKG-INFO
+[19.587s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/SOURCES.txt
+[19.655s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces-0.0.1-py3.10.egg-info/top_level.txt
+[19.719s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces
+[19.748s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[19.811s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[19.873s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[19.936s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/libhiveflight_interfaces__rosidl_generator_py.so
+[19.995s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg
+[20.030s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/_drone_message.py
+[20.103s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/_drone_message_s.c
+[20.177s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/__init__.py
+[20.245s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_c.c
+[20.307s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[20.369s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/_hiveflight_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[20.432s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/__init__.py
+[20.836s] Listing '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces'...
+[20.837s] Compiling '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/__init__.py'...
+[20.838s] Listing '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg'...
+[20.839s] Compiling '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/__init__.py'...
+[20.840s] Compiling '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/msg/_drone_message.py'...
+[20.886s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[20.990s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[21.040s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[21.145s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[21.195s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[21.302s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages/hiveflight_interfaces/hiveflight_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[21.316s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_py.so
+[21.388s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_interfaces__rosidl_generator_py.so" to ""
+[21.415s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/rust_packages/hiveflight_interfaces
+[21.473s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust
+[21.495s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/build.rs
+[21.548s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/Cargo.toml
+[21.599s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src
+[21.627s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/lib.rs
+[21.685s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/msg
+[21.719s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/msg/rmw.rs
+[21.787s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/rust/src/msg.rs
+[21.855s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/msg/DroneMessage.idl
+[21.912s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/msg/DroneMessage.msg
+[21.983s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_interfaces
+[22.059s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_interfaces
+[22.118s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/ament_prefix_path.sh
+[22.161s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/ament_prefix_path.dsv
+[22.205s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/path.sh
+[22.248s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/environment/path.dsv
+[22.294s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.bash
+[22.340s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.sh
+[22.382s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.zsh
+[22.424s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/local_setup.dsv
+[22.464s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.dsv
+[22.526s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_interfaces
+[22.601s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_cExport.cmake
+[22.669s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_cExport-noconfig.cmake
+[22.732s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[22.801s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[22.865s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_cppExport.cmake
+[22.934s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[22.998s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[23.062s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[23.124s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[23.189s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cExport.cmake
+[23.259s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[23.324s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[23.394s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[23.458s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cppExport.cmake
+[23.524s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[23.589s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_pyExport.cmake
+[23.652s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/export_hiveflight_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[23.710s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/rosidl_cmake-extras.cmake
+[23.757s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[23.806s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[23.856s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[23.907s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[23.954s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[24.002s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[24.050s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfacesConfig.cmake
+[24.096s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake/hiveflight_interfacesConfig-version.cmake
+[24.144s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/package.xml
+[24.194s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces

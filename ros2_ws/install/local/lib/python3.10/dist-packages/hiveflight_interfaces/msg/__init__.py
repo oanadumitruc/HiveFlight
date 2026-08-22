@@ -1,0 +1,1 @@
+/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/rosidl_generator_py/hiveflight_interfaces/msg/__init__.py

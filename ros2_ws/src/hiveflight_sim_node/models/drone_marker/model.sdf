@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="drone_marker">
+    <static>false</static>
+    <link name="body">
+      <gravity>false</gravity>
+      <kinematic>true</kinematic>
+      <visual name="fuselage">
+        <geometry><box><size>5.4 3.5 1.1</size></box></geometry>
+        <material><ambient>__RED__ __GREEN__ __BLUE__ 1</ambient><diffuse>__RED__ __GREEN__ __BLUE__ 1</diffuse><specular>0.7 0.7 0.7 1</specular></material>
+      </visual>
+      <visual name="nose">
+        <pose>3.0 0 0 0 0 0</pose>
+        <geometry><sphere><radius>1.0</radius></sphere></geometry>
+        <material><ambient>0.1 0.6 1.0 1</ambient><diffuse>0.1 0.6 1.0 1</diffuse><emissive>0.02 0.08 0.2 1</emissive></material>
+      </visual>
+      <visual name="arm_left"><pose>0 3.2 0 0 0 0</pose><geometry><box><size>0.56 6.4 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
+      <visual name="arm_right"><pose>0 -3.2 0 0 0 0</pose><geometry><box><size>0.56 6.4 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
+      <visual name="arm_front"><pose>3.2 0 0 0 0 0</pose><geometry><box><size>6.4 0.56 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
+      <visual name="arm_back"><pose>-3.2 0 0 0 0 0</pose><geometry><box><size>6.4 0.56 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
+      <visual name="rotor_front_left"><pose>2.7 2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
+      <visual name="rotor_front_right"><pose>2.7 -2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
+      <visual name="rotor_back_left"><pose>-2.7 2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
+      <visual name="rotor_back_right"><pose>-2.7 -2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
+      <collision name="collision"><geometry><box><size>5.4 3.5 1.1</size></box></geometry></collision>
+    </link>
+  </model>
+</sdf>

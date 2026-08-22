@@ -1,0 +1,41 @@
+[0.906s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[2.585s] -- The C compiler identification is GNU 11.4.0
+[4.624s] -- The CXX compiler identification is GNU 11.4.0
+[5.612s] -- Detecting C compiler ABI info
+[8.305s] -- Detecting C compiler ABI info - done
+[8.402s] -- Check for working C compiler: /usr/bin/cc - skipped
+[8.405s] -- Detecting C compile features
+[8.410s] -- Detecting C compile features - done
+[8.564s] -- Detecting CXX compiler ABI info
+[11.499s] -- Detecting CXX compiler ABI info - done
+[11.582s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[11.585s] -- Detecting CXX compile features
+[11.587s] -- Detecting CXX compile features - done
+[11.805s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[14.404s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[17.037s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[18.623s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[18.831s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[19.036s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[19.309s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[19.623s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[20.837s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[20.948s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[26.343s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[30.126s] -- Found FastRTPS: /opt/ros/humble/include  
+[36.299s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[36.729s] -- Looking for pthread.h
+[39.686s] -- Looking for pthread.h - found
+[39.718s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[42.296s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[42.313s] -- Found Threads: TRUE  
+[42.841s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[43.033s] -- Found hiveflight_interfaces: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake)
+[44.142s] [31mCMake Error at CMakeLists.txt:13 (message):
+[44.144s]   SwarmSimulation3D.cpp not found at:
+[44.146s]   /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim/../../SwarmSimulation3D.cpp
+[44.147s] 
+[44.149s] [0m
+[44.151s] -- Configuring incomplete, errors occurred!
+[44.153s] See also "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim/CMakeFiles/CMakeOutput.log".
+[44.245s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install

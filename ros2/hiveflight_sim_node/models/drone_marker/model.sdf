@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="drone_marker">
+  <static>false</static>
+    <link name="link">
+      <gravity>false</gravity>
+      <kinematic>true</kinematic>
+      <visual name="visual">
+        <geometry>
+          <sphere><radius>2.0</radius></sphere>
+        </geometry>
+        <material>
+          <ambient>0.1 0.6 1.0 1</ambient>
+          <diffuse>0.1 0.6 1.0 1</diffuse>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <sphere><radius>2.0</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
+

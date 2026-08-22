@@ -1,0 +1,1 @@
+/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/ament_cmake_environment_hooks/local_setup.sh

@@ -1,0 +1,1 @@
+/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/rosidl_generator_py/hiveflight_interfaces/msg/_drone_message_s.c

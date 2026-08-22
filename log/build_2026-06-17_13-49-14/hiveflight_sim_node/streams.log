@@ -1,0 +1,66 @@
+[0.320s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': AMENT_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[0.887s] -- The C compiler identification is GNU 11.4.0
+[1.510s] -- The CXX compiler identification is GNU 11.4.0
+[1.798s] -- Detecting C compiler ABI info
+[2.784s] -- Detecting C compiler ABI info - done
+[2.805s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.806s] -- Detecting C compile features
+[2.807s] -- Detecting C compile features - done
+[2.858s] -- Detecting CXX compiler ABI info
+[3.807s] -- Detecting CXX compiler ABI info - done
+[3.830s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.831s] -- Detecting CXX compile features
+[3.832s] -- Detecting CXX compile features - done
+[3.932s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.763s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[5.607s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[6.095s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.172s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.248s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.328s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.448s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.870s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.911s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[8.573s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[9.640s] -- Found FastRTPS: /opt/ros/humble/include  
+[11.450s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[11.598s] -- Looking for pthread.h
+[12.598s] -- Looking for pthread.h - found
+[12.609s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[13.679s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[13.685s] -- Found Threads: TRUE  
+[13.931s] -- Found hiveflight_interfaces: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake)
+[14.509s] -- Found hiveflight_sim: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake)
+[15.164s] -- Configuring done
+[15.654s] -- Generating done
+[15.831s] -- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[15.843s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': AMENT_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[15.855s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': AMENT_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[15.960s] gmake: Warning: File 'Makefile' has modification time 0.21 s in the future
+[16.542s] [ 50%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/simulation_node.cpp.o[0m
+[26.568s] [100%] [32m[1mLinking CXX executable simulation_node[0m
+[30.354s] [100%] Built target simulation_node
+[30.453s] gmake: warning:  Clock skew detected.  Your build may be incomplete.
+[30.455s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': AMENT_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[30.481s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': AMENT_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[30.558s] -- Install configuration: ""
+[30.573s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node
+[30.865s] -- Set runtime path of "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node" to ""
+[30.874s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch
+[30.905s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch/hiveflight.launch.py
+[30.977s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_sim_node
+[31.074s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_sim_node
+[31.150s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.sh
+[31.201s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.dsv
+[31.256s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.sh
+[31.307s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.dsv
+[31.362s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.bash
+[31.412s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.sh
+[31.462s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.zsh
+[31.512s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.dsv
+[31.561s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.dsv
+[31.627s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_sim_node
+[31.708s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig.cmake
+[31.763s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig-version.cmake
+[31.821s] -- Installing: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.xml
+[31.871s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': AMENT_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node

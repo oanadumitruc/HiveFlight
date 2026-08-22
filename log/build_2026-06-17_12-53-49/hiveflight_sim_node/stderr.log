@@ -1,0 +1,14 @@
+/usr/bin/ld: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_ros2_adapter.a(SwarmSimulation3D.cpp.o): in function `SwarmSimulation3D::step()':
+SwarmSimulation3D.cpp:(.text+0x18e2): undefined reference to `SpatialGrid3D::init(double, double, double, double)'
+/usr/bin/ld: SwarmSimulation3D.cpp:(.text+0x18f7): undefined reference to `SpatialGrid3D::clear()'
+/usr/bin/ld: SwarmSimulation3D.cpp:(.text+0x1983): undefined reference to `SpatialGrid3D::insert(unsigned long, Drone3D const&, bool)'
+/usr/bin/ld: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_ros2_adapter.a(SwarmSimulation3D.cpp.o): in function `void SpatialGrid3D::forEachCandidate<SwarmSimulation3D::separationForce(unsigned long) const::{lambda(unsigned long)#1}>(Vec3 const&, bool, SwarmSimulation3D::separationForce(unsigned long) const::{lambda(unsigned long)#1}&&) const':
+SwarmSimulation3D.cpp:(.text+0x3877): undefined reference to `SpatialGrid3D::bucketIndex(int, int, int) const'
+/usr/bin/ld: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_ros2_adapter.a(SwarmSimulation3D.cpp.o): in function `void SpatialGrid3D::forEachCandidate<SwarmSimulation3D::alignmentForce(unsigned long) const::{lambda(unsigned long)#1}>(Vec3 const&, bool, SwarmSimulation3D::alignmentForce(unsigned long) const::{lambda(unsigned long)#1}&&) const':
+SwarmSimulation3D.cpp:(.text+0x3b33): undefined reference to `SpatialGrid3D::bucketIndex(int, int, int) const'
+/usr/bin/ld: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/libhiveflight_ros2_adapter.a(SwarmSimulation3D.cpp.o): in function `void SpatialGrid3D::forEachCandidate<SwarmSimulation3D::cohesionForce(unsigned long) const::{lambda(unsigned long)#1}>(Vec3 const&, bool, SwarmSimulation3D::cohesionForce(unsigned long) const::{lambda(unsigned long)#1}&&) const':
+SwarmSimulation3D.cpp:(.text+0x3def): undefined reference to `SpatialGrid3D::bucketIndex(int, int, int) const'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/simulation_node.dir/build.make:176: simulation_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/simulation_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

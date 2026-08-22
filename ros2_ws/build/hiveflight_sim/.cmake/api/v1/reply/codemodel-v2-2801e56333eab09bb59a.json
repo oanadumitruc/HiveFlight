@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-d494e793193d06b92294.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "hiveflight_sim",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_ros2_adapter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_ros2_adapter-185259b61ebb0423cb9d.json",
+					"name" : "hiveflight_ros2_adapter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_sim_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_sim_uninstall-57e209d995a62abb5962.json",
+					"name" : "hiveflight_sim_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-3a0e0a4a66eea58d25a5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim",
+		"source" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

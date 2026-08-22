@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>hiveflight_sim_node</name>
+  <version>0.0.1</version>
+  <description>ROS 2 node for HiveFlight simulation bridge</description>
+  <maintainer email="devnull@example.com">devnull</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>hiveflight_interfaces</depend>
+  <depend>hiveflight_sim</depend>
+  <depend>geometry_msgs</depend>
+  <depend>gazebo_ros</depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>gazebo_msgs</exec_depend>
+
+  <export>
+
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>
+

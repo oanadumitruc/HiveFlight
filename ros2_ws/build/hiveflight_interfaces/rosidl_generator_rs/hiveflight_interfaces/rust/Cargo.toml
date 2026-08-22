@@ -1,0 +1,19 @@
+[package]
+name = "hiveflight_interfaces"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+rosidl_runtime_rs = "0.6"
+serde = { version = "1", optional = true, features = ["derive"] }
+serde-big-array = { version = "0.5.1", optional = true }
+
+# ROS Dependencies
+geometry_msgs = "*"
+std_msgs = "*"
+
+[features]
+serde = ['dep:serde', 'dep:serde-big-array', 'rosidl_runtime_rs/serde', 'geometry_msgs/serde', 'std_msgs/serde']
+
+[package.metadata.ros-env]
+include = true

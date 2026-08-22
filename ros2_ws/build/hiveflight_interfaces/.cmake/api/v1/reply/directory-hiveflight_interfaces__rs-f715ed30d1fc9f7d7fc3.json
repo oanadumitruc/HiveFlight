@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "hiveflight_interfaces__rs",
+		"source" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/hiveflight_interfaces__rs"
+	}
+}

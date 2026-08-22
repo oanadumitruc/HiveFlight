@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8abd6be6d8b3f0c063bf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "hiveflight_interfaces__py",
+					"jsonFile" : "directory-hiveflight_interfaces__py-0321db4a2ed34f464523.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/hiveflight_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "hiveflight_interfaces__rs",
+					"jsonFile" : "directory-hiveflight_interfaces__rs-f715ed30d1fc9f7d7fc3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/hiveflight_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "hiveflight_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_hiveflight_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_hiveflight_interfaces_egg-fb6c79641f2e82109433.json",
+					"name" : "ament_cmake_python_build_hiveflight_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_hiveflight_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_hiveflight_interfaces-f50b506d5089dead904e.json",
+					"name" : "ament_cmake_python_symlink_hiveflight_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces-8a328baa372e2aaf5a06.json",
+					"name" : "hiveflight_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__cpp-d04336fd8d7ed30f17d5.json",
+					"name" : "hiveflight_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "hiveflight_interfaces__py::@8466322263540094826f",
+					"jsonFile" : "target-hiveflight_interfaces__py-185a79863f24f6b13b90.json",
+					"name" : "hiveflight_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_generator_c-c78ea6e1e992dcca5b4f.json",
+					"name" : "hiveflight_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_generator_py-e68ad95804e2f43645fc.json",
+					"name" : "hiveflight_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_c-430ce3dd06ef950fe941.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_c__pyext-8547a64c5586c637b5d1.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_cpp-d03b7e5a2a970b4bb2c0.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_fastrtps_c-7a69ebb57fbe36c80185.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext-4dbe027fcd9849ca3f2b.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp-d2e99746491d68c3a061.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_introspection_c-9fe2d7deb06493d09079.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext-e88e73c5861d34886627.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces__rosidl_typesupport_introspection_cpp-40e5d4ad9dbb8c1df264.json",
+					"name" : "hiveflight_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "hiveflight_interfaces__rs::@65bdba4b6ba4c900b8a0",
+					"jsonFile" : "target-hiveflight_interfaces__rs-86c932d05cfe8ad89964.json",
+					"name" : "hiveflight_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hiveflight_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hiveflight_interfaces_uninstall-f3be08803262507b587b.json",
+					"name" : "hiveflight_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-d38c362b6b381aef3fc7.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces",
+		"source" : "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

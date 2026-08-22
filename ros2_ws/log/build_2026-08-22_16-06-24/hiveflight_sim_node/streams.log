@@ -1,0 +1,139 @@
+[0.415s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[1.060s] -- The C compiler identification is GNU 11.4.0
+[1.836s] -- The CXX compiler identification is GNU 11.4.0
+[2.342s] -- Detecting C compiler ABI info
+[3.745s] -- Detecting C compiler ABI info - done
+[3.777s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.778s] -- Detecting C compile features
+[3.779s] -- Detecting C compile features - done
+[3.847s] -- Detecting CXX compiler ABI info
+[4.939s] -- Detecting CXX compiler ABI info - done
+[4.966s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.967s] -- Detecting CXX compile features
+[4.968s] -- Detecting CXX compile features - done
+[5.048s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.868s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[6.186s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.849s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[7.368s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[7.450s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[7.538s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[7.612s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.729s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.127s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[8.166s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[10.145s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[11.372s] -- Found FastRTPS: /opt/ros/humble/include  
+[13.588s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[13.743s] -- Looking for pthread.h
+[14.825s] -- Looking for pthread.h - found
+[14.837s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[15.870s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[15.875s] -- Found Threads: TRUE  
+[16.165s] -- Found hiveflight_interfaces: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_interfaces/cmake)
+[16.806s] -- Found hiveflight_sim: 0.0.1 (/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim/cmake)
+[16.931s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[17.041s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[17.042s] -- Checking for module 'bullet>=2.82'
+[17.210s] --   Found bullet, version 3.05
+[18.580s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[19.242s] -- Found assimp: /usr/include (found version "5.2.0") 
+[19.453s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[19.756s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[20.161s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[20.249s] -- Looking for ignition-math6 -- found version 6.15.1
+[20.297s] -- Searching for dependencies of ignition-math6
+[20.299s] -- Looking for OGRE...
+[20.301s] -- OGRE_PREFIX_WATCH changed.
+[20.329s] -- Checking for module 'OGRE'
+[20.494s] --   Found OGRE, version 1.9.0
+[20.960s] -- Found Ogre Ghadamon (1.9.0)
+[21.379s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[21.385s] -- Looking for OGRE_Paging...
+[21.813s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[21.814s] -- Looking for OGRE_Terrain...
+[22.221s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[22.222s] -- Looking for OGRE_Property...
+[22.608s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[22.609s] -- Looking for OGRE_RTShaderSystem...
+[23.017s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[23.018s] -- Looking for OGRE_Volume...
+[23.422s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[23.423s] -- Looking for OGRE_Overlay...
+[23.812s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[43.760s] -- Looking for ignition-math6 -- found version 6.15.1
+[43.798s] -- Looking for ignition-transport8 -- found version 8.2.1
+[43.799s] -- Searching for dependencies of ignition-transport8
+[44.882s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[45.922s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[45.952s] -- Checking for module 'libzmq >= 4'
+[46.106s] --   Found libzmq , version 4.3.4
+[46.523s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[46.587s] -- Checking for module 'uuid'
+[46.738s] --   Found uuid, version 2.37.2
+[47.133s] -- Found UUID: TRUE  
+[47.170s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[47.171s] -- Searching for dependencies of ignition-msgs5
+[48.236s] -- Looking for ignition-math6 -- found version 6.15.1
+[48.266s] -- Checking for module 'tinyxml2'
+[48.454s] --   Found tinyxml2, version 9.0.0
+[48.894s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[48.932s] -- Looking for ignition-common3 -- found version 3.14.0
+[48.933s] -- Searching for dependencies of ignition-common3
+[48.969s] -- Looking for dlfcn.h - found
+[49.004s] -- Looking for libdl - found
+[49.005s] -- Found DL: TRUE  
+[49.146s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[49.147s] -- Searching for <ignition-common3> component [graphics]
+[49.185s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[49.186s] -- Searching for dependencies of ignition-common3-graphics
+[49.187s] -- Looking for ignition-math6 -- found version 6.15.1
+[49.223s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[49.224s] -- Searching for dependencies of ignition-fuel_tools4
+[51.120s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[51.192s] -- Checking for module 'jsoncpp'
+[51.344s] --   Found jsoncpp, version 1.9.5
+[51.736s] -- Found JSONCPP: TRUE  
+[51.768s] -- Checking for module 'libzip'
+[51.922s] --   Found libzip, version 1.7.3
+[52.445s] -- Found ZIP: TRUE  
+[52.446s] -- Looking for ignition-common3 -- found version 3.14.0
+[52.447s] -- Looking for ignition-math6 -- found version 6.15.1
+[52.447s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[52.484s] -- Gazebo version: 11.10
+[52.484s] -- Checking for module 'tbb'
+[52.620s] --   Found tbb, version 2021.5.0
+[54.027s] -- Configuring done
+[54.591s] -- Generating done
+[54.807s] -- Build files have been written to: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[54.818s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install
+[54.831s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[55.574s] [ 50%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/simulation_node.cpp.o[0m
+[68.255s] [100%] [32m[1mLinking CXX executable simulation_node[0m
+[72.195s] [100%] Built target simulation_node
+[72.289s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node -- -j16 -l16
+[72.312s] Invoking command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node
+[72.389s] -- Install configuration: ""
+[72.398s] -- Execute custom install script
+[72.413s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/simulation_node
+[72.527s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/launch/hiveflight.launch.py
+[72.677s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/models/drone_marker/model.sdf
+[72.806s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/models/target_marker/model.sdf
+[72.948s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/worlds/hiveflight.world
+[73.059s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/lib/hiveflight_sim_node/gazebo_swarm_bridge.py
+[73.163s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/package_run_dependencies/hiveflight_sim_node
+[73.284s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/parent_prefix_path/hiveflight_sim_node
+[73.431s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.sh
+[73.538s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/ament_prefix_path.dsv
+[73.641s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.sh
+[73.749s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/environment/path.dsv
+[73.853s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.bash
+[73.970s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.sh
+[74.081s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.zsh
+[74.184s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/local_setup.dsv
+[74.277s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.dsv
+[74.382s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/ament_index/resource_index/packages/hiveflight_sim_node
+[74.500s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig.cmake
+[74.607s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/cmake/hiveflight_sim_nodeConfig-version.cmake
+[74.711s] -- Symlinking: /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/install/share/hiveflight_sim_node/package.xml
+[74.809s] Invoked command in '/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node

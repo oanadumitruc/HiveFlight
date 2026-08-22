@@ -83,6 +83,23 @@ void DroneCommunicator3D::broadcastMessages(double currentTime) {
         if (m_drones[i].health > 0.0)
             deliverBroadcast(i, currentTime);
     }
+
+    const double radiusSq = m_cfg.communicationRadius * m_cfg.communicationRadius;
+    for (const DroneMessage3D& message : m_externalMessages) {
+        if (message.senderIndex >= count) continue;
+        for (std::size_t receiver = 0; receiver < count; ++receiver) {
+            if (receiver == message.senderIndex) continue;
+            if (m_drones[receiver].health <= 0.0) continue;
+            if (distanceSquared(message.position, m_drones[receiver].position) > radiusSq) continue;
+            m_commStates[receiver].inbox.push_back(message);
+            ++m_lastDeliveredMessages;
+        }
+    }
+    m_externalMessages.clear();
+}
+
+void DroneCommunicator3D::queueExternalMessage(const DroneMessage3D& message) {
+    m_externalMessages.push_back(message);
 }
 
 // ---------------------------------------------------------------------------

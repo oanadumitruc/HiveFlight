@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "name": "CMake compile commands (enhanced include paths)",
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+      "intelliSenseMode": "gcc-x64",
+      "includePath": [
+        "${workspaceFolder}",
+        "${workspaceFolder}/build",
+        "${workspaceFolder}/HiveFlight",
+        "${workspaceFolder}/HiveFlight/include"    
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "${workspaceFolder}/build"
+        ]
+      }
+    }
+  ],
+  "version": 4
+}
+

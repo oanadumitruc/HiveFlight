@@ -1,17 +1,26 @@
 cmake_minimum_required(VERSION 3.10)
+project(hiveflight)
 
-
-
-project(DroneSwarm)
-
+#
+# --- COMMON SETTINGS ---
+#
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Threads REQUIRED)
-option(HIVEFLIGHT_BUILD_OPENGL_VIEWER "Build the interactive OpenGL swarm viewer" ON)
 
-# 2D Simulation
+#
+# --- ROS 2 DEPENDENCIES ---
+#
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(hiveflight_interfaces REQUIRED)
+
+#
+# --- OLD DRONESWARM IMPLEMENTATION (2D + 3D) ---
+#
 add_executable(drone_swarm
     main.cpp
     Config.cpp
@@ -19,11 +28,9 @@ add_executable(drone_swarm
     PpmRenderer.cpp
     SpatialGrid.cpp
 )
-
 target_include_directories(drone_swarm PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(drone_swarm Threads::Threads)
+target_link_libraries(drone_swarm PRIVATE Threads::Threads)
 
-# 3D Simulation
 add_executable(drone_swarm_3d
     main_3d.cpp
     SwarmSimulation3D.cpp
@@ -31,16 +38,19 @@ add_executable(drone_swarm_3d
     SpatialGrid3D.cpp
     DroneCommunication3D.cpp
 )
-
-
 target_include_directories(drone_swarm_3d PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(drone_swarm_3d Threads::Threads)
+target_link_libraries(drone_swarm_3d PRIVATE Threads::Threads)
+
+#
+# --- OPTIONAL OPENGL VIEWER ---
+#
+option(HIVEFLIGHT_BUILD_OPENGL_VIEWER "Build the interactive OpenGL swarm viewer" ON)
 
 if(HIVEFLIGHT_BUILD_OPENGL_VIEWER)
     find_package(OpenGL)
     find_package(GLUT)
 
-    if(OpenGL_FOUND AND GLUT_FOUND AND (OPENGL_GLU_FOUND OR TARGET OpenGL::GLU OR OPENGL_glu_LIBRARY))
+    if(OpenGL_FOUND AND GLUT_FOUND)
         add_executable(hiveflight_gl_viewer
             main_opengl.cpp
             OpenGLSwarmViewer.cpp
@@ -50,27 +60,49 @@ if(HIVEFLIGHT_BUILD_OPENGL_VIEWER)
         )
 
         target_include_directories(hiveflight_gl_viewer PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+        target_link_libraries(hiveflight_gl_viewer PRIVATE Threads::Threads)
 
         if(TARGET OpenGL::GL)
             target_link_libraries(hiveflight_gl_viewer PRIVATE OpenGL::GL)
-            if(TARGET OpenGL::GLU)
-                target_link_libraries(hiveflight_gl_viewer PRIVATE OpenGL::GLU)
-            elseif(OPENGL_glu_LIBRARY)
-                target_link_libraries(hiveflight_gl_viewer PRIVATE ${OPENGL_glu_LIBRARY})
-            endif()
-        else()
-            target_link_libraries(hiveflight_gl_viewer PRIVATE ${OPENGL_LIBRARIES})
+        endif()
+
+        if(TARGET OpenGL::GLU)
+            target_link_libraries(hiveflight_gl_viewer PRIVATE OpenGL::GLU)
         endif()
 
         if(TARGET GLUT::GLUT)
             target_link_libraries(hiveflight_gl_viewer PRIVATE GLUT::GLUT)
-        else()
-            target_include_directories(hiveflight_gl_viewer PRIVATE ${GLUT_INCLUDE_DIRS})
-            target_link_libraries(hiveflight_gl_viewer PRIVATE ${GLUT_LIBRARIES})
         endif()
-
-        target_link_libraries(hiveflight_gl_viewer PRIVATE Threads::Threads)
     else()
-        message(STATUS "OpenGL/GLU/GLUT not found; skipping hiveflight_gl_viewer target")
+        message(STATUS "OpenGL/GLUT not found; skipping hiveflight_gl_viewer")
     endif()
 endif()
+
+#
+# --- ROS 2 SIMULATION NODE ---
+#
+add_executable(simulation_node
+    src/simulation_node.cpp
+)
+ament_target_dependencies(simulation_node
+    rclcpp
+    geometry_msgs
+    hiveflight_interfaces
+)
+
+install(TARGETS simulation_node
+    DESTINATION lib/${PROJECT_NAME}
+)
+
+#
+# --- INSTALL LAUNCH FILES ---
+#
+install(
+    DIRECTORY launch
+    DESTINATION share/${PROJECT_NAME}
+)
+
+#
+# --- EXPORT ROS 2 PACKAGE ---
+#
+ament_package()
