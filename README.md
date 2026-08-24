@@ -1,274 +1,121 @@
-# HiveFlight
-### Core Capabilities
-- **30 autonomous drones** in 3D space (200×200×150 world)
-- **Reynolds Boids Algorithm** with 5 weighted behaviors in 3D
-- **Obstacle avoidance** with spherical obstacles
-- **Target seeking** with 3D spiral movement pattern
+# HiveFlight 🐝
+
+**HiveFlight** is a drone swarm simulation platform written in modern **C++17**. It implements the
+[Reynolds Boids](https://en.wikipedia.org/wiki/Boids) flocking algorithm in both 2D and 3D, with
+multiple visualization front-ends (ASCII console, interactive OpenGL) and a full **ROS 2 + Gazebo**
+integration for realistic multi-drone simulation.
+
+## Core Capabilities
+
+- **Up to 30+ autonomous drones** in 3D space (200×200×150 world)
+- **Reynolds Boids algorithm** with 5 weighted behaviors (separation, alignment, cohesion, target seeking, obstacle avoidance)
 - **Battery management** with velocity-based energy drain
-- **60 FPS simulation** for smooth dynamics
-## Simulation Dynamics
+- **60 FPS simulation** with spatial-grid neighbor acceleration (O(n))
+- **Multiple renderers**: 2D ASCII, 3D isometric ASCII, interactive OpenGL viewer, PPM frames
+- **Data export**: OBJ 3D models, CSV per-drone telemetry
+- **ROS 2 Humble + Gazebo Classic 11 integration** — spawn drones in Gazebo and drive them from the same swarm engine
 
-### Behavior Forces (3D Extensions)
+## Repository Structure
 
-1. **Separation Force**
-   - Prevents drone crowding
-   - Repulsion within 30 unit radius
-   - Distance-weighted magnitude
-
-2. **Alignment Force**
-   - Drones align velocities with neighbors
-   - Perception radius: 80 units
-   - Creates coordinated movement
-
-3. **Cohesion Force**
-   - Attraction to neighbor swarm center
-   - Keeps group together
-   - Prevents fragmentation
-
-4. **Target Seeking Force**
-   - Continuous attraction to target
-   - 3D spiral movement pattern (period: ~20 seconds)
-   - Overrides other behaviors when weighted high
-
-5. **Obstacle Avoidance Force**
-   - Repulsion from spherical obstacles
-   - Strongest force weight (2.5)
-   - Safety buffer: 3.0 unit
-## Architecture Diagram
-
-```mermaid
-flowchart TD
-    User[User / Command Line] --> BuildScripts[build_linux.sh / build_windows.bat]
-    BuildScripts --> CMake[CMakeLists.txt]
-
-    CMake --> Target2D[drone_swarm]
-    CMake --> Target3D[drone_swarm_3d]
-    CMake --> TargetGL[hiveflight_gl_viewer]
-
-    Config[Config.cpp / Config.hpp] --> Target2D
-    Vec2[Vec2.hpp] --> Sim2D[SwarmSimulation.cpp / SwarmSimulation.hpp]
-    Spatial[SpatialGrid.cpp / SpatialGrid.hpp] --> Sim2D
-    Sim2D --> Target2D
-    Sim2D --> Console2D[ConsoleRenderer.hpp]
-    Sim2D --> Ppm[PpmRenderer.cpp / PpmRenderer.hpp]
-    Target2D --> ConsoleOutput[Console Output]
-    Target2D --> PpmFrames[PPM Frames]
-
-    Vec3[Vec3.hpp] --> Sim3D[SwarmSimulation3D.cpp / SwarmSimulation3D.hpp]
-    Sim3D --> Target3D
-    Renderer3D[Renderer3D.cpp / Renderer3D.hpp] --> Target3D
-    Target3D --> IsoConsole[Isometric Console View]
-    Target3D --> Exports[OBJ / CSV Exports]
-
-    Sim3D --> TargetGL
-    OpenGLViewer[OpenGLSwarmViewer.cpp / OpenGLSwarmViewer.hpp] --> TargetGL
-    TargetGL --> Interactive3D[Interactive OpenGL 3D Viewer]
-
-    Sim2D --> Boids2D[Separation / Alignment / Cohesion / Target / Obstacles]
-    Sim3D --> Boids3D[3D Separation / Alignment / Cohesion / Target / Obstacles]
+```
+HiveFlight/
+├── CMakeLists.txt              # Root build config (2D, 3D, OpenGL targets)
+├── build_linux.sh / .bat       # Convenience build scripts
+├── swarm_demo.conf             # Sample configuration file
+│
+├── Core sources (repo root)
+│   ├── main.cpp / drone_swarm.cpp        # 2D entry points
+│   ├── main_3d.cpp                       # 3D console entry point
+│   ├── main_opengl.cpp                   # OpenGL viewer entry point
+│   ├── SwarmSimulation.*                 # 2D physics engine
+│   ├── SwarmSimulation3D.*               # 3D physics engine
+│   ├── SpatialGrid.* / SpatialGrid3D.*   # Neighbor acceleration
+│   ├── Vec2.hpp / Vec3.hpp               # Math primitives
+│   ├── Config.*                          # Configuration system
+│   ├── ConsoleRenderer.hpp / Renderer3D.*# ASCII renderers + OBJ/CSV export
+│   ├── PpmRenderer.*                     # PPM frame export
+│   └── OpenGLSwarmViewer.*               # Interactive OpenGL viewer
+│
+├── docs/                       # All project documentation (see docs/README.md)
+├── ros2_ws/                    # ACTIVE ROS 2 workspace (source of truth)
+│   └── src/
+│       ├── hiveflight_interfaces/   # Custom DroneMessage.msg
+│       ├── hiveflight_sim/          # ROS 2 adapter library around the sim core
+│       └── hiveflight_sim_node/     # Simulation node, launch file, Gazebo bridge
+├── ros2/                       # LEGACY ROS 2 copy — do not build this one
+└── build/, install/, log/      # Build artifacts (generated)
 ```
 
-### Runtime Flow
+## Quick Start
 
-```mermaid
-sequenceDiagram
-    participant App as main / main_3d / main_opengl
-    participant Sim as Swarm Simulation
-    participant Grid as Spatial Grid
-    participant Renderer as Renderer / Viewer
-    participant Output as Console / Files / OpenGL Window
+### Standalone (no ROS required)
 
-    App->>Sim: create config and initialize drones
-    loop each frame or timestep
-        App->>Sim: step()
-        Sim->>Grid: rebuild neighbor buckets
-        Grid-->>Sim: nearby drone candidates
-        Sim->>Sim: apply boid forces and obstacle avoidance
-        Sim->>Sim: update velocity, position, battery, target
-        App->>Renderer: render current state
-        Renderer->>Output: draw or export frame data
-    end
-```
-HiveFlight provides:
+Prerequisites: **C++17 compiler** (g++ / clang / MSVC / MinGW), **CMake ≥ 3.10**.
 
-- **2D swarm simulation** (Reynolds Boids variant)
-- **3D swarm simulation** (acceleration-based Reynolds Boids in a bounded 3D volume)
-- **Visualization** in two forms:
-  - Console **ASCII** renderers (2D + 3D)
-  - Optional **interactive OpenGL** viewer for 3D
-- **Export** for 3D simulation results:
-  - **OBJ** for geometry visualization
-  - **CSV** for analysis
-
-At a high level, the pipeline is:
-
-1. `Config` (or `SwarmConfig3D`) defines world + swarm parameters
-2. `SwarmSimulation` / `SwarmSimulation3D` updates drone states each tick
-3. A renderer (console/OBJ/CSV/OpenGL) consumes the updated state
-
----
-
-## Build / targets (CMake)
-
-The root CMake file (`HiveFlight/CMakeLists.txt`) builds these executables:
-
-- `drone_swarm` (2D)
-- `drone_swarm_3d` (3D console + export)
-- `hiveflight_gl_viewer` (optional, interactive OpenGL)
-
-OpenGL viewer is guarded by:
-
-- `option(HIVEFLIGHT_BUILD_OPENGL_VIEWER ... ON)`
-- presence of OpenGL + GLUT (+ optional GLU)
-
-## Building
-
-### Prerequisites
-- C++17 compiler (g++, clang, or MSVC)
-- CMake 3.10+
-- Standard C++ library
-
-### Build Commands
-
-**Linux/WSL:**
 ```bash
 cd HiveFlight
-bash build_linux.sh
-```
+bash build_linux.sh          # Linux / WSL
+build_windows.bat            # Windows (MinGW)
 
-**Windows (with MinGW):**
-```cmd
-cd HiveFlight
-build_windows.bat
-```
-## Installation Quick Start
-
-```bash
-# Clone/extract project
-cd HiveFlight
-
-# Build
-bash build_linux.sh
-
-# Run 2D
+# Run the 2D simulation
 ./build/drone_swarm --config swarm_demo.conf
 
-# Run 3D
-./build/drone_swarm_3d --drones 30
+# Run the 3D simulation
+./build/drone_swarm_3d --drones 30 --seed 42
 
-# Export 3D
+# Export results
 ./build/drone_swarm_3d --export obj output.obj
+./build/drone_swarm_3d --export csv drones.csv
 ```
-### Interactive OpenGL 3D Viewer
 
-If OpenGL and GLUT/freeglut are available when CMake configures the project, an
-extra executable is built:
+Optional interactive 3D viewer (needs OpenGL + GLUT):
 
 ```bash
-cd {your project folder}/HiveFlight/build
-./hiveflight_gl_viewer --drones 60 --seed 7
+sudo apt install freeglut3-dev libglu1-mesa-dev   # Debian/Ubuntu
+./build/hiveflight_gl_viewer --drones 60 --seed 7
 ```
 
-Common Linux dependencies:
+Viewer controls: mouse drag = orbit · wheel = zoom · Space = pause · R = reset · V = velocity vectors · +/- speed · Q/Esc = quit.
+
+### ROS 2 + Gazebo mode
+
+Target environment: Windows host + **Ubuntu 22.04 (WSL 2)**, **ROS 2 Humble**, **Gazebo Classic 11**.
 
 ```bash
-sudo apt install freeglut3-dev libglu1-mesa-dev
+# Install dependencies (Ubuntu 22.04)
+sudo apt install -y ros-humble-desktop ros-humble-gazebo-ros-pkgs \
+  python3-colcon-common-extensions build-essential cmake
+
+# Build the workspace
+cd ros2_ws
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install --merge-install
+source install/setup.bash
+
+# Launch Gazebo + simulation node + Gazebo bridge
+ros2 launch hiveflight_sim_node hiveflight.launch.py drone_count:=20 target_count:=1 gui:=true
 ```
 
-Viewer controls:
+Verify: `ros2 topic hz /hiveflight/swarm_0/drone_poses` should publish near 60 Hz.
+Full setup, verification and troubleshooting: [docs/ROS2_SETUP.md](docs/ROS2_SETUP.md).
 
-- Mouse drag: orbit camera
-- Mouse wheel: zoom
-- Arrow keys: orbit camera
-- Space: pause/resume
-- R: reset simulation
-- V: toggle velocity vectors
-- +/-: change simulation speed
-- 0: reset camera
-- Q or Esc: quit
+## Dependencies
 
-## Quick component map
+| Component | Requirement | Notes |
+|---|---|---|
+| Compiler | C++17 (g++, clang, MSVC, MinGW) | Required |
+| CMake | ≥ 3.10 | Required |
+| STL only | — | Standalone sim has no external libs |
+| freeglut + OpenGL (+ GLU) | optional | Only for `hiveflight_gl_viewer` |
+| ROS 2 Humble desktop | optional | For the Gazebo integration |
+| gazebo_ros_pkgs (Gazebo Classic 11) | optional | Spawn/state services used by the bridge |
+| colcon, Python 3 | optional | ROS 2 workspace build & Python bridge |
 
-| Functionality | 2D | 3D | OpenGL |
-|---|---|---|---|
-| Simulation engine | `SwarmSimulation` | `SwarmSimulation3D` | (uses `SwarmSimulation3D`) |
-| Neighbor acceleration | `SpatialGrid` | (not yet) | (not yet) |
-| Console render | `ConsoleRenderer.hpp` | `Renderer3D::printConsole` | (no) |
-| Export | (PPM optional) | `Renderer3D::exportOBJ/exportCSV` | (no) |
-| Interactive 3D | (none) | (ASCII only) | `OpenGLSwarmViewer` |
----
-## Data Flow
+## Documentation
 
-```
-┌─────────────────────────────────────┐
-│   Configuration (swarm_demo.conf)   │
-└────────────┬────────────────────────┘
-             │
-             ▼
-┌─────────────────────────────────────┐
-│   SimConfig (parameters)            │
-└────────────┬────────────────────────┘
-             │
-             ▼
-┌─────────────────────────────────────┐
-│   SwarmSimulation (engine)          │
-│  ├─ Drones[]                        │
-│  ├─ Obstacles[]                     │
-│  ├─ Target (Vec2)                   │
-│  └─ SpatialGrid                     │
-└────────────┬────────────────────────┘
-             │
-             ▼
-   ┌─────────────────────┐
-   │  Physics Step       │
-   │  - Calculate forces │
-   │  - Update velocity  │
-   │  - Update position  │
-   │  - Drain battery    │
-   └─────────┬───────────┘
-             │
-    ┌────────┴────────┐
-    ▼                 ▼
-┌──────────────┐  ┌──────────────┐
-│ Console      │  │ PPM Renderer │
-│ Renderer     │  │ (optional)   │
-└──────────────┘  └──────────────┘
-```
+All documentation lives in [`docs/`](docs/README.md). Start there for quick starts,
+architecture deep-dives, the ROS 2 integration guide, performance data, and the roadmap.
 
-## 5. Optional OpenGL Visualization (3D Viewer)
+## License
 
-HiveFlight also includes an **interactive OpenGL-based viewer** (`hiveflight_gl_viewer`) that renders the same 3D swarm state using real 3D graphics.
-
-
-### OpenGL Viewer Executable
-- **Target**: `hiveflight_gl_viewer`
-- **Entry**: `main_opengl.cpp`
-
-### Key Components
-- `OpenGLSwarmViewer.cpp/.hpp`
-  - Handles window/display (`display()`, `reshape()`)
-  - Draws scene elements: world box, grid, obstacles, target, drones, overlays
-  - Implements camera + interaction: keyboard/special/mouse/timer
-
-### Data Flow (Simulation → OpenGL)
-
-```
-┌───────────────────────┐
-│      SwarmSimulation3D │
-└───────────┬───────────┘
-            │ step() / state updates
-            ▼
-┌───────────────────────┐
-│     OpenGLSwarmViewer   │
-│  ├─ setCamera()         │
-│  ├─ drawScene()        │
-│  ├─ drawDrones()       │
-│  └─ drawObstacles()    │
-└───────────┬───────────┘
-            │ OpenGL rendering calls
-            ▼
-┌───────────────────────┐
-│  OpenGL Window (interactive) │
-└───────────────────────┘
-```
-
+See [LICENSE](LICENSE).
