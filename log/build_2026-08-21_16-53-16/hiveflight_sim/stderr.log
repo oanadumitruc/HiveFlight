@@ -1,5 +1,0 @@
-[31mCMake Error at CMakeLists.txt:13 (message):
-  SwarmSimulation3D.cpp not found at:
-  /mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim/../../SwarmSimulation3D.cpp
-
-[0m

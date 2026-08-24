@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/src/hiveflight_sim/include/DroneCommunication3D.hpp

@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim/ament_cmake_core/hiveflight_simConfig.cmake

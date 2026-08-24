@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/ament_cmake_python/hiveflight_interfaces/hiveflight_interfaces.egg-info/SOURCES.txt

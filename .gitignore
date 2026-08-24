@@ -1,0 +1,36 @@
+# Visual Studio
+.vs/
+*.vsidx
+*.slnx
+
+# Build folders
+build/
+build_*/
+
+# ROS2 / colcon
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+COLCON_IGNORE
+
+# Simulation outputs
+*.mp4
+*.obj
+*.ppm
+*.png
+*.jpg
+
+# Temporary files
+*.cache
+*.tmp
+*.log
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Editor swap files
+*.swp
+*.swo

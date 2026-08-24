@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/rosidl_generator_cpp/hiveflight_interfaces/msg/detail/drone_message__type_support.hpp

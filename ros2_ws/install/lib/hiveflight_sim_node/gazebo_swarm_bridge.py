@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node/gazebo_swarm_bridge.py

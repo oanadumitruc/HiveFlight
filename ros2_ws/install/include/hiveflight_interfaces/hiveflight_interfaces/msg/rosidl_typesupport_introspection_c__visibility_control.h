@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/rosidl_typesupport_introspection_c/hiveflight_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h

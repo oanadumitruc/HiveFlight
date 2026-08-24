@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_sim_node/simulation_node" "TARGETS" "simulation_node" "DESTINATION" "lib/hiveflight_sim_node")

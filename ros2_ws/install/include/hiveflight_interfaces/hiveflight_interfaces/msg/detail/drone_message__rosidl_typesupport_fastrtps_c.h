@@ -1,1 +1,0 @@
-/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws/build/hiveflight_interfaces/rosidl_typesupport_fastrtps_c/hiveflight_interfaces/msg/detail/drone_message__rosidl_typesupport_fastrtps_c.h
