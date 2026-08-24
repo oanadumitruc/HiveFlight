@@ -9,8 +9,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Threads REQUIRED)
-find_package(hiveflight_interfaces REQUIRED)
-
 #
 # --- OLD DRONESWARM IMPLEMENTATION (2D + 3D) ---
 #
