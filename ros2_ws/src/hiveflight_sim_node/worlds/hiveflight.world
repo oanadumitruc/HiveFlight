@@ -10,5 +10,10 @@
     <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
       <ros><namespace>/gazebo</namespace></ros>
     </plugin>
+    <!-- Applies swarm PoseArray topics directly on the physics thread:
+         one message updates ALL drones each step (no service round-robin). -->
+    <plugin name="hiveflight_pose_plugin" filename="libhiveflight_pose_plugin.so">
+      <swarm_id>0</swarm_id>
+    </plugin>
   </world>
 </sdf>

@@ -32,6 +32,10 @@ private:
     this->declare_parameter("max_speed",            48.0);
     this->declare_parameter("max_force",            14.0);
     this->declare_parameter("target_speed_multiplier", 2.5);
+    // Global time scale: >1 speeds up the whole simulation (drones + targets).
+    // The timer still fires at tick_ms, but each step advances sim time by
+    // dt * sim_speed, so motion looks faster without changing the physics feel.
+    this->declare_parameter("sim_speed",             2.0);
     this->declare_parameter("weight_separation",     1.8);
     this->declare_parameter("weight_cohesion",       1.0);
     this->declare_parameter("weight_alignment",      1.0);
@@ -60,6 +64,7 @@ private:
     cfg.weightCohesion   = this->get_parameter("weight_cohesion").as_double();
     cfg.weightAlignment  = this->get_parameter("weight_alignment").as_double();
     cfg.weightTarget     = this->get_parameter("weight_target").as_double();
+    m_simSpeed = this->get_parameter("sim_speed").as_double();
 
     const std::size_t swarmId =
       static_cast<std::size_t>(this->get_parameter("swarm_id").as_int());
@@ -97,12 +102,18 @@ private:
   }
 
   void tick() {
-    m_adapter->spinOnce();
-    for (const auto& message : m_adapter->takePendingMessages()) {
-      m_sim->queueCommunicationMessage(message);
+    // Advance sim time faster than wall time when sim_speed > 1: run multiple
+    // fixed-dt physics steps per timer tick so motion is visibly quicker while
+    // keeping the integration stable (dt itself never changes).
+    const int steps = std::max(1, static_cast<int>(std::lround(m_simSpeed)));
+    for (int s = 0; s < steps; ++s) {
+      m_adapter->spinOnce();
+      for (const auto& message : m_adapter->takePendingMessages()) {
+        m_sim->queueCommunicationMessage(message);
+      }
+      m_sim->step();
+      m_adapter->publishBroadcasts(m_sim->commStates(), m_sim->time());
     }
-    m_sim->step();
-    m_adapter->publishBroadcasts(m_sim->commStates(), m_sim->time());
 
     geometry_msgs::msg::PoseArray poses;
     poses.header.stamp = this->now();
@@ -186,6 +197,7 @@ private:
   std::shared_ptr<DroneRos2Adapter>   m_adapter;
   rclcpp::TimerBase::SharedPtr        m_timer;
   std::vector<std::size_t>            m_targetIndexByDrone;
+  double                              m_simSpeed = 1.0;
   rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr m_pose_pub;
   rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr m_target_pub;
   rclcpp::Publisher<std_msgs::msg::Int32MultiArray>::SharedPtr m_assignment_pub;

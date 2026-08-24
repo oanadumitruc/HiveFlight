@@ -13,11 +13,12 @@
   <depend>hiveflight_sim</depend>
   <depend>geometry_msgs</depend>
   <depend>gazebo_ros</depend>
+  <depend>gazebo_dev</depend>
   <depend>std_msgs</depend>
 
   <exec_depend>nav_msgs</exec_depend>
   <exec_depend>gazebo_ros_pkgs</exec_depend>
- 
+
   <exec_depend>rclpy</exec_depend>
   <exec_depend>gazebo_msgs</exec_depend>
   <exec_depend>ament_index_python</exec_depend>

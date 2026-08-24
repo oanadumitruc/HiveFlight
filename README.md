@@ -41,7 +41,7 @@ HiveFlight/
 │   └── src/
 │       ├── hiveflight_interfaces/   # Custom DroneMessage.msg
 │       ├── hiveflight_sim/          # ROS 2 adapter library around the sim core
-│       └── hiveflight_sim_node/     # Simulation node, launch file, Gazebo bridge
+│       └── hiveflight_sim_node/     # Simulation node, Gazebo world plugin, launch file, Gazebo bridge
 ├── ros2/                       # LEGACY ROS 2 copy — do not build this one
 └── build/, install/, log/      # Build artifacts (generated)
 ```
@@ -115,6 +115,20 @@ ros2 launch hiveflight_sim_node hiveflight.launch.py drone_count:=20 target_coun
 ```
 
 Verify: `hf hz` should report near 60 Hz.
+
+Motion feel is tunable at launch time (no recompile needed):
+
+```bash
+./hf run sim_speed:=2.0 max_force:=24.0 target_speed_multiplier:=6.0
+```
+
+| Parameter | Default | Effect |
+|---|---|---|
+| `sim_speed` | 2.0 | Global time scale — simulation advances N× faster in wall time |
+| `max_force` | 24.0 | Steering aggressiveness — higher = sharper turns, less "floating" |
+| `target_speed_multiplier` | 6.0 | Target orbital speed — higher pulls the swarm faster |
+| `use_plugin` | true | Poses applied by the Gazebo world plugin on the physics thread (smooth); false = legacy service round-robin |
+
 Full setup, verification and troubleshooting: [docs/ROS2_SETUP.md](docs/ROS2_SETUP.md).
 
 ## Dependencies

@@ -173,6 +173,10 @@ Defaults:
 drone_count=20
 target_count=1
 gui=true
+use_plugin=true
+sim_speed=2.0
+max_force=24.0
+target_speed_multiplier=6.0
 ```
 
 Override values without editing code:
@@ -184,13 +188,32 @@ ros2 launch hiveflight_sim_node hiveflight.launch.py \
   gui:=true
 ```
 
+### Motion tuning parameters
+
+| Parameter | Default | Effect |
+|---|---|---|
+| `sim_speed` | 2.0 | Global time scale. Each 60 Hz timer tick runs N physics steps (N = round of sim_speed), so the whole simulation advances N× faster in wall time without changing integration stability. |
+| `max_force` | 24.0 | Steering force limit. Higher values make drones turn more aggressively (less "floating" feel); lower values give lazy, drifting motion. |
+| `max_speed` | 48.0 | Velocity cap per drone (world units/s). |
+| `target_speed_multiplier` | 6.0 | Scales the target's orbital motion speed — higher makes targets move faster and "pull" the swarm along. |
+| `use_plugin` | true | When true, poses are applied by the Gazebo world plugin on the physics thread; the Python bridge only spawns models. Set false to fall back to per-model service updates. |
+
+Example — fast, aggressive motion:
+
+```bash
+./hf run sim_speed:=3.0 max_force:=30.0 target_speed_multiplier:=8.0
+```
+
 The launch file starts:
 
 1. Gazebo Classic with `hiveflight.world`.
 2. `simulation_node`.
 3. The installed `gazebo_swarm_bridge.py`.
 
-The world loads `libgazebo_ros_state.so`, and the bridge uses `/spawn_entity` plus `/gazebo/set_model_state` or `/gazebo/set_entity_state`.
+The world loads two plugins:
+
+- **`libgazebo_ros_state.so`** — exposes `/gazebo/set_model_state`, `/spawn_entity`, etc. Used by the bridge for spawning (and as a fallback pose path when `use_plugin:=false`).
+- **`libhiveflight_pose_plugin.so`** — HiveFlight's world plugin. It subscribes directly to `/hiveflight/swarm_N/drone_poses` and `target_poses` and applies every pose to the matching Gazebo model via `Model::SetWorldPose()` on the physics thread, at every physics step. This replaces the old round-robin service-call scheme (~7.5 Hz per drone with 20 drones) with full-rate smooth motion: one PoseArray message updates all drones each step.
 
 ## 8. Verify Startup
 

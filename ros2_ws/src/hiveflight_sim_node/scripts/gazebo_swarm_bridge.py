@@ -39,6 +39,9 @@ class GazeboSwarmBridge(Node):
         # sends only the latest visualization sample at bounded rates.
         self.declare_parameter("drone_update_hz", 25.0)
         self.declare_parameter("target_update_hz", 30.0)
+        # When the Gazebo world plugin applies poses on the physics thread,
+        # this bridge only spawns models and skips all pose service calls.
+        self.declare_parameter("use_plugin", True)
         swarm_id = self.get_parameter("swarm_id").value
         prefix = f"/hiveflight/swarm_{swarm_id}"
         qos = QoSProfile(history=HistoryPolicy.KEEP_LAST, depth=1, reliability=ReliabilityPolicy.BEST_EFFORT)
@@ -300,6 +303,8 @@ class GazeboSwarmBridge(Node):
         )
 
     def update_models(self):
+        if self.get_parameter("use_plugin").value:
+            return
         if not self.ensure_state_service():
             return
         with self.lock:
@@ -345,6 +350,8 @@ class GazeboSwarmBridge(Node):
 
     def update_target_models(self):
         """Always submit the newest target pose through the verified state API."""
+        if self.get_parameter("use_plugin").value:
+            return
         if not self.targets_ready or not self.ensure_state_service():
             return
         with self.lock:

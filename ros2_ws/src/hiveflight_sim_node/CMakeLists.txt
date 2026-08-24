@@ -8,8 +8,31 @@ find_package(hiveflight_sim REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(gazebo_ros REQUIRED)
+find_package(gazebo_dev REQUIRED)
 find_package(gazebo_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+
+add_library(hiveflight_pose_plugin SHARED
+  src/hiveflight_pose_plugin.cpp
+)
+target_include_directories(hiveflight_pose_plugin PRIVATE
+  ${GAZEBO_INCLUDE_DIRS}
+)
+link_directories(${GAZEBO_LIBRARY_DIRS})
+set_target_properties(hiveflight_pose_plugin PROPERTIES
+  CXX_STANDARD 17
+  PREFIX "lib"
+  LIBRARY_OUTPUT_DIRECTORY $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
+)
+ament_target_dependencies(hiveflight_pose_plugin
+  rclcpp
+  geometry_msgs
+  std_msgs
+  gazebo_dev
+)
+install(TARGETS hiveflight_pose_plugin
+  LIBRARY DESTINATION lib
+)
 
 add_executable(simulation_node
   src/simulation_node.cpp
