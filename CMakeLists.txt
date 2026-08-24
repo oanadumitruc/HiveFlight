@@ -9,13 +9,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Threads REQUIRED)
-
-#
-# --- ROS 2 DEPENDENCIES ---
-#
-find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(geometry_msgs REQUIRED)
 find_package(hiveflight_interfaces REQUIRED)
 
 #
@@ -78,31 +71,5 @@ if(HIVEFLIGHT_BUILD_OPENGL_VIEWER)
     endif()
 endif()
 
-#
-# --- ROS 2 SIMULATION NODE ---
-#
-add_executable(simulation_node
-    src/simulation_node.cpp
-)
-ament_target_dependencies(simulation_node
-    rclcpp
-    geometry_msgs
-    hiveflight_interfaces
-)
 
-install(TARGETS simulation_node
-    DESTINATION lib/${PROJECT_NAME}
-)
 
-#
-# --- INSTALL LAUNCH FILES ---
-#
-install(
-    DIRECTORY launch
-    DESTINATION share/${PROJECT_NAME}
-)
-
-#
-# --- EXPORT ROS 2 PACKAGE ---
-#
-ament_package()
