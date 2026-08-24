@@ -12,16 +12,9 @@ ROS2_WS_DIR="$SCRIPT_DIR/ros2_ws"
 COLCON_BUILD_BASE="$ROS2_WS_DIR/build"
 COLCON_INSTALL_BASE="$ROS2_WS_DIR/install"
 
-# Clean previous ROS overlay to avoid stale/partial installs.
-rm -rf "$ROS2_WS_DIR/src" "$COLCON_BUILD_BASE" "$COLCON_INSTALL_BASE" "$ROS2_WS_DIR/log"
+# Clean previous ROS build artifacts (NEVER touch src/ — it is the source of truth).
+rm -rf "$COLCON_BUILD_BASE" "$COLCON_INSTALL_BASE" "$ROS2_WS_DIR/log"
 rm -f "$ROS2_WS_DIR"/COLCON_IGNORE
-
-mkdir -p "$ROS2_WS_DIR/src"
-
-# Copy packages into the colcon workspace (simple + robust across filesystems).
-cp -R "$SCRIPT_DIR/ros2/hiveflight_interfaces" "$ROS2_WS_DIR/src/"
-cp -R "$SCRIPT_DIR/ros2/hiveflight_sim" "$ROS2_WS_DIR/src/"
-cp -R "$SCRIPT_DIR/ros2/hiveflight_sim_node" "$ROS2_WS_DIR/src/"
 
 # ROS setup.bash expects certain env vars; avoid strict bash mode issues.
 set +u
@@ -30,7 +23,7 @@ set -u
 
 
 # Build everything under ./ros2_ws/src, and install into ./ros2_ws/install
-colcon build \
+colcon build --symlink-install \
   --base-paths "${ROS2_WS_DIR}/src" \
   --build-base "$COLCON_BUILD_BASE" \
   --install-base "$COLCON_INSTALL_BASE" \

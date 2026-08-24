@@ -1,0 +1,46 @@
+#!/bin/bash
+# hf — HiveFlight one-letter CLI for the ROS 2 workspace
+# Usage:
+#   hf kill    Kill leftover gzserver/gzclient/simulation_node
+#   hf build   Clean rebuild of ros2_ws (colcon, symlink + merge install)
+#   hf run     Launch hiveflight_sim_node (extra args passed to ros2 launch)
+#   hf all     kill + build + run
+#   hf hz      Check publish rate of drone_poses topic
+set -e
+
+WS="/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws"
+PKG="hiveflight_sim_node"
+
+kill_all() {
+  pkill -x gzserver 2>/dev/null || true
+  pkill -x gzclient 2>/dev/null || true
+  pkill -x simulation_node 2>/dev/null || true
+  echo "[hf] leftovers killed."
+}
+
+build() {
+  cd "$WS" || exit 1
+  rm -rf build install log
+  set +u; source /opt/ros/humble/setup.bash; set -u
+  colcon build --symlink-install --merge-install
+}
+
+run() {
+  cd "$WS" || exit 1
+  set +u; source /opt/ros/humble/setup.bash; source install/setup.bash; set -u
+  ros2 launch "$PKG" hiveflight.launch.py "$@"
+}
+
+hz() {
+  set +u; source /opt/ros/humble/setup.bash; source "$WS/install/setup.bash"; set -u
+  ros2 topic hz /hiveflight/swarm_0/drone_poses
+}
+
+case "${1:-help}" in
+  kill)  kill_all ;;
+  build) build ;;
+  run)   shift; run "$@" ;;
+  all)   kill_all; build; run ;;
+  hz)    hz ;;
+  *) echo "usage: hf {kill|build|run|all|hz} [launch args...]" ;;
+esac

@@ -106,14 +106,45 @@ echo "$DISPLAY"
 echo "$WAYLAND_DISPLAY"
 ```
 
-## 5. Clean Build
+## 5. The `hf` CLI (recommended)
+
+The repo ships a convenience script, `hf`, that wraps all common workflow commands. It is available at the repo root and in `ros2_ws/`:
+
+```bash
+# one-time setup: alias it so it works from anywhere
+echo "alias hf='/mnt/c/work/ubuntu_work/HiveFlight/hf'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+| Command | What it does |
+|---|---|
+| `hf kill` | Kill leftover `gzserver` / `gzclient` / `simulation_node` processes |
+| `hf build` | Clean rebuild of `ros2_ws` (`rm -rf build install log` + `colcon build --symlink-install --merge-install`) |
+| `hf run [args...]` | Source the workspace and launch `hiveflight.launch.py` (extra args passed through) |
+| `hf all` | `kill` + `build` + `run` in one shot |
+| `hf hz` | Check publish rate of `/hiveflight/swarm_0/drone_poses` |
+
+Examples:
+
+```bash
+hf kill
+hf build
+hf run drone_count:=20 target_count:=3 gui:=true
+hf all                      # full cycle: kill -> build -> run
+```
+
+> **Note:** ROS Humble lives in the **Ubuntu-22.04** WSL distro. If your default distro differs, run commands via `wsl -d Ubuntu-22.04` or set it as default with `wsl --set-default Ubuntu-22.04`.
+
+The manual equivalents of each command are documented below.
+
+## 6. Clean Build (manual)
 
 Stop old processes before rebuilding:
 
 ```bash
-pkill -f gazebo 2>/dev/null || true
-pkill -f simulation_node 2>/dev/null || true
-pkill -f gazebo_swarm_bridge.py 2>/dev/null || true
+pkill -x gzserver 2>/dev/null || true
+pkill -x gzclient 2>/dev/null || true
+pkill -x simulation_node 2>/dev/null || true
 ```
 
 A clean build avoids merged/isolated install conflicts and stale bridge scripts:
@@ -128,7 +159,7 @@ source install/setup.bash
 
 The `--merge-install` option is required when the existing install directory was created with merged layout.
 
-## 6. Launch the Full System
+## 7. Launch the Full System
 
 Default runtime:
 
@@ -161,7 +192,7 @@ The launch file starts:
 
 The world loads `libgazebo_ros_state.so`, and the bridge uses `/spawn_entity` plus `/gazebo/set_model_state` or `/gazebo/set_entity_state`.
 
-## 7. Verify Startup
+## 8. Verify Startup
 
 Check nodes:
 

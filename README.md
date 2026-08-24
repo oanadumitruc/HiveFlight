@@ -86,17 +86,35 @@ Target environment: Windows host + **Ubuntu 22.04 (WSL 2)**, **ROS 2 Humble**, *
 sudo apt install -y ros-humble-desktop ros-humble-gazebo-ros-pkgs \
   python3-colcon-common-extensions build-essential cmake
 
-# Build the workspace
+# Build the workspace — or use the hf CLI (recommended)
+cd ros2_ws
+./hf build
+
+# Launch Gazebo + simulation node + Gazebo bridge
+./hf run drone_count:=20 target_count:=1 gui:=true
+```
+
+The `hf` CLI wraps the whole workflow:
+
+| Command | Action |
+|---|---|
+| `hf kill` | Kill leftover `gzserver` / `gzclient` / `simulation_node` |
+| `hf build` | Clean rebuild (`colcon build --symlink-install --merge-install`) |
+| `hf run [args...]` | Launch `hiveflight.launch.py` (args passed through) |
+| `hf all` | kill → build → run in one shot |
+| `hf hz` | Check publish rate of the drone poses topic |
+
+Manual equivalent:
+
+```bash
 cd ros2_ws
 source /opt/ros/humble/setup.bash
 colcon build --symlink-install --merge-install
 source install/setup.bash
-
-# Launch Gazebo + simulation node + Gazebo bridge
 ros2 launch hiveflight_sim_node hiveflight.launch.py drone_count:=20 target_count:=1 gui:=true
 ```
 
-Verify: `ros2 topic hz /hiveflight/swarm_0/drone_poses` should publish near 60 Hz.
+Verify: `hf hz` should report near 60 Hz.
 Full setup, verification and troubleshooting: [docs/ROS2_SETUP.md](docs/ROS2_SETUP.md).
 
 ## Dependencies
