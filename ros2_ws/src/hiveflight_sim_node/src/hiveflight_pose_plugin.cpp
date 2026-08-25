@@ -11,12 +11,10 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose_array.hpp>
-#include <std_msgs/msg/int32_multi_array.hpp>
 
 #include <memory>
 #include <mutex>
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 namespace gazebo
@@ -60,18 +58,6 @@ namespace gazebo
           [this](const geometry_msgs::msg::PoseArray::SharedPtr msg)
           {
             StorePoses(msg->poses, target_poses_);
-          });
-
-      assignments_sub_ = node_->create_subscription<std_msgs::msg::Int32MultiArray>(
-          prefix_ + "/target_assignments", qos,
-          [this](const std_msgs::msg::Int32MultiArray::SharedPtr msg)
-          {
-            std::lock_guard<std::mutex> lock(mutex_);
-            assignments_.clear();
-            for (size_t i = 0; i < msg->data.size(); ++i)
-            {
-              assignments_[static_cast<int>(i)] = msg->data[i];
-            }
           });
 
       executor_thread_ = std::thread([this]()
@@ -124,21 +110,15 @@ namespace gazebo
     }
 
     void ApplyModels(const std::vector<ignition::math::Pose3d> &poses,
-                     const char *model_prefix,
-                     const std::unordered_map<int, int> *remap)
+                     const char *model_prefix)
     {
+      // NOTE: model colouring is handled by the Python spawner; this plugin
+      // only streams poses. The previous target-colour remap read an
+      // unordered_map from the physics thread while the ROS executor wrote
+      // it - an unsynchronised data race that corrupted the heap and
+      // segfaulted gzserver (crash surfaced inside libdraco).
       for (size_t i = 0; i < poses.size(); ++i)
       {
-        int color_index = i;
-        if (remap)
-        {
-          auto it = remap->find(static_cast<int>(i));
-          if (it != remap->end())
-          {
-            color_index = it->second;
-          }
-        }
-        (void)color_index; // coloring handled by spawner; pose uses index
         if (auto model = world_->ModelByName(model_prefix + std::to_string(i)))
         {
           model->SetWorldPose(poses[i]);
@@ -157,11 +137,11 @@ namespace gazebo
       }
       if (!drones.empty())
       {
-        ApplyModels(drones, "drone_", nullptr);
+        ApplyModels(drones, "drone_");
       }
       if (!targets.empty())
       {
-        ApplyModels(targets, "target_", &assignments_);
+        ApplyModels(targets, "target_");
       }
     }
 
@@ -170,13 +150,11 @@ namespace gazebo
     rclcpp::Node::SharedPtr node_;
     rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr drone_sub_;
     rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr target_sub_;
-    rclcpp::Subscription<std_msgs::msg::Int32MultiArray>::SharedPtr assignments_sub_;
     rclcpp::executors::SingleThreadedExecutor::SharedPtr executor_;
     std::thread executor_thread_;
     std::mutex mutex_;
     std::vector<ignition::math::Pose3d> drone_poses_;
     std::vector<ignition::math::Pose3d> target_poses_;
-    std::unordered_map<int, int> assignments_;
     std::string prefix_;
     int swarm_id_{0};
     bool owns_rclcpp_{false};

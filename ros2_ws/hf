@@ -12,10 +12,16 @@ WS="/mnt/c/work/ubuntu_work/HiveFlight/ros2_ws"
 PKG="hiveflight_sim_node"
 
 kill_all() {
+  # TERM first (graceful), then KILL - gzserver can hang in shutdown with
+  # rclcpp plugins and ignore TERM, leaving zombie ROS publishers behind.
   pkill -x gzserver 2>/dev/null || true
   pkill -x gzclient 2>/dev/null || true
   pkill -x simulation_node 2>/dev/null || true
-  echo "[hf] leftovers killed."
+  sleep 2
+  pkill -9 -x gzserver 2>/dev/null || true
+  pkill -9 -x gzclient 2>/dev/null || true
+  pkill -9 -x simulation_node 2>/dev/null || true
+  echo "[hf] leftovers killed (TERM + KILL)."
 }
 
 build() {
@@ -37,10 +43,11 @@ hz() {
 }
 
 case "${1:-help}" in
-  kill)  kill_all ;;
-  build) build ;;
-  run)   shift; run "$@" ;;
-  all)   kill_all; build; run ;;
-  hz)    hz ;;
-  *) echo "usage: hf {kill|build|run|all|hz} [launch args...]" ;;
+  kill)   kill_all ;;
+  build)  build ;;
+  run)    shift; run "$@" ;;
+  all)    kill_all; build; run ;;
+  hz)     hz ;;
+  doctor) bash "/mnt/c/work/ubuntu_work/HiveFlight/hf_doctor.sh" ;;
+  *) echo "usage: hf {kill|build|run|all|hz|doctor} [launch args...]" ;;
 esac

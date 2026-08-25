@@ -21,6 +21,7 @@ def generate_launch_description():
         DeclareLaunchArgument('gui', default_value='true'),
         DeclareLaunchArgument('drone_count', default_value='20'),
         DeclareLaunchArgument('target_count', default_value='1'),
+        DeclareLaunchArgument('world_depth', default_value='60'),
         # When the Gazebo world plugin (libhiveflight_pose_plugin.so) applies
         # poses on the physics thread, the Python bridge only needs to spawn
         # models — its per-model service updates are disabled.
@@ -46,6 +47,7 @@ def generate_launch_description():
             parameters=[{
                 'drone_count': ParameterValue(LaunchConfiguration('drone_count'), value_type=int),
                 'target_count': ParameterValue(LaunchConfiguration('target_count'), value_type=int),
+                'world_depth': ParameterValue(LaunchConfiguration('world_depth'), value_type=float),
             }],
         ),
         # Invoke python3 explicitly instead of relying on the script's shebang:

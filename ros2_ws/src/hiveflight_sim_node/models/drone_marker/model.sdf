@@ -1,28 +1,434 @@
 <?xml version="1.0"?>
-<sdf version="1.6">
+<sdf version="1.7">
+
+  <!--
+    HiveFlight drone_marker - a realistic, demo-ready quadcopter.
+    Gazebo Classic renders it; the HiveFlight world plugin owns its pose, so
+    every link is kinematic and gravity-free.
+
+    DEMO SCALE: geometry is 3x a real quadcopter (~1.3 m hull, ~2.7 m rotor
+    span) so the swarm stays visible at the demo camera distance (~200 m).
+
+    The bridge (gazebo_swarm_bridge.py) replaces __RED__ __GREEN__ __BLUE__
+    before spawning so each assigned team gets a distinct livery colour.
+
+    Axes: +X is the nose (camera faces forward), +Y is left, +Z is up.
+    The simulation derives yaw/pitch from the velocity, so the nose always
+    points along the direction of travel.
+  -->
+
   <model name="drone_marker">
     <static>false</static>
-    <link name="body">
+    <allow_auto_disable>false</allow_auto_disable>
+
+    <link name="drone">
+
       <gravity>false</gravity>
       <kinematic>true</kinematic>
-      <visual name="fuselage">
-        <geometry><box><size>5.4 3.5 1.1</size></box></geometry>
-        <material><ambient>__RED__ __GREEN__ __BLUE__ 1</ambient><diffuse>__RED__ __GREEN__ __BLUE__ 1</diffuse><specular>0.7 0.7 0.7 1</specular></material>
+      <self_collide>false</self_collide>
+
+      <!-- ============================================================
+           FUSELAGE
+           ============================================================ -->
+      <!-- Main hull (team colour) -->
+      <visual name="main_body">
+        <pose>0 0 0.045 0 0 0</pose>
+        <geometry><box><size>1.32 1.02 0.33</size></box></geometry>
+        <material>
+          <ambient>__RED__ __GREEN__ __BLUE__ 1</ambient>
+          <diffuse>__RED__ __GREEN__ __BLUE__ 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+        </material>
       </visual>
-      <visual name="nose">
-        <pose>3.0 0 0 0 0 0</pose>
-        <geometry><sphere><radius>1.0</radius></sphere></geometry>
-        <material><ambient>0.1 0.6 1.0 1</ambient><diffuse>0.1 0.6 1.0 1</diffuse><emissive>0.02 0.08 0.2 1</emissive></material>
+
+      <!-- Body side skirts -->
+      <visual name="skirt_left">
+        <pose>0 0.51 0 0 0 0</pose>
+        <geometry><box><size>1.2 0.09 0.255</size></box></geometry>
+        <material>
+          <ambient>0.03 0.035 0.04 1</ambient>
+          <diffuse>0.05 0.055 0.06 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
       </visual>
-      <visual name="arm_left"><pose>0 3.2 0 0 0 0</pose><geometry><box><size>0.56 6.4 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
-      <visual name="arm_right"><pose>0 -3.2 0 0 0 0</pose><geometry><box><size>0.56 6.4 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
-      <visual name="arm_front"><pose>3.2 0 0 0 0 0</pose><geometry><box><size>6.4 0.56 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
-      <visual name="arm_back"><pose>-3.2 0 0 0 0 0</pose><geometry><box><size>6.4 0.56 0.40</size></box></geometry><material><diffuse>0.05 0.05 0.07 1</diffuse></material></visual>
-      <visual name="rotor_front_left"><pose>2.7 2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
-      <visual name="rotor_front_right"><pose>2.7 -2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
-      <visual name="rotor_back_left"><pose>-2.7 2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
-      <visual name="rotor_back_right"><pose>-2.7 -2.7 0.56 0 0 0</pose><geometry><cylinder><radius>1.28</radius><length>0.13</length></cylinder></geometry><material><diffuse>0.02 0.02 0.025 1</diffuse></material></visual>
-      <collision name="collision"><geometry><box><size>5.4 3.5 1.1</size></box></geometry></collision>
+      <visual name="skirt_right">
+        <pose>0 -0.51 0 0 0 0</pose>
+        <geometry><box><size>1.2 0.09 0.255</size></box></geometry>
+        <material>
+          <ambient>0.03 0.035 0.04 1</ambient>
+          <diffuse>0.05 0.055 0.06 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+
+      <!-- Electronics hump -->
+      <visual name="upper_housing">
+        <pose>0.03 0 0.255 0 0 0</pose>
+        <geometry><box><size>0.78 0.6 0.18</size></box></geometry>
+        <material>
+          <ambient>0.02 0.02 0.025 1</ambient>
+          <diffuse>0.03 0.033 0.04 1</diffuse>
+          <specular>0.85 0.85 0.85 1</specular>
+        </material>
+      </visual>
+
+      <!-- Battery / belly pack -->
+      <visual name="belly_pack">
+        <pose>0.06 0 -0.195 0 0 0</pose>
+        <geometry><box><size>0.84 0.6 0.15</size></box></geometry>
+        <material>
+          <ambient>0.045 0.05 0.055 1</ambient>
+          <diffuse>0.065 0.07 0.08 1</diffuse>
+          <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+
+      <!-- ============================================================
+           CAMERA / SENSOR FRONT
+           ============================================================ -->
+      <visual name="camera_mount">
+        <pose>0.615 0 -0.135 0 0 0</pose>
+        <geometry><box><size>0.33 0.36 0.21</size></box></geometry>
+        <material>
+          <ambient>0.02 0.02 0.025 1</ambient>
+          <diffuse>0.025 0.025 0.03 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      <visual name="gimbal_tilt">
+        <pose>0.75 0 -0.264 0 0.785 0</pose>
+        <geometry><box><size>0.15 0.27 0.15</size></box></geometry>
+        <material>
+          <ambient>0.05 0.055 0.06 1</ambient>
+          <diffuse>0.08 0.09 0.1 1</diffuse>
+        </material>
+      </visual>
+      <visual name="camera_lens">
+        <pose>0.855 0 -0.3 0 1.5708 0</pose>
+        <geometry><cylinder><radius>0.09</radius><length>0.06</length></cylinder></geometry>
+        <material>
+          <ambient>0.03 0.05 0.08 1</ambient>
+          <diffuse>0.03 0.06 0.12 1</diffuse>
+          <specular>0.95 0.95 1 1</specular>
+        </material>
+      </visual>
+
+      <!-- GPS mast + puck -->
+      <visual name="gps_mast">
+        <pose>0 0 0.45 0 0 0</pose>
+        <geometry><cylinder><radius>0.018</radius><length>0.3</length></cylinder></geometry>
+        <material><diffuse>0.06 0.06 0.06 1</diffuse></material>
+      </visual>
+      <visual name="gps_puck">
+        <pose>0 0 0.615 0 0 0</pose>
+        <geometry><cylinder><radius>0.114</radius><length>0.036</length></cylinder></geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.12 0.12 0.12 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+        </material>
+      </visual>
+
+      <!-- ============================================================
+           ARMS + MOTORS (X frame)
+           ============================================================ -->
+      <visual name="arm_front_right">
+        <pose>0.33 0.33 0.075 0 0 0.785398</pose>
+        <geometry><box><size>0.9 0.054 0.09</size></box></geometry>
+        <material>
+          <ambient>0.035 0.04 0.045 1</ambient>
+          <diffuse>0.06 0.065 0.07 1</diffuse>
+          <specular>0.7 0.7 0.7 1</specular>
+        </material>
+      </visual>
+      <visual name="arm_front_left">
+        <pose>0.33 -0.33 0.075 0 0 -0.785398</pose>
+        <geometry><box><size>0.9 0.054 0.09</size></box></geometry>
+        <material>
+          <ambient>0.035 0.04 0.045 1</ambient>
+          <diffuse>0.06 0.065 0.07 1</diffuse>
+          <specular>0.7 0.7 0.7 1</specular>
+        </material>
+      </visual>
+      <visual name="arm_rear_right">
+        <pose>-0.33 -0.33 0.075 0 0 0.785398</pose>
+        <geometry><box><size>0.9 0.054 0.09</size></box></geometry>
+        <material>
+          <ambient>0.035 0.04 0.045 1</ambient>
+          <diffuse>0.06 0.065 0.07 1</diffuse>
+          <specular>0.7 0.7 0.7 1</specular>
+        </material>
+      </visual>
+      <visual name="arm_rear_left">
+        <pose>-0.33 0.33 0.075 0 0 -0.785398</pose>
+        <geometry><box><size>0.9 0.054 0.09</size></box></geometry>
+        <material>
+          <ambient>0.035 0.04 0.045 1</ambient>
+          <diffuse>0.06 0.065 0.07 1</diffuse>
+          <specular>0.7 0.7 0.7 1</specular>
+        </material>
+      </visual>
+
+      <!-- Motor pods -->
+      <visual name="motor_front_right">
+        <pose>0.615 0.615 0.186 0 0 0</pose>
+        <geometry><cylinder><radius>0.084</radius><length>0.105</length></cylinder></geometry>
+        <material><diffuse>0.08 0.08 0.085 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+      <visual name="motor_front_left">
+        <pose>0.615 -0.615 0.186 0 0 0</pose>
+        <geometry><cylinder><radius>0.084</radius><length>0.105</length></cylinder></geometry>
+        <material><diffuse>0.08 0.08 0.085 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+      <visual name="motor_rear_right">
+        <pose>-0.615 -0.615 0.186 0 0 0</pose>
+        <geometry><cylinder><radius>0.084</radius><length>0.105</length></cylinder></geometry>
+        <material><diffuse>0.08 0.08 0.085 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+      <visual name="motor_rear_left">
+        <pose>-0.615 0.615 0.186 0 0 0</pose>
+        <geometry><cylinder><radius>0.084</radius><length>0.105</length></cylinder></geometry>
+        <material><diffuse>0.08 0.08 0.085 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+
+      <!-- ============================================================
+           ROTORS (semi-transparent spin discs + blade cross)
+           ============================================================ -->
+      <visual name="rotor_disc_front_right">
+        <pose>0.615 0.615 0.276 0 0 0</pose>
+        <geometry><cylinder><radius>0.375</radius><length>0.024</length></cylinder></geometry>
+        <material>
+          <ambient>0.55 0.58 0.62 1</ambient>
+          <diffuse>0.65 0.68 0.72 1</diffuse>
+          <transparency>0.55</transparency>
+        </material>
+      </visual>
+      <visual name="rotor_blade_a_fr">
+        <pose>0.615 0.615 0.3 0 0 0</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_blade_b_fr">
+        <pose>0.615 0.615 0.3 0 0 1.5708</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_blade_c_fr">
+        <pose>0.615 0.615 0.3 0 0 0.785</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.5 0.52 0.55 1</ambient><diffuse>0.6 0.62 0.65 1</diffuse></material>
+      </visual>
+      <visual name="rotor_blade_d_fr">
+        <pose>0.615 0.615 0.3 0 0 2.356</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.5 0.52 0.55 1</ambient><diffuse>0.6 0.62 0.65 1</diffuse></material>
+      </visual>
+      <visual name="rotor_hub_front_right">
+        <pose>0.615 0.615 0.3 0 0 0</pose>
+        <geometry><sphere><radius>0.054</radius></sphere></geometry>
+        <material><diffuse>0.12 0.12 0.13 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+
+      <visual name="rotor_disc_front_left">
+        <pose>0.615 -0.615 0.276 0 0 0</pose>
+        <geometry><cylinder><radius>0.375</radius><length>0.024</length></cylinder></geometry>
+        <material>
+          <ambient>0.55 0.58 0.62 1</ambient>
+          <diffuse>0.65 0.68 0.72 1</diffuse>
+          <transparency>0.55</transparency>
+        </material>
+      </visual>
+      <visual name="rotor_blade_a_fl">
+        <pose>0.615 -0.615 0.3 0 0 0.5</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_blade_b_fl">
+        <pose>0.615 -0.615 0.3 0 0 2.0708</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_hub_front_left">
+        <pose>0.615 -0.615 0.3 0 0 0</pose>
+        <geometry><sphere><radius>0.054</radius></sphere></geometry>
+        <material><diffuse>0.12 0.12 0.13 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+
+      <visual name="rotor_disc_rear_right">
+        <pose>-0.615 -0.615 0.276 0 0 0</pose>
+        <geometry><cylinder><radius>0.375</radius><length>0.024</length></cylinder></geometry>
+        <material>
+          <ambient>0.55 0.58 0.62 1</ambient>
+          <diffuse>0.65 0.68 0.72 1</diffuse>
+          <transparency>0.55</transparency>
+        </material>
+      </visual>
+      <visual name="rotor_blade_a_rr">
+        <pose>-0.615 -0.615 0.3 0 0 0.25</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_blade_b_rr">
+        <pose>-0.615 -0.615 0.3 0 0 1.8208</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_hub_rear_right">
+        <pose>-0.615 -0.615 0.3 0 0 0</pose>
+        <geometry><sphere><radius>0.054</radius></sphere></geometry>
+        <material><diffuse>0.12 0.12 0.13 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+
+      <visual name="rotor_disc_rear_left">
+        <pose>-0.615 0.615 0.276 0 0 0</pose>
+        <geometry><cylinder><radius>0.375</radius><length>0.024</length></cylinder></geometry>
+        <material>
+          <ambient>0.55 0.58 0.62 1</ambient>
+          <diffuse>0.65 0.68 0.72 1</diffuse>
+          <transparency>0.55</transparency>
+        </material>
+      </visual>
+      <visual name="rotor_blade_a_rl">
+        <pose>-0.615 0.615 0.3 0 0 0.75</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_blade_b_rl">
+        <pose>-0.615 0.615 0.3 0 0 2.3208</pose>
+        <geometry><box><size>0.72 0.06 0.006</size></box></geometry>
+        <material><ambient>0.7 0.72 0.75 1</ambient><diffuse>0.8 0.82 0.85 1</diffuse></material>
+      </visual>
+      <visual name="rotor_hub_rear_left">
+        <pose>-0.615 0.615 0.3 0 0 0</pose>
+        <geometry><sphere><radius>0.054</radius></sphere></geometry>
+        <material><diffuse>0.12 0.12 0.13 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+      </visual>
+
+      <!-- ============================================================
+           LANDING GEAR
+           ============================================================ -->
+      <visual name="leg_strut_fl">
+        <pose>0.39 0.39 -0.42 0 0 0</pose>
+        <geometry><cylinder><radius>0.027</radius><length>0.66</length></cylinder></geometry>
+        <material><diffuse>0.04 0.04 0.045 1</diffuse></material>
+      </visual>
+      <visual name="leg_strut_fr">
+        <pose>0.39 -0.39 -0.42 0 0 0</pose>
+        <geometry><cylinder><radius>0.027</radius><length>0.66</length></cylinder></geometry>
+        <material><diffuse>0.04 0.04 0.045 1</diffuse></material>
+      </visual>
+      <visual name="leg_strut_rl">
+        <pose>-0.39 0.39 -0.42 0 0 0</pose>
+        <geometry><cylinder><radius>0.027</radius><length>0.66</length></cylinder></geometry>
+        <material><diffuse>0.04 0.04 0.045 1</diffuse></material>
+      </visual>
+      <visual name="leg_strut_rr">
+        <pose>-0.39 -0.39 -0.42 0 0 0</pose>
+        <geometry><cylinder><radius>0.027</radius><length>0.66</length></cylinder></geometry>
+        <material><diffuse>0.04 0.04 0.045 1</diffuse></material>
+      </visual>
+      <visual name="foot_front">
+        <pose>0.39 0 -0.78 0 0 0</pose>
+        <geometry><box><size>0.06 0.96 0.036</size></box></geometry>
+        <material><diffuse>0.02 0.02 0.022 1</diffuse></material>
+      </visual>
+      <visual name="foot_rear">
+        <pose>-0.39 0 -0.78 0 0 0</pose>
+        <geometry><box><size>0.06 0.96 0.036</size></box></geometry>
+        <material><diffuse>0.02 0.02 0.022 1</diffuse></material>
+      </visual>
+
+      <!-- ============================================================
+           LIGHTS (eye-catching)
+           ============================================================ -->
+      <visual name="nav_bar_front">
+        <pose>0.675 0 0.036 0 0 0</pose>
+        <geometry><box><size>0.06 0.42 0.075</size></box></geometry>
+        <material>
+          <ambient>0.05 0.3 0.9 1</ambient>
+          <diffuse>0.05 0.3 0.9 1</diffuse>
+          <emissive>0.15 0.45 1 1</emissive>
+        </material>
+      </visual>
+      <visual name="nav_bar_rear">
+        <pose>-0.675 0 0.036 0 0 0</pose>
+        <geometry><box><size>0.06 0.42 0.075</size></box></geometry>
+        <material>
+          <ambient>1 0.03 0.02 1</ambient>
+          <diffuse>1 0.03 0.02 1</diffuse>
+          <emissive>1 0.05 0.02 1</emissive>
+        </material>
+      </visual>
+
+      <visual name="led_front_right">
+        <pose>0.69 0.78 0.12 0 0 0</pose>
+        <geometry><sphere><radius>0.06</radius></sphere></geometry>
+        <material>
+          <ambient>0.05 0.3 1 1</ambient>
+          <diffuse>0.1 0.4 1 1</diffuse>
+          <emissive>0.1 0.5 1 1</emissive>
+        </material>
+      </visual>
+      <visual name="led_front_left">
+        <pose>0.69 -0.78 0.12 0 0 0</pose>
+        <geometry><sphere><radius>0.06</radius></sphere></geometry>
+        <material>
+          <ambient>0.05 0.3 1 1</ambient>
+          <diffuse>0.1 0.4 1 1</diffuse>
+          <emissive>0.1 0.5 1 1</emissive>
+        </material>
+      </visual>
+      <visual name="led_rear_right">
+        <pose>-0.69 -0.78 0.12 0 0 0</pose>
+        <geometry><sphere><radius>0.06</radius></sphere></geometry>
+        <material>
+          <ambient>1 0.04 0.02 1</ambient>
+          <diffuse>1 0.06 0.03 1</diffuse>
+          <emissive>1 0.03 0.02 1</emissive>
+        </material>
+      </visual>
+      <visual name="led_rear_left">
+        <pose>-0.69 0.78 0.12 0 0 0</pose>
+        <geometry><sphere><radius>0.06</radius></sphere></geometry>
+        <material>
+          <ambient>1 0.04 0.02 1</ambient>
+          <diffuse>1 0.06 0.03 1</diffuse>
+          <emissive>1 0.03 0.02 1</emissive>
+        </material>
+      </visual>
+
+      <!-- Status beacon on top of the GPS puck -->
+      <visual name="status_beacon">
+        <pose>0 0 0.705 0 0 0</pose>
+        <geometry><sphere><radius>0.048</radius></sphere></geometry>
+        <material>
+          <ambient>0.2 1 0.3 1</ambient>
+          <diffuse>0.3 1 0.4 1</diffuse>
+          <emissive>0.4 1 0.5 1</emissive>
+        </material>
+      </visual>
+
+      <!-- Under-glow halo: keeps the swarm readable from a distance -->
+      <visual name="glow_halo">
+        <pose>0 0 -0.345 0 0 0</pose>
+        <geometry><cylinder><radius>0.57</radius><length>0.024</length></cylinder></geometry>
+        <material>
+          <ambient>0 0.25 0.4 1</ambient>
+          <diffuse>0 0.3 0.5 1</diffuse>
+          <emissive>0 0.35 0.55 1</emissive>
+          <lighting>false</lighting>
+          <transparency>0.35</transparency>
+        </material>
+      </visual>
+
+      <!-- Compact collision body -->
+      <collision name="collision">
+        <geometry><box><size>1.38 1.02 0.9</size></box></geometry>
+        <surface>
+          <friction><ode><mu>0</mu><mu2>0</mu2></ode></friction>
+        </surface>
+      </collision>
+
     </link>
   </model>
 </sdf>

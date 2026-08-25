@@ -129,6 +129,20 @@ Motion feel is tunable at launch time (no recompile needed):
 | `target_speed_multiplier` | 6.0 | Target orbital speed — higher pulls the swarm faster |
 | `use_plugin` | true | Poses applied by the Gazebo world plugin on the physics thread (smooth); false = legacy service round-robin |
 
+### Demo scene
+
+The launch loads `hiveflight.world`, a countryside airfield ready for demos:
+a **country road** with dashed markings, power lines and parked traffic runs
+along the south edge; around it sit a golden **wheat field**, a **plowed
+field**, a green **crop field**, hay bales, a red **barn with silo**, a
+tractor and two **wind turbines**. All tall scenery lives *outside* the
+200×200 m flight volume, so the swarm never clips through it. Drones fly a
+compact 60 m ceiling and Gazebo opens **pre-framed on the swarm** from a
+zoomed-out south-west establishing shot — no zooming needed. There is no
+distance fog, so the scene stays crisp at any zoom level. Drones are
+rendered at **3× scale** (~2.7 m rotor span) to stay visible at that
+distance.
+
 Full setup, verification and troubleshooting: [docs/ROS2_SETUP.md](docs/ROS2_SETUP.md).
 
 ## Dependencies

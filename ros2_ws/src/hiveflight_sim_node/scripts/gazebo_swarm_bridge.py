@@ -127,6 +127,13 @@ class GazeboSwarmBridge(Node):
         return xml.replace("__RED__", red).replace("__GREEN__", green).replace("__BLUE__", blue)
 
     def on_drones(self, message):
+        if not message.poses:
+            # An empty PoseArray must never reach spawn_drones(): spawning
+            # zero models sets drone_spawn_active and wedges the spawn
+            # state machine until restart.
+            self.get_logger().warn(
+                "Ignoring empty drone PoseArray", throttle_duration_sec=5.0)
+            return
         self.received_drones = True
         with self.lock:
             self.drone_poses = {index: pose for index, pose in enumerate(message.poses)}
@@ -135,6 +142,11 @@ class GazeboSwarmBridge(Node):
             self.spawn_drones(len(message.poses))
 
     def on_targets(self, message):
+        if not message.poses:
+            # Mirror of the drone guard: keeps target_spawn_active unstuck.
+            self.get_logger().warn(
+                "Ignoring empty target PoseArray", throttle_duration_sec=5.0)
+            return
         self.received_targets = True
         with self.lock:
             self.target_poses = {index: pose for index, pose in enumerate(message.poses)}
@@ -191,7 +203,7 @@ class GazeboSwarmBridge(Node):
         request = SpawnEntity.Request()
         request.name = f"drone_{index}"
         request.xml = xml
-        request.initial_pose.position.z = 50.0
+        request.initial_pose.position.z = 25.0
         request.reference_frame = "world"
         self.get_logger().info(f"Requesting Gazebo spawn: {request.name}")
         future = self.spawn_client.call_async(request)
@@ -228,7 +240,7 @@ class GazeboSwarmBridge(Node):
         request = SpawnEntity.Request()
         request.name = f"target_{index}"
         request.xml = xml
-        request.initial_pose.position.z = 50.0
+        request.initial_pose.position.z = 25.0
         request.reference_frame = "world"
         self.get_logger().info(f"Requesting Gazebo spawn: {request.name}")
         future = self.spawn_client.call_async(request)

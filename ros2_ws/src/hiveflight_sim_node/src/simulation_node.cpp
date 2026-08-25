@@ -28,7 +28,7 @@ private:
     this->declare_parameter("seed",                 42);
     this->declare_parameter("world_width",         200.0);
     this->declare_parameter("world_height",        200.0);
-    this->declare_parameter("world_depth",         150.0);
+    this->declare_parameter("world_depth",          60.0);
     this->declare_parameter("max_speed",            48.0);
     this->declare_parameter("max_force",            14.0);
     this->declare_parameter("target_speed_multiplier", 2.5);
