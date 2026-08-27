@@ -14,7 +14,7 @@ ros2_ws/log/
 COLCON_IGNORE
 
 # Simulation outputs
-*.mp4
+#*.mp4
 *.obj
 *.ppm
 *.png
